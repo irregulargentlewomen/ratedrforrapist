@@ -1,0 +1,44 @@
+input[type="submit"] {
+	color: #900;
+	background-color: #fff;
+	border: solid 1px #900;
+	display: inline-block;
+	margin-bottom: 0;
+	width: auto;
+	height: auto;
+	padding: 4px;
+	box-sizing: border-box;
+	-webkit-box-align: center;
+	text-align: center;
+	cursor: pointer;
+}
+
+section {
+	border-width: 10px 20px;
+	border-style: solid dashed solid dashed;
+	border-color: #000;
+	height: 400px;
+	width: 1000px;
+}
+section form {
+	border: dashed 20px black;
+	border-width: 0 20px;
+	height: 381px;
+	margin: 10px;
+	text-align: center;
+	font-family: sans;
+}
+section p {
+	position: absolute;
+	top: 100px;
+	font-family: Zapfino;
+	font-size: 80px;
+}
+.yes {
+	color: #900;
+	left: 200px;
+}
+.no {
+	color: green;
+	left: 300px;
+}

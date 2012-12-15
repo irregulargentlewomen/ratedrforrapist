@@ -1,0 +1,28 @@
+section {
+	margin: 20px auto 0;
+	border: solid 10px black;
+	float: left;
+	width: 920px;
+}
+
+section div {
+	border-right: 10px solid #000;
+	float: left;
+	font-family: "Times New Roman", serif;
+	font-size: 80px;
+	font-size: 8rem;
+	padding: 30px 10px 33px;
+	width: 60px;
+}
+section p {
+	border-top: 10px solid #000;
+	float: right;
+	font-size: 19px;
+	font-size: 1.9rem;
+	margin: 0;
+	padding: 5px 0 5px 10px;
+	width: 820px;
+}
+section p:first-of-type {
+	border-top-width: 0;
+}

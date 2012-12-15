@@ -1,0 +1,109 @@
+form,
+section {
+	position: absolute;
+}
+form {
+	text-align: center;
+	z-index: 30;
+}
+form.alert-inverse {
+	background-color: rgba(0,0,0,0.5);
+}
+form input,
+form label,
+form span {
+	border-radius: 2px;
+	font-family: "Baskerville";
+}
+form label,
+form span {
+	background-color: rgba(0,0,0,0.7);
+	color: #fff;
+	display: inline-block;
+	font-weight: normal;
+	padding: 2px 3px 2px;
+}
+section.background p {
+	color: darkBlue;
+	font-family: "MankSans";
+	font-size: 60px;
+	font-size: 6rem;
+	margin-bottom: 0;
+}
+.background cite cite {
+	font-style: italic;
+}
+section.response {
+	text-align: center;
+	top: 60%;
+	width: 93.5%;
+}
+section.response h2,
+section.response p {
+	font-family: "Baskerville";
+	font-size: 2.6rem;
+	font-size: 26px;
+}
+.alert-success {
+	display: none;
+	background-color: rgba(103, 219, 103, 0.4);
+	border-color: #347834;
+	color: #347834;
+}
+.alert-success h2,
+.alert-success p {
+	text-shadow: 1px 1px #fff;
+}
+.alert-error {
+	display: none;
+	background-color: rgba(153,0,0,0.33);
+	border-color: #900;
+	color: #900;
+	z-index: 30;
+}
+.alert-error h2,
+.alert-error p {
+	text-shadow: 1px 1px #000;
+}
+
+@media only screen and (min-width: 480px) {
+  /* 480 =================================================== */
+	form {
+		left: 3%;
+		top: 25%;
+	}
+}
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+  /* 600 =================================================== */
+	form {
+		left: 5%;
+		top: 25%;
+	}
+}
+@media only screen and (min-width: 768px) {
+  /* 768 =================================================== */
+	form {
+		left: 10%;
+		top: 30%;
+	}
+}
+@media only screen and (min-width: 992px) {
+  /* 992 =================================================== */
+	form {
+		left: 20%;
+		top: 30%;
+	}
+}
+@media only screen and (min-width: 1382px) {
+  /* 1382 =================================================== */
+  body {
+    max-width: 1440px;
+  }
+	form {
+		left: 20%;
+		top: 30%;
+	}
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* 2x =================================================== */
+}

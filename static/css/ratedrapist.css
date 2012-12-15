@@ -1,0 +1,118 @@
+h1 {
+	text-align: center;
+}
+cite.title {
+	font-style: italic;
+}
+form {
+	text-align: center;
+}
+/* hides the results and further-info elements until invoked */
+section.alert {
+	display: none;
+}
+section.alert.invoked {
+	display: block;
+}
+.response h2 {
+	text-align: center;
+}
+.response .icon-info-sign {
+	background-color: transparent;
+}
+.response a.icon-info-sign {
+	display: inline-block;
+}
+.response a.icon-info-sign:hover {
+	text-decoration: none;
+}
+.response a.icon-info-sign:hover,
+.response a.icon-info-sign:visited {
+	color: #DF2922;
+}
+.alert p,
+.alert li {
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+.alert > ul {
+	margin: 5px 0;
+}
+.alert li {
+	float: left;
+	width: 33%;
+}
+.alert li:nth-child(3n+1) {
+	clear: left;
+}
+.ohmygod {
+	background-color: #fff;
+	border-color: #900;
+	box-shadow: 5px 5px 10px #000;
+}
+.ohmygod p {
+	color: #DF2922;
+	font-size: 20px;
+	font-size: 2.0rem;
+	text-shadow: 2px 2px 2px 2px #000;
+}
+.ohmygod .what {
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-weight: bold;
+}
+.the-question span {
+	font-size: 16px;
+	font-size: 1.6rem;
+	font-weight: bold;
+}
+input[type="submit"] {
+	font-weight: bold;
+}
+input[type="submit"]:hover {
+	border-color: #DF2922;
+}
+footer {
+	text-align: center;
+}
+@media only screen and (min-width: 480px) {
+  /* 480 =================================================== */
+}
+@media only screen and (min-width: 600px) {
+  /* 600 =================================================== */
+}
+@media only screen and (max-width: 768px) {
+	p.has-citation {
+		display: none;
+	}
+	.ohmygod p {
+		font-size: 26px;
+		font-size: 2.6rem;
+	}
+}
+@media only screen and (min-width: 768px) {
+  /* 768 =================================================== */
+	p.has-citation {
+		display: block;
+		margin-right: 10px;
+	}
+	.has-citation {
+		float: left;
+		width: 47%;
+	}
+	blockquote {
+	  margin: 0;
+	}
+}
+@media only screen and (min-width: 992px) {
+  /* 992 =================================================== */
+}
+@media only screen and (min-width: 1382px) {
+  /* 1382 =================================================== */
+  body {
+    max-width: 1440px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* 2x =================================================== */
+}
