@@ -14,10 +14,18 @@ body {
 	background-color: #008;
 }
 .mpaa.rapist {
+	display: none;
 	background-color: #D87304;
 }
+.rated-rapist .mpaa.rapist {
+	display: block;
+}
 .mpaa.rapist-free {
+	display: none;
 	background-color: #016301;
+}
+.rated-rapist-free .mpaa.rapist-free {
+	display: block;
 }
 .mpaa p {
 	color: #fff;
