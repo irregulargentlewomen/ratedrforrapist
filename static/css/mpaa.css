@@ -27,6 +27,12 @@ body {
 .rated-rapist-free .mpaa.rapist-free {
 	display: block;
 }
+.disambiguation {
+	display: none;
+}
+.disambiguation.needed {
+	display: block;
+}
 .mpaa p {
 	color: #fff;
 	font-family: 'helvetica neue', helvetica, arial, sans-serif;
