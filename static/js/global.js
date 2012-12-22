@@ -8,10 +8,14 @@ document.documentElement.className = "js";
 var IrregularGentlewomen = IrregularGentlewomen || {};
 
 IrregularGentlewomen.afterSearch = {
-    success: function () {
-	    $('body').addClass("rated-rapist");
+    success: function(data) {
+        if(data.blacklisted) {
+    	    $('body').addClass("rated-rapist");
+        } else {
+            $('body').addClass("rated-rapist-free");
+        }
     },
-    error: function () {
+    error: function() {
         alert('try again');
     }
 };

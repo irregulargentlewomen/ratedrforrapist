@@ -9,9 +9,6 @@ var search = require('./search').search;
 
 app.use('/', express.static(__dirname + '/static/mpaa.html'));
 app.use('/search', search);
-app.get('/test', function(req, res){
-  res.send("we have actually reloaded.")
-});
 
 app.use(express.static(__dirname + '/static'));
 
