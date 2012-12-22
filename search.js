@@ -9,9 +9,11 @@ function search(req, res) {
                 castSearch(titleData[0].id);
             } else {
                 res.type('text/json');
-                res.send(titleData.map(function(datum) {
-                    return {id: datum.id, title: datum.title};
-                }));
+                res.send({
+                    disambiguate: titleData.map(function(datum) {
+                        return {id: datum.id, title: datum.title};
+                    })
+                });
             }
         });
     }

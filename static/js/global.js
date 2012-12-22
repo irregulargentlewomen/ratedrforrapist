@@ -9,7 +9,9 @@ var IrregularGentlewomen = IrregularGentlewomen || {};
 
 IrregularGentlewomen.afterSearch = {
     success: function(data) {
-        if(data.blacklisted) {
+        if(data.disambiguate) {
+            IrregularGentlewomen.populateDisambiguator(data.disambiguate);
+        } else if (data.blacklisted) {
     	    $('body').addClass("rated-rapist");
         } else {
             $('body').addClass("rated-rapist-free");
@@ -29,9 +31,38 @@ IrregularGentlewomen.titleSearch = function(form) {
     });
 }
 
+IrregularGentlewomen.castSearch = function(link) {
+    $.ajax({
+        url: link.href,
+        method: 'get',
+        success: IrregularGentlewomen.afterSearch.success,
+        error: IrregularGentlewomen.afterSearch.error        
+    });
+}
+
+IrregularGentlewomen.populateDisambiguator = function(data) {
+    var section = $('.disambiguation'),
+        list = section.find('ul');
+
+    for(var i = data.length-1; i >= 0; i--) {
+        list.append(
+            '<li><a href="/search?id=' +
+            data[i].id +
+            '">' +
+            data[i].title +
+            "</a></li>"
+        );
+    }
+    section.addClass('needed');
+}
+
 $(document).ready(function () {
     $('form').submit(function(e){
         e.preventDefault();
         IrregularGentlewomen.titleSearch(e.target);
+    });
+    $('.disambiguation').on('click', 'li a', function(e){
+        e.preventDefault();
+        IrregularGentlewomen.castSearch(e.target);
     });
 });

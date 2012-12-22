@@ -7,7 +7,6 @@ var exec = require('child_process').exec;
 
 var search = require('./search').search;
 
-app.use('/', express.static(__dirname + '/static/mpaa.html'));
 app.use('/search', search);
 
 app.use(express.static(__dirname + '/static'));
