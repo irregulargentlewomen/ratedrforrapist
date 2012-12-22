@@ -8,11 +8,26 @@ document.documentElement.className = "js";
 var IrregularGentlewomen = IrregularGentlewomen || {};
 
 IrregularGentlewomen.afterSearch = {
-    init: function () {
-	    $('.alert').addClass("invoked");
-	}
+    success: function () {
+	    $('body').addClass("rated-rapist");
+    },
+    error: function () {
+        alert('try again');
+    }
 };
 
+IrregularGentlewomen.titleSearch = function(form) {
+    $.ajax({
+        url: form.action + '?' + $(form).serialize(),
+        method: 'get',
+        success: IrregularGentlewomen.afterSearch.success,
+        error: IrregularGentlewomen.afterSearch.error
+    });
+}
+
 $(document).ready(function () {
-    IrregularGentlewomen.afterSearch.init();
+    $('form').submit(function(e){
+        e.preventDefault();
+        IrregularGentlewomen.titleSearch(e.target);
+    });
 });

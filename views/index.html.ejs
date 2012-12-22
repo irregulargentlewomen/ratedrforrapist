@@ -25,12 +25,18 @@
 <body>
   <section class="mpaa not-rated">
     <p>This movie has <span class="rating">not yet been rated.</span></p>
-    <form action="untitled_submit" method="get" accept-charset="utf-8" class="form-inline">
+    <form action="/search" method="get" accept-charset="utf-8" class="form-inline">
       <label for="title">Has anyone who worked on</label>
       <input type="text" name="title" placeholder="this movie" id="title" class="input-extra-large">
       <span>collaborated with or otherwise supported</span>
       <input type="submit" value="Roman Polanski?">
     </form>
+    <div class="disambiguation">
+      <p>Did you mean:</p>
+      <ul>
+      </ul>
+    </div>
+
   </section>
   <section class="mpaa rapist">
     <p>This movie has been rated <span class="rating">rapist</span> <span class="reasoning">for being made by at least one person<br />who has collaborated with <br />or otherwise supported Roman Polanski.</span></p>

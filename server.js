@@ -1,7 +1,17 @@
 var express = require('express');
 var app = express();
 
+var title_data_source = require('./title_data_source');
+var exec = require('child_process').exec;
+
+
+var search = require('./search').search;
+
 app.use('/', express.static(__dirname + '/static/mpaa.html'));
+app.use('/search', search);
+app.get('/test', function(req, res){
+  res.send("we have actually reloaded.")
+});
 
 app.use(express.static(__dirname + '/static'));
 
