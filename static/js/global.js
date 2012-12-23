@@ -13,8 +13,10 @@ IrregularGentlewomen.afterSearch = {
             IrregularGentlewomen.populateDisambiguator(data.disambiguate);
         } else if (data.blacklisted) {
     	    $('body').addClass("rated-rapist");
+            $('body').removeClass("rated-rapist-free");
         } else {
             $('body').addClass("rated-rapist-free");
+            $('body').removeClass("rated-rapist");
         }
     },
     error: function() {
@@ -38,11 +40,16 @@ IrregularGentlewomen.castSearch = function(link) {
         success: IrregularGentlewomen.afterSearch.success,
         error: IrregularGentlewomen.afterSearch.error        
     });
+    $(link).addClass('selected');
 }
 
 IrregularGentlewomen.populateDisambiguator = function(data) {
     var section = $('.disambiguation'),
         list = section.find('ul');
+
+    list.html('');
+    $('body').removeClass("rated-rapist");
+    $('body').removeClass("rated-rapist-free");
 
     for(var i = data.length-1; i >= 0; i--) {
         list.append(

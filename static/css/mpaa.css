@@ -30,6 +30,12 @@ body {
 .disambiguation {
 	display: none;
 }
+.disambiguation li {
+	list-style-type: none
+}
+.disambiguation a {
+	color: white;
+}
 .disambiguation.needed {
 	display: block;
 }
