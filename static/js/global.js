@@ -9,7 +9,10 @@ var IrregularGentlewomen = IrregularGentlewomen || {};
 
 IrregularGentlewomen.afterSearch = {
     success: function(data) {
-        if(data.disambiguate) {
+        console.log(data);
+        if(data.error) {
+            IrregularGentlewomen.afterSearch.error();
+        } else if(data.disambiguate) {
             IrregularGentlewomen.populateDisambiguator(data.disambiguate);
         } else if (data.blacklisted) {
     	    $('body').addClass("rated-rapist");

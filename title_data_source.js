@@ -13,11 +13,29 @@ function apiCall(title, callback) {
   var apiConfig = require('./api_config.json');
   var querystring = require('querystring');
 
-  http.request(
-    'http://api.themoviedb.org/3/search/movie?api_key' + apiConfig.key + '&query' + querystring.stringify(title),
-    function(response){
+
+  var query = querystring.stringify({
+    api_key: apiConfig.key,
+    query: title
+  })
+  var path = '/3/search/movie?' + query;
+  http.get(
+    {
+      host:'api.themoviedb.org',
+      path: path,
+      port: 80,
+      method: 'GET',
+      headers: {"Accept": "application/json"}
+    },
+    function(res) {
+      var body = '';
       res.on("data", function(chunk) {
-        callback(chunk));
+        body += chunk;
+      });
+
+      res.on("end", function() {
+        console.log(body);
+        callback(body);
       });
   }).on('error', function(e) {
     console.log("Got error: " + e.message);
@@ -25,7 +43,7 @@ function apiCall(title, callback) {
 } 
 
 var fetch = function(title, callback) {
-  staticLocalFile(title, function(data) {
+  apiCall(title, function(data) {
     callback(JSON.parse(data).results);
   });
 }
