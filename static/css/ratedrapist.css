@@ -1,4 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Alegreya:400italic,900italic,400,700,900);
+body {
+	background-color: #f5f5f5;
+	background-color: rgba(245, 245, 245, .3);
+}
 h1 {
+	font-family: Alegreya, serif;
 	text-align: center;
 }
 cite.title {
@@ -30,46 +36,41 @@ section.alert.invoked {
 .response a.icon-info-sign:visited {
 	color: #DF2922;
 }
-.alert p,
-.alert li {
+.alert p {
 	font-size: 16px;
 	font-size: 1.6rem;
 }
-.alert > ul {
-	margin: 5px 0;
-}
-.alert li {
-	float: left;
-	width: 33%;
-}
-.alert li:nth-child(3n+1) {
-	clear: left;
-}
 .ohmygod {
 	background-color: #fff;
-	border-color: #900;
+	border-color: #DF2922;
 	box-shadow: 5px 5px 10px #000;
 }
 .ohmygod p {
 	color: #DF2922;
-	font-size: 20px;
-	font-size: 2.0rem;
+	font-family: Alegreya, serif;
+	font-size: 22px;
+	font-size: 2.2rem;
 	text-shadow: 2px 2px 2px 2px #000;
 }
 .ohmygod .what {
-	font-size: 24px;
-	font-size: 2.4rem;
-	font-weight: bold;
+	font-size: 34em;
+	font-size: 3.4rem;
+	font-weight: 900;
 }
 .the-question span {
 	font-size: 16px;
 	font-size: 1.6rem;
 	font-weight: bold;
 }
+input {
+	background-color: #f5f5f5;
+	background-color: rgba(245, 245, 245, .3);
+}
 input[type="submit"] {
 	font-weight: bold;
 }
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+input[type="text"]:hover {
 	border-color: #DF2922;
 }
 footer {

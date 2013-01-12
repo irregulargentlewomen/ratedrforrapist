@@ -1,7 +1,8 @@
 Rated R For Rapist provides information about whether a movie has been made in part by people who have chosen to collaborate with or otherwise support Roman Polanski.
 
-The interested user may wish to read any or all of the following texts, which provide, in chronological order of publication, a great deal of the background to our reasoning in developing Rated R For Rapist:
+The interested user may wish to read any or all of the following texts related to <em>People of the State of California v. Roman Raymond Polanski</em> and the ramifications thereof:
 * [1977 grand jury testimony transcript](http://www.thesmokinggun.com/file/roman-polanski-grand-jury-transcript)
+* [What's "Unlawful Sexual Intercourse"?](http://www.slate.com/articles/news_and_politics/explainer/2009/09/whats_unlawful_sexual_intercourse.single.html), by Brian Palmer
 * [Reminder: Roman Polanski raped a child](http://www.salon.com/2009/09/28/polanski_arrest/), by Kate Harding
 * [Six Degrees of Roman Polanski](http://mommyish.com/stuff/six-degrees-of-roman-polanski-361/), by Eve Vawter
 
