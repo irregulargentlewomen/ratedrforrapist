@@ -1,5 +1,5 @@
+require_relative 'api_handler'
 require 'delegate'
-require 'json'
 class SearchResults < SimpleDelegator
   def self.get(title)
     new(title)
@@ -9,7 +9,7 @@ class SearchResults < SimpleDelegator
 
   def initialize(title)
     @search_title = title
-    results = get_unless_down
+    results = get_unless_down['results']
     super(
       results.map { |r|
         Result.new(r)
@@ -18,19 +18,7 @@ class SearchResults < SimpleDelegator
   end
 
   private
-  def api_key
-    @api_key ||= AppConfig.api_key
-  end
-
-  def get_unless_down
-    5.times do |i|
-      response = HTTParty.get(url)
-      if response.code == 200
-        return JSON.parse(response.body)['results']
-      end
-    end
-    raise 'api down'
-  end
+  include ApiHandler
 
   def url
     "http://api.omdb.org/3/search/movie?query=#{search_title}&api_key=#{api_key}"

@@ -1,4 +1,4 @@
-require 'json'
+require 'api_handler'
 
 class Movie
   attr_reader :id
@@ -12,23 +12,10 @@ class Movie
   end
 
   private
-  def api_key
-    @api_key ||= Config.api_key
-  end
-
+  include ApiHandler
   def get_cast_and_crew
     response_body = get_unless_down
     response_body['cast'] + response_body['crew']
-  end
-
-  def get_unless_down
-    5.times do |i|
-      response = HTTParty.get(url)
-      if response.code == 200
-        return JSON.parse(response.body)
-      end
-    end
-    raise 'api down'
   end
 
   def url
