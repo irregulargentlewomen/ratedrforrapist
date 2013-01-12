@@ -8,6 +8,8 @@ function apiHandler(config) {
     params[prop] = config.params[prop];
   }
 
+  console.log(config.path + '?' + querystring.stringify(params));
+
   http.get(
     {
       host:'api.themoviedb.org',

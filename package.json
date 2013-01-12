@@ -7,6 +7,7 @@
     "express": "3.0.4",
     "ejs": "*",
     "vows": "*",
-    "zombie": "*"
+    "zombie": "*",
+    "async": "*"
   }
 }
