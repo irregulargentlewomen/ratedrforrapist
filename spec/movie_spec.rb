@@ -1,8 +1,4 @@
-require File.expand_path("#{File.dirname(__FILE__)}/../lib/movie")
-
-require 'ostruct'
-
-module HTTParty; end
+require_relative '../lib/movie'
 
 describe Movie do
   let(:movie) { Movie.new(0) }
