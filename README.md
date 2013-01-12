@@ -30,7 +30,7 @@ The Irregular Gentlewomen make no claim to complete accuracy in the results prov
 * [SACD](http://www.sacd.fr/Tous-les-signataires-de-la-petition-All-signing-parties.1341.0.html)
 * [YouTube](http://www.youtube.com/watch?v=yyx4E51ZCns)
 
-It is possible, indeed probable, indeed almost certain, that there are further collaborators and supporters of Polanski's career and decisions. 
+It is possible, indeed probable, indeed certain, that there are further collaborators and supporters of Polanski's career and decisions. (We have not included film critics, for example, in our list.)
 
 In short: Roman Polanski has been working in the film industry, American and European, for a very long time. He is undeniably a talented filmmaker and therefore enjoys the support of many of his fellow filmmakers. Because we live in a society which excuses, minimizes, and avoids thinking about rape, he has been able to retain that support even though he is an admitted, convicted rapist.
 
@@ -42,6 +42,5 @@ These are our premises; we do not intend to defend or explain them beyond this s
 
 To Do
 =====
-* create an MPAA-style title graphic
+* create a decent title graphic
 * test the CSS on actual mobile devices
-* add Melior as an embedded font for the MPAA graphic & h1
