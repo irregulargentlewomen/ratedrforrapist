@@ -1,5 +1,5 @@
-require_relative '../lib/search_results'
-require_relative 'spec_helper'
+require_relative '../../lib/search_results'
+require_relative '../spec_helper'
 
 describe SearchResults do
   subject(:results) {SearchResults.get('title')}

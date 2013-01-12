@@ -1,4 +1,5 @@
-require_relative '../lib/movie'
+require_relative '../../lib/movie'
+require_relative '../spec_helper'
 
 describe Movie do
   let(:movie) { Movie.new(0) }
