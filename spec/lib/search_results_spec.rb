@@ -35,4 +35,15 @@ describe SearchResults do
       results.length.should == 1
     end
   end
+
+  describe SearchResults::Result do
+    subject(:result) {SearchResults::Result.new(
+      'title' => 'title',
+      'id' => 5,
+      'release_date' => '2012-12-01'
+    )}
+    it 'knows the year of release' do
+      result.year.should == '2012'
+    end
+  end
 end

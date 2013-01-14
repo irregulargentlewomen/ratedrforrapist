@@ -36,8 +36,8 @@ describe Movie do
       it 'returns the correct result' do
         result = movie.cast_and_crew
         result.length.should == 2
-        result.should include {|x| x['id'] == 819 && x['name'] == "Edward Norton"}
-        result.should include {|x| x['id'] == 1283 && x['name'] == "Helena Bonham Carter"}     
+        result.select {|x| x['id'] == 819 && x['name'] == "Edward Norton"}.length.should == 1
+        result.select {|x| x['id'] == 1283 && x['name'] == "Helena Bonham Carter"}.length.should == 1   
       end
     end
 

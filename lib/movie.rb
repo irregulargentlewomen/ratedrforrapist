@@ -13,6 +13,7 @@ class Movie
 
   private
   include ApiHandler
+  
   def get_cast_and_crew
     response_body = get_unless_down
     response_body['cast'] + response_body['crew']
