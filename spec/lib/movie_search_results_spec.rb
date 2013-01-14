@@ -1,8 +1,8 @@
-require_relative '../../lib/search_results'
+require_relative '../../lib/movie_search_results'
 require_relative '../spec_helper'
 
-describe SearchResults do
-  subject(:results) {SearchResults.get('title')}
+describe MovieSearchResults do
+  subject(:results) {MovieSearchResults.get('title')}
   let(:response) {
     OpenStruct.new(code: 200, body: {
       results: [
@@ -23,7 +23,7 @@ describe SearchResults do
   describe ".get" do
     context 'when there are results for a given title' do
       it 'returns a results object' do
-        results = SearchResults.get('title')
+        results = MovieSearchResults.get('title')
         results.first.title.should == 'Fight Club'
         results.first.id.should == 550
       end
@@ -36,8 +36,8 @@ describe SearchResults do
     end
   end
 
-  describe SearchResults::Result do
-    subject(:result) {SearchResults::Result.new(
+  describe MovieSearchResults::Result do
+    subject(:result) {MovieSearchResults::Result.new(
       'title' => 'title',
       'id' => 5,
       'release_date' => '2012-12-01'

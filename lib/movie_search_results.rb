@@ -1,7 +1,7 @@
 require_relative 'api_handler'
 require 'date'
 require 'delegate'
-class SearchResults < SimpleDelegator
+class MovieSearchResults < SimpleDelegator
   def self.get(title)
     new(title)
   end
