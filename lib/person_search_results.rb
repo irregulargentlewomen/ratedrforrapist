@@ -22,7 +22,7 @@ class PersonSearchResults < SimpleDelegator
   include ApiHandler
 
   def url
-    "http://api.omdb.org/3/search/person?query=#{search_title}&api_key=#{api_key}"
+    "http://api.omdb.org/3/search/person?query=#{search_name}&api_key=#{api_key}"
   end
 
   class Result
