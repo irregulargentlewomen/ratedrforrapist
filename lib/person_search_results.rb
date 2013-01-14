@@ -30,11 +30,6 @@ class PersonSearchResults < SimpleDelegator
     def initialize(attrs)
       @name = attrs['name']
       @id = attrs['id']
-      @release_date = DateTime.strptime(attrs['release_date'], '%Y-%m-%d')
-    end
-
-    def year
-      @release_date.strftime("%Y")
     end
   end
 end
