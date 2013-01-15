@@ -7,6 +7,10 @@ class Movie
     @id = id
   end
 
+  def has_blacklisted_cast_or_crew?
+    Blacklist.check(cast_and_crew.map {|x| x['id']})
+  end
+
   def cast_and_crew
     @cast_and_crew ||= get_cast_and_crew
   end

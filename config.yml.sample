@@ -3,3 +3,8 @@ development:
 
 test:
   api_key: key
+  database:
+    name: polanski_test
+    user: root
+    password: test
+    host: localhost

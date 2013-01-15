@@ -1,6 +1,8 @@
 require_relative '../../lib/movie'
 require_relative '../spec_helper'
 
+class Blacklist; end
+
 describe Movie do
   let(:movie) { Movie.new(0) }
   before do
@@ -53,6 +55,27 @@ describe Movie do
       it 'tries 5 times before giving up' do
         HTTParty.should_receive(:get).exactly(5).times
       end
+    end
+  end
+
+  describe "#has_blacklisted_cast_or_crew?" do
+    before do
+      # ugliest thing ever, I know
+      movie.instance_variable_set('@cast_and_crew', [
+        {'id' => 4}, {'id' => 8}
+      ])
+    end
+    it 'returns true if a blacklist match is found' do
+      Blacklist.stub(:check).
+        with([4, 8]).
+        and_return(true)
+      movie.has_blacklisted_cast_or_crew?.should be_true
+    end
+    it 'returns false if no blacklisted cast or crew exist' do
+      Blacklist.stub(:check).
+        with([4, 8]).
+        and_return(false)
+      movie.has_blacklisted_cast_or_crew?.should be_false
     end
   end
 end

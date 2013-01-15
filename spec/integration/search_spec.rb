@@ -79,16 +79,9 @@ describe 'POST /search' do
         last_response.should be_ok
       end
 
-      it 'responds with the disambiguation json' do
+      it 'responds with json including "blacklisted: false"' do
         result = JSON.parse(last_response.body)
-        result['disambiguate'].should include { |x|
-          x['title'] == 'Fight Club (1999)'
-          x['id'] == 550
-        }
-        result['disambiguate'].should include { |x|
-          x['title'] == 'Clubbed (2008)'
-          x['id'] == 14476
-        }
+        result['blacklisted'].should be_false
       end
     end
   end
