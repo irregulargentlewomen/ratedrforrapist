@@ -84,5 +84,34 @@ describe 'POST /search' do
         result['blacklisted'].should be_false
       end
     end
+
+    context "and the search turns a blacklisted person" do
+      let(:api_response) {
+        OpenStruct.new(code: 200, body: {
+          id: 0,
+          cast: [
+            {
+              id: 287,
+              name: "Brad Pitt"
+            }
+          ],
+          crew: [
+            {
+              id: 1283,
+              name: "Helena Bonham Carter"
+            }
+          ]
+        }.to_json)
+      }
+
+      it 'responds with a 200' do
+        last_response.should be_ok
+      end
+
+      it 'responds with json including "blacklisted: true"' do
+        result = JSON.parse(last_response.body)
+        result['blacklisted'].should be_true
+      end
+    end
   end
 end
