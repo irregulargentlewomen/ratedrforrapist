@@ -15,17 +15,23 @@ set :app_file, __FILE__
 set :public_folder, File.dirname(__FILE__) + '/static'
 
 post '/search' do
-  if params[:id]
-    result = {
-      blacklisted: Movie.new(params[:id]).has_blacklisted_cast_or_crew?
-    }
-  else
-    result = {
-      disambiguate: MovieSearchResults.get(params['title']).map { |x|
+  if params[:title]
+    search_results = MovieSearchResults.get(params['title'])
+    if search_results.length < 1
+      return json(error: 'no results found')
+    elsif search_results.length > 1
+      return json(disambiguate: search_results.map { |x|
         {title: "#{x.title} (#{x.year})", id: x.id}
-      }
-    }
+      })
+    end
+    movie = Movie.new(search_results.first.id)
+  elsif params[:id]
+    movie = Movie.new(params[:id])
+  else
+    return json(error: 'please search by either movie title or movie id')
   end
-
-  json result
+  
+  json({
+    blacklisted: movie.has_blacklisted_cast_or_crew?
+  })
 end
