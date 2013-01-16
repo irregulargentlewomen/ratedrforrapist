@@ -1,4 +1,4 @@
-require 'api_handler'
+require_relative 'api_handler'
 
 class Person
   attr_reader :id
