@@ -15,11 +15,9 @@ IrregularGentlewomen.afterSearch = {
         } else if(data.disambiguate) {
             IrregularGentlewomen.populateDisambiguator(data.disambiguate);
         } else if (data.blacklisted) {
-    	    $('body').addClass("rated-rapist");
-            $('body').removeClass("rated-rapist-free");
+    	    $('.positive.response').addClass("invoked");
         } else {
-            $('body').addClass("rated-rapist-free");
-            $('body').removeClass("rated-rapist");
+            $('.negative.response').addClass("invoked");
         }
     },
     error: function() {
@@ -52,7 +50,7 @@ IrregularGentlewomen.populateDisambiguator = function(data) {
 
     list.html('');
     $('body').removeClass("rated-rapist");
-    $('body').removeClass("rated-rapist-free");
+    $('body').removeClass("rated-rapist-free"); /* I would really prefer to avoid this language, as we aren't looking at other rape cases (and there are a LOT) in Hollywood */
 
     for(var i = data.length-1; i >= 0; i--) {
         list.append(
