@@ -30,6 +30,8 @@ The Irregular Gentlewomen make no claim to complete accuracy in the results prov
 * [SACD](http://www.sacd.fr/Tous-les-signataires-de-la-petition-All-signing-parties.1341.0.html)
 * [YouTube](http://www.youtube.com/watch?v=yyx4E51ZCns)
 
+(What is the script actually querying?)
+
 It is possible, indeed probable, indeed certain, that there are further collaborators and supporters of Polanski's career and decisions. (We have not gone looking for any of the many op-eds written in 2009 to include the authors thereof, for example.)
 
 In short: Roman Polanski has been working in the film industry, American and European, for a very long time. He is undeniably a talented filmmaker and therefore enjoys the support of many of his fellow filmmakers. Because we live in a society which excuses, minimizes, and avoids thinking about rape, he has been able to retain that support even though he is an admitted rapist.
@@ -48,3 +50,7 @@ To Do
 * write up installation instructions
 * play with the embedded fonts for the Polanski quotation
 * add documentation comments to CSS and HTML
+* refine language in further-info alert
+* set up cron job to keep the list updated
+* establish baseline blacklist from script and disambiguate as needed
+* once the script is run through, live testing of form submission
