@@ -22,6 +22,7 @@ The capsule biography of Roman Polanski is adapted from the New Oxford American 
 [A Vague Disclaimer Is Nobody's Friend](http://tmblr.co/Z-dllxbNAKMv)
 =====================================
 The Irregular Gentlewomen make no claim to complete accuracy in the results provided by this tool. The information used in determining if a movie has been made in part by Roman Polanski collaborators or supporters is drawn from the following sources:
+* [Bernard-Henri Levy](http://www.bernard-henri-levy.com/si-vous-souhaitez-signer-la-petition-pour-roman-polanski-2418.html)
 * Breitbart.com ([1](http://www.breitbart.com/Big-Hollywood/2009/09/29/Naming-Names--The-Free-Roman-Polanski-Petition), [2](http://www.breitbart.com/Big-Hollywood/2009/09/28/Round-Up-of-Hollywoods-Polanski-Supporters))
 * [I Hate the Media](http://www.ihatethemedia.com/roman-polanski-whoopi-goldberg)
 * [New York Times](http://roomfordebate.blogs.nytimes.com/2009/09/29/the-polanski-uproar/#damon)
@@ -44,7 +45,6 @@ To Do
 * create a decent title graphic
 * test the CSS on actual mobile devices
 * clean up the invocation JS
-* clean up the extra sketching HTML, CSS, & JS files in static (Betsy, are you using the static/js directory? if not, we can get rid of it, I think -E.)
 * write up installation instructions
 * play with the embedded fonts for the Polanski quotation
 * add documentation comments to CSS and HTML
