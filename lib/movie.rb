@@ -12,18 +12,25 @@ class Movie
   end
 
   def cast_and_crew
-    @cast_and_crew ||= get_cast_and_crew
+    api_response_body['cast'] + api_response_body['crew']
+  end
+
+  def release_year
   end
 
   private
   include ApiHandler
   
+  def api_response_body
+    @api_response_body ||= get_unless_down
+  end
+
   def get_cast_and_crew
     response_body = get_unless_down
     response_body['cast'] + response_body['crew']
   end
 
   def url
-    "http://api.omdb.org/3/movie/#{id}/casts?api_key=#{api_key}"
+    "http://api.themoviedb.org/3/movie/#{id}/casts?api_key=#{api_key}"
   end
 end

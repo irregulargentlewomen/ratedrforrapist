@@ -15,7 +15,7 @@ describe Person do
     describe "when the API is available" do
       before do
         HTTParty.stub(:get).
-        with("http://api.omdb.org/3/person/0/credits?api_key=key").
+        with("http://api.themoviedb.org/3/person/0/credits?api_key=key").
         and_return(OpenStruct.new(code: 200, body: {
           id: 0,
           cast: [

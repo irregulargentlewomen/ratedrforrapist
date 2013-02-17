@@ -15,7 +15,7 @@ describe PersonSearchResults do
   }
   before do
     HTTParty.stub(:get).
-      with("http://api.omdb.org/3/search/person?query=name&api_key=key").
+      with("http://api.themoviedb.org/3/search/person?query=name&api_key=key").
       and_return(response)
   end
 

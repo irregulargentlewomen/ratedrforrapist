@@ -17,7 +17,6 @@ RSpec.configure do |config|
   config.include Rack::Test::Methods
 end
 
-require_relative '../db/reload_schema.rb'
-DB[:blacklist].multi_insert(
-  YAML.load_file(File.join(File.dirname(__FILE__), 'fixtures', 'blacklist.yml'))
-)
+before(:all) do
+  DB. (YAML.load_file(File.join(File.dirname(__FILE__), 'fixtures', 'blacklist.yml')))
+end

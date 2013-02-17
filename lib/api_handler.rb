@@ -11,13 +11,15 @@ module ApiHandler
   end
 
   def get_unless_down
+    response = nil
     5.times do |i|
-      response = HTTParty.get(url)
+      response = HTTParty.get(URI.escape(url),
+        :headers => {'Accept' => 'application/json'})
       if response.code == 200
         return JSON.parse(response.body)
       end
     end
-    raise 'api down'
+    raise "api down: #{response.code} #{response.body}" 
   end
 
   def url

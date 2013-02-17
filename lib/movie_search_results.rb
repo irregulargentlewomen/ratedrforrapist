@@ -22,12 +22,13 @@ class MovieSearchResults < SimpleDelegator
   include ApiHandler
 
   def url
-    "http://api.omdb.org/3/search/movie?query=#{search_title}&api_key=#{api_key}"
+    "http://api.themoviedb.org/3/search/movie?query=#{search_title}&api_key=#{api_key}"
   end
 
   class Result
     attr_reader :title, :id
     def initialize(attrs)
+      raise attrs.to_yaml
       @title = attrs['title']
       @id = attrs['id']
       @release_date = DateTime.strptime(attrs['release_date'], '%Y-%m-%d')

@@ -11,25 +11,13 @@ class PersonSearchResults < SimpleDelegator
   def initialize(name)
     @search_name = name
     results = get_unless_down['results']
-    super(
-      results.map { |r|
-        Result.new(r)
-      }
-    )
+    super(results.map {|r| { 'id' => r["id"], 'name' => r['name']} })
   end
 
   private
   include ApiHandler
 
   def url
-    "http://api.omdb.org/3/search/person?query=#{search_name}&api_key=#{api_key}"
-  end
-
-  class Result
-    attr_reader :name, :id
-    def initialize(attrs)
-      @name = attrs['name']
-      @id = attrs['id']
-    end
+    "http://api.themoviedb.org/3/search/person?query=#{search_name}&api_key=#{api_key}"
   end
 end

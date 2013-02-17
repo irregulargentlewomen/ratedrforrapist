@@ -24,7 +24,7 @@
 </head>
 <body>
 	<h1>Rated R For Rapist</h1>
-	<form action="untitled_submit" method="get" accept-charset="utf-8" class="form-inline the-question">
+	<form action="/search" method="get" accept-charset="utf-8" class="form-inline the-question">
 		<label for="title">Has anyone who worked on</label>
 		<input type="text" name="title" placeholder="this movie" id="title" class="input-extra-large">
 		<span>collaborated with or otherwise supported</span>
@@ -37,11 +37,14 @@
 			<p><cite>&mdash; Roman Polanski, quoted in Martin Amis, <cite class="title icon-book">Visiting Mrs Nabokov</cite>, 1979, p. 264.</cite></p>
 		</blockquote>
 	</article>
-	<section class="invoked negative response alert alert-success">
+	<section class="response disambiguation">
+		<ul></ul>
+	</section>
+	<section class="negative response alert alert-success">
 		<h2>No!</h2>
 		<p>None of the cast or crew of $movie have collaborated with Roman Polanski or publicly expressed support for him. <a href="#further-info" class="icon-info-sign alert-error" title="Link to more context on how and why we make this claim."></a></p>
 	</section>
-	<section class="invoked positive response alert alert-warning">
+	<section class="positive response alert alert-warning">
 		<h2>Yes.</h2>
 		<p>One or more people who worked on $movie have either collaborated with Roman Polanski or publicly expressed support for him. <a href="#further-info" class="icon-info-sign alert-error" title="Link to more context on how and why we make this claim."></a></p>
 	</section>

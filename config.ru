@@ -1,3 +1,3 @@
-require File.join(File.dirname(__FILE__), 'server.rb')
+require './server.rb'
 
 run Sinatra::Application

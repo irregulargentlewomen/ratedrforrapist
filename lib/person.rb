@@ -20,6 +20,6 @@ class Person
   end
 
   def url
-    "http://api.omdb.org/3/person/#{id}/credits?api_key=#{api_key}"
+    "http://api.themoviedb.org/3/person/#{id}/credits?api_key=#{api_key}"
   end
 end
