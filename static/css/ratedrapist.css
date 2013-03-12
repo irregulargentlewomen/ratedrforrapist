@@ -19,6 +19,14 @@ section.alert {
 }
 section.alert.invoked {
 	display: block;
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	width: 50%;
+	z-index: 10;
+}
+section.alert-error.invoked {
+	top: 50%;
 }
 .response h2 {
 	text-align: center;

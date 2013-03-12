@@ -15,11 +15,9 @@ IrregularGentlewomen.afterSearch = {
         } else if(data.disambiguate) {
             IrregularGentlewomen.populateDisambiguator(data.disambiguate);
         } else if (data.blacklisted) {
-    	    $('.positive').addClass("invoked");
-            $('.negative').removeClass("invoked");
+    	    $('.positive.response').addClass("invoked");
         } else {
-            $('.negative').addClass("invoked");
-            $('.positive').removeClass("invoked");
+            $('.negative.response').addClass("invoked");
         }
     },
     error: function() {
