@@ -28,7 +28,6 @@ class MovieSearchResults < SimpleDelegator
   class Result
     attr_reader :title, :id
     def initialize(attrs)
-      raise attrs.to_yaml
       @title = attrs['title']
       @id = attrs['id']
       @release_date = DateTime.strptime(attrs['release_date'], '%Y-%m-%d')
