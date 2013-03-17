@@ -31,7 +31,10 @@ get '/search' do
     return json(error: 'please search by either movie title or movie id')
   end
   
+
+  logger.info movie.blacklisted_cast_and_crew.inspect
   json({
-    blacklisted: movie.has_blacklisted_cast_or_crew?
+    blacklisted: movie.has_blacklisted_cast_or_crew?,
+    blacklisted_cast_and_crew: movie.blacklisted_cast_and_crew
   })
 end

@@ -125,6 +125,13 @@ describe 'POST /search' do
           result.should have_key 'blacklisted'
           result['blacklisted'].should be_true
         end
+
+        it 'responds with json including the id of the blacklisted person' do
+          result = JSON.parse(last_response.body)
+          result.should have_key 'blacklisted_cast_and_crew'
+          result['blacklisted_cast_and_crew'].first.should have_key 'id'
+          result['blacklisted_cast_and_crew'].first['id'].should == 287
+        end
       end
     end
   end

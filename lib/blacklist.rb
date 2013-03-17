@@ -1,5 +1,5 @@
 class Blacklist
-  def self.check(ids)
-    DB[:blacklist].filter(:id => ids).count > 0
+  def self.filtered_by_id(ids)
+    DB[:blacklist].filter(:id => ids)
   end
 end

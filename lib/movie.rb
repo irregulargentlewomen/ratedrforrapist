@@ -8,11 +8,15 @@ class Movie
   end
 
   def has_blacklisted_cast_or_crew?
-    Blacklist.check(cast_and_crew.map {|x| x['id']})
+    blacklisted_cast_and_crew.length > 0
+  end
+
+  def blacklisted_cast_and_crew
+    @blacklisted_cast_and_crew ||= cast_and_crew.select {|x| ids_of_blacklisted_cast_and_crew.include? x['id']}
   end
 
   def cast_and_crew
-    api_response_body['cast'] + api_response_body['crew']
+    @cast_and_crew ||= api_response_body['cast'] + api_response_body['crew']
   end
 
   def release_year
@@ -25,9 +29,8 @@ class Movie
     @api_response_body ||= get_unless_down
   end
 
-  def get_cast_and_crew
-    response_body = get_unless_down
-    response_body['cast'] + response_body['crew']
+  def ids_of_blacklisted_cast_and_crew
+    @ids_of_blacklisted_cast_and_crew ||= Blacklist.filtered_by_id(cast_and_crew.map {|x| x['id']}).select_map(:id)
   end
 
   def url
