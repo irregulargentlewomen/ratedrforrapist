@@ -2,6 +2,7 @@ require 'rack/test'
 ENV['RACK_ENV'] = 'test'
 
 require_relative '../server'
+require_relative '../db/reload_schema'
 
 # setup test environment
 set :environment, :test
