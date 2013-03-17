@@ -26,7 +26,7 @@ describe 'POST /search' do
         }.to_json)
       }
       before do
-        post '/search', :title => 'title'
+        get '/search', title: 'title'
       end
 
       it 'responds with a 200' do
@@ -64,7 +64,7 @@ describe 'POST /search' do
           and_return(second_api_response)
 
 
-        post '/search', :title => 'title'
+        get '/search', :title => 'title'
       end
 
       context "and the search turns up no one blacklisted" do
@@ -135,7 +135,7 @@ describe 'POST /search' do
         with("http://api.omdb.org/3/movie/0/casts?api_key=key").
         and_return(api_response)
 
-      post '/search', :id => 0
+      get '/search', :id => 0
     end
 
     context "and the search turns up no one blacklisted" do
