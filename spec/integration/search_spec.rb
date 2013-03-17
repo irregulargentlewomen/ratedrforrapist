@@ -4,7 +4,7 @@ describe 'POST /search' do
   context "when given a title" do
     before do
       HTTParty.stub(:get).
-        with("http://api.omdb.org/3/search/movie?query=title&api_key=key").
+        with("http://api.themoviedb.org/3/search/movie?query=title&api_key=key", :headers => {"Accept"=>"application/json"}).
         and_return(api_response)
     end
 
@@ -60,7 +60,7 @@ describe 'POST /search' do
       }
       before do
         HTTParty.stub(:get).
-          with("http://api.omdb.org/3/movie/550/casts?api_key=key").
+          with("http://api.themoviedb.org/3/movie/550/casts?api_key=key", :headers => {"Accept"=>"application/json"}).
           and_return(second_api_response)
 
 
@@ -132,7 +132,7 @@ describe 'POST /search' do
   context "when given an id" do
     before do
       HTTParty.stub(:get).
-        with("http://api.omdb.org/3/movie/0/casts?api_key=key").
+        with("http://api.themoviedb.org/3/movie/0/casts?api_key=key", :headers => {"Accept"=>"application/json"}).
         and_return(api_response)
 
       get '/search', :id => 0
