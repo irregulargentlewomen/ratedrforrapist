@@ -1,3 +1,5 @@
+About
+=====
 Rated R For Rapist provides information about whether a movie has been made in part by people who have chosen to collaborate with or otherwise support Roman Polanski.
 
 The interested user may wish to read any or all of the following texts related to <em>People of the State of California v. Roman Raymond Polanski</em> and the ramifications thereof:
@@ -5,6 +7,10 @@ The interested user may wish to read any or all of the following texts related t
 * [What's "Unlawful Sexual Intercourse"?](http://www.slate.com/articles/news_and_politics/explainer/2009/09/whats_unlawful_sexual_intercourse.single.html), by Brian Palmer
 * [Reminder: Roman Polanski raped a child](http://www.salon.com/2009/09/28/polanski_arrest/), by Kate Harding
 * [Six Degrees of Roman Polanski](http://mommyish.com/stuff/six-degrees-of-roman-polanski-361/), by Eve Vawter
+
+Installation
+============
+This is a Sinatra project, and we run Sequel for the ORM against MySQL.
 
 Copyright and licensing
 =======================
@@ -30,8 +36,6 @@ The Irregular Gentlewomen make no claim to complete accuracy in the results prov
 * [SACD](http://www.sacd.fr/Tous-les-signataires-de-la-petition-All-signing-parties.1341.0.html)
 * [YouTube](http://www.youtube.com/watch?v=yyx4E51ZCns)
 
-(What is the script actually querying?)
-
 It is possible, indeed probable, indeed certain, that there are further collaborators and supporters of Polanski's career and decisions. (We have not gone looking for any of the many op-eds written in 2009 to include the authors thereof, for example.)
 
 In short: Roman Polanski has been working in the film industry, American and European, for a very long time. He is undeniably a talented filmmaker and therefore enjoys the support of many of his fellow filmmakers. Because we live in a society which excuses, minimizes, and avoids thinking about rape, he has been able to retain that support even though he is an admitted rapist.
@@ -40,15 +44,14 @@ We are not interested in debating, discussing, or engaging with the question of 
 
 These are our premises; we do not intend to defend or explain them beyond this statement. 
 
-&mdash; Elizabeth Yalkut and Betsy Haibel, November 2012
+&mdash; Elizabeth Yalkut and Betsy Haibel, March 2013
 
 To Do
 =====
 * create a decent title graphic
 * test the CSS on actual mobile devices
 * clean up the invocation JS
-* write up installation instructions
-* play with the embedded fonts for the Polanski quotation
+* migrate CSS to scss
 * add documentation comments to CSS and HTML
 * refine language in further-info alert
 * set up cron job to keep the list updated
