@@ -38,7 +38,7 @@ The Irregular Gentlewomen make no claim to complete accuracy in the results prov
 
 It is possible, indeed probable, indeed certain, that there are further collaborators and supporters of Polanski's career and decisions. (We have not gone looking for any of the many op-eds written in 2009 to include the authors thereof, for example.)
 
-In short: Roman Polanski has been working in the film industry, American and European, for a very long time. He is undeniably a talented filmmaker and therefore enjoys the support of many of his fellow filmmakers. Because we live in a society which excuses, minimizes, and avoids thinking about rape, he has been able to retain that support even though he is an admitted rapist.
+In short: Roman Polanski has been working in the film industry, American and European, for decades. He is undeniably a talented filmmaker and therefore enjoys the support of many of his fellow filmmakers. Because we live in a society which excuses, minimizes, and avoids thinking about rape, he has been able to retain that support even though he is an admitted rapist.
 
 We are not interested in debating, discussing, or engaging with the question of whether Polanski's life, history, and/or talent provide mitigating circumstances; this project operates on the assumptions that (a) drugging and raping a thirteen-year-old is not an excusable action, (b) to attempt to excuse such an action allies one with the rapist rather than the survivor, and (c) to choose not to support, financially or otherwise, the work of a rapist or those who support a rapist is an ethical action. Many people &mdash; including both the authors of this project &mdash; have independently made such a choice; this tool is meant only to provide information to make it easier to follow through on that choice.
 
@@ -50,7 +50,7 @@ To Do
 =====
 * create a decent title graphic
 * test the CSS on actual mobile devices
-* clean up the invocation JS
+* clean up the invocation JS workflow
 * migrate CSS to scss
 * add documentation comments to CSS and HTML
 * refine language in further-info alert
