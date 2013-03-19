@@ -1,10 +1,14 @@
-@import url(http://fonts.googleapis.com/css?family=Alegreya);
+@import url(http://fonts.googleapis.com/css?family=Oxygen|Limelight|Gilda+Display);
+/* Resetting fonts */
+body, .alert, input, button, p > cite {
+	font-family: Oxygen, sans;
+}
 body {
 	background-color: #f5f5f5;
 	background-color: rgba(245, 245, 245, .3);
 }
 h1 {
-	font-family: Alegreya, serif;
+	font-family: Limelight, serif;
 	text-align: center;
 }
 cite.title {
@@ -55,7 +59,7 @@ section.alert-error.invoked {
 }
 .ohmygod p {
 	color: #DF2922;
-	font-family: Alegreya, serif;
+	font-family: "Gilda Display", serif;
 	font-size: 22px;
 	font-size: 2.2rem;
 	text-shadow: 2px 2px 2px 2px #000;
