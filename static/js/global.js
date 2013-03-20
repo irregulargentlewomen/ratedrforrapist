@@ -65,22 +65,22 @@ IrregularGentlewomen.populateDisambiguator = function(data) {
     section.addClass('invoked');
 }
 
-// IrregularGentlewomen.populateBlacklist = function(data) {
-//     var section = $('.blacklist'),
-//         list = section.find('ul');
+IrregularGentlewomen.populateBlacklist = function(data) {
+    var section = $('.blacklist'),
+        list = section.find('ul');
 
-//     list.html('');
-//     for(var i = data.length-1; i >= 0; i--) {
-//         list.append(
-//             '<li>' +
-//             data[i].name +
-//             ' (' +
-//             data[i].role +
-//             ")</li>"
-//         );
-//     }
-//     section.addClass('invoked');
-// }
+    list.html('');
+    for(var i = data.length-1; i >= 0; i--) {
+        list.append(
+            '<li>' +
+            data[i].name +
+            ' (' +
+            data[i].role +
+            ")</li>"
+        );
+    }
+    section.addClass('invoked');
+}
 
 $(document).ready(function () {
     $('form').submit(function(e){
@@ -90,5 +90,6 @@ $(document).ready(function () {
     $('.disambiguation').on('click', 'li a', function(e){
         e.preventDefault();
         IrregularGentlewomen.castSearch(e.target);
+        $('.response .movie-title').html(e.target.innerHTML);
     });
 });
