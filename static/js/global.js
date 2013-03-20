@@ -9,18 +9,18 @@ var IrregularGentlewomen = IrregularGentlewomen || {};
 
 IrregularGentlewomen.afterSearch = {
     success: function(data) {
-        console.log(data);
         if(data.error) {
             IrregularGentlewomen.afterSearch.error();
         } else if(data.disambiguate) {
             IrregularGentlewomen.populateDisambiguator(data.disambiguate);
         } else if (data.blacklisted) {
     	    $('.positive.response').addClass("invoked");
+            IrregularGentlewomen.populateBlacklist(data.blacklisted_cast_and_crew);
         } else {
             $('.negative.response').addClass("invoked");
         }
     },
-    error: function() {
+    error: function(data) {
         alert('try again');
     }
 };
@@ -49,6 +49,7 @@ IrregularGentlewomen.populateDisambiguator = function(data) {
         list = section.find('ul');
 
     list.html('');
+    //not sure these actually go here
     $('.positive').removeClass("invoked");
     $('.negative').removeClass("invoked");
 
@@ -63,6 +64,23 @@ IrregularGentlewomen.populateDisambiguator = function(data) {
     }
     section.addClass('invoked');
 }
+
+// IrregularGentlewomen.populateBlacklist = function(data) {
+//     var section = $('.blacklist'),
+//         list = section.find('ul');
+
+//     list.html('');
+//     for(var i = data.length-1; i >= 0; i--) {
+//         list.append(
+//             '<li>' +
+//             data[i].name +
+//             ' (' +
+//             data[i].role +
+//             ")</li>"
+//         );
+//     }
+//     section.addClass('invoked');
+// }
 
 $(document).ready(function () {
     $('form').submit(function(e){
