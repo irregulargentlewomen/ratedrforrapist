@@ -15,5 +15,4 @@ group :development, :test do
   gem 'jasmine'
 
   gem 'compass'
-  gem 'compass_twitter_bootstrap'
 end
