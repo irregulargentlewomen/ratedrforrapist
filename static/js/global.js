@@ -13,16 +13,25 @@ IrregularGentlewomen.afterSearch = {
             IrregularGentlewomen.afterSearch.error();
         } else if(data.disambiguate) {
             IrregularGentlewomen.populateDisambiguator(data.disambiguate);
+            IrregularGentlewomen.changePageState('state-disambiguate');
         } else if (data.blacklisted) {
-    	    $('.positive.response').addClass("invoked");
             IrregularGentlewomen.populateBlacklist(data.blacklisted_cast_and_crew);
+            IrregularGentlewomen.changePageState('state-positive');           
         } else {
-            $('.negative.response').addClass("invoked");
+            IrregularGentlewomen.changePageState('state-negative');
         }
     },
     error: function(data) {
         alert('try again');
     }
+};
+
+IrregularGentlewomen.currentPageState = "";
+
+IrregularGentlewomen.changePageState = function(state) {
+    $('body').removeClass(IrregularGentlewomen.currentPageState);
+    IrregularGentlewomen.currentPageState = state;
+    $('body').addClass(state);
 };
 
 IrregularGentlewomen.titleSearch = function(form) {
@@ -32,7 +41,7 @@ IrregularGentlewomen.titleSearch = function(form) {
         success: IrregularGentlewomen.afterSearch.success,
         error: IrregularGentlewomen.afterSearch.error
     });
-}
+};
 
 IrregularGentlewomen.castSearch = function(link) {
     $.ajax({
@@ -42,45 +51,29 @@ IrregularGentlewomen.castSearch = function(link) {
         error: IrregularGentlewomen.afterSearch.error        
     });
     $(link).addClass('selected');
-}
+};
 
 IrregularGentlewomen.populateDisambiguator = function(data) {
-    var section = $('.disambiguation'),
-        list = section.find('ul');
-
-    list.html('');
-    //not sure these actually go here
-    $('.positive').removeClass("invoked");
-    $('.negative').removeClass("invoked");
-
-    for(var i = data.length-1; i >= 0; i--) {
-        list.append(
-            '<li><a href="/search?id=' +
-            data[i].id +
-            '">' +
-            data[i].title +
-            "</a></li>"
-        );
-    }
-    section.addClass('invoked');
-}
+    IrregularGentlewomen.populateList('.disambiguation', data, function(x) {
+        return '<a href="/search?id=' + x.id + '">' + x.title + "</a>"
+    });
+};
 
 IrregularGentlewomen.populateBlacklist = function(data) {
-    var section = $('.blacklist'),
-        list = section.find('ul');
+    IrregularGentlewomen.populateList('.blacklist', data, function(x) {
+        return x.name + ' (' + x.role + ")"
+    }); 
+};
 
+IrregularGentlewomen.populateList = function(listSectionClass, data, stringFunction) {
+    var list = $(listSectionClass + ' ul');
     list.html('');
     for(var i = data.length-1; i >= 0; i--) {
         list.append(
-            '<li>' +
-            data[i].name +
-            ' (' +
-            data[i].role +
-            ")</li>"
+            '<li>' + stringFunction(data[i]) + "</li>"
         );
     }
-    section.addClass('invoked');
-}
+};
 
 $(document).ready(function () {
     $('form').submit(function(e){

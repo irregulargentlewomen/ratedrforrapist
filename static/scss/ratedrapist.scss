@@ -25,17 +25,36 @@ form {
 /* hides the results and further-info elements until invoked */
 section.alert {
   display: none;
-}
-section.alert.invoked {
-  display: block;
   position: absolute;
   top: 25%;
   left: 25%;
   width: 50%;
   z-index: 10;
 }
-section.alert-error.invoked {
+section.alert-error {
   top: 50%;
+}
+@mixin invoked {
+  display: block;
+}
+
+/* define application states */
+body.state-disambiguate {
+  .disambiguation {
+    @include invoked;
+  }
+}
+
+body.state-positive {
+  .blacklist, .positive.response {
+    @include invoked;
+  }
+}
+
+body.state-negative {
+  .negative.response {
+    @include invoked;
+  }
 }
 
 .response {
@@ -78,7 +97,7 @@ section.alert-error.invoked {
     font-weight: 900;
   }
 }
-.ohmygod 
+
 .the-question span {
   font-size: 16px;
   font-size: 1.6rem;
