@@ -13,12 +13,13 @@ IrregularGentlewomen.afterSearch = {
             IrregularGentlewomen.afterSearch.error();
         } else if(data.disambiguate) {
             IrregularGentlewomen.populateDisambiguator(data.disambiguate);
-            IrregularGentlewomen.changePageState('state-disambiguate');
+            IrregularGentlewomen.pushPageState('state-disambiguate');
         } else if (data.blacklisted) {
             IrregularGentlewomen.populateBlacklist(data.blacklisted_cast_and_crew);
-            IrregularGentlewomen.changePageState('state-positive');           
+            IrregularGentlewomen.pushPageState('state-positive');           
         } else {
-            IrregularGentlewomen.changePageState('state-negative');
+            Irregulargentlewomen.clearBlacklist();
+            IrregularGentlewomen.pushPageState('state-negative');
         }
     },
     error: function(data) {
@@ -26,11 +27,11 @@ IrregularGentlewomen.afterSearch = {
     }
 };
 
-IrregularGentlewomen.currentPageState = "";
+IrregularGentlewomen.pageStates = [""];
 
-IrregularGentlewomen.changePageState = function(state) {
-    $('body').removeClass(IrregularGentlewomen.currentPageState);
-    IrregularGentlewomen.currentPageState = state;
+IrregularGentlewomen.pushPageState = function(state) {
+    $('body').removeClass(IrregularGentlewomen.pageStates[-1]);
+    IrregularGentlewomen.pageStates.push(state);
     $('body').addClass(state);
 };
 
@@ -63,6 +64,10 @@ IrregularGentlewomen.populateBlacklist = function(data) {
     IrregularGentlewomen.populateList('.blacklist', data, function(x) {
         return x.name + ' (' + x.role + ")"
     }); 
+};
+
+IrregularGentlewomen.clearBlacklist = function() {
+    $('.blacklist ul').html(''); 
 };
 
 IrregularGentlewomen.populateList = function(listSectionClass, data, stringFunction) {
