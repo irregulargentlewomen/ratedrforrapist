@@ -37,43 +37,48 @@ section.alert.invoked {
 section.alert-error.invoked {
   top: 50%;
 }
-.response h2 {
-  text-align: center;
+
+.response {
+  h2 {
+    text-align: center;
+  }
+  .icon-info-sign {
+    background-color: transparent;
+  }
+  a.icon-info-sign {
+    display: inline-block;
+    &:hover {
+      text-decoration: none;
+    }
+    &:hover, &:visited {
+      color: #DF2922;
+    }
+  }
 }
-.response .icon-info-sign {
-  background-color: transparent;
-}
-.response a.icon-info-sign {
-  display: inline-block;
-}
-.response a.icon-info-sign:hover {
-  text-decoration: none;
-}
-.response a.icon-info-sign:hover,
-.response a.icon-info-sign:visited {
-  color: #DF2922;
-}
+
 .alert p {
   font-size: 16px;
   font-size: 1.6rem;
 }
+
 .ohmygod {
   background-color: #fff;
   border-color: #DF2922;
   box-shadow: 5px 5px 10px #000;
+  p {
+    color: #DF2922;
+    font-family: "Gilda Display", serif;
+    font-size: 22px;
+    font-size: 2.2rem;
+    text-shadow: 2px 2px 2px 2px #000;
+  }
+  .what {
+    font-size: 34em;
+    font-size: 3.4rem;
+    font-weight: 900;
+  }
 }
-.ohmygod p {
-  color: #DF2922;
-  font-family: "Gilda Display", serif;
-  font-size: 22px;
-  font-size: 2.2rem;
-  text-shadow: 2px 2px 2px 2px #000;
-}
-.ohmygod .what {
-  font-size: 34em;
-  font-size: 3.4rem;
-  font-weight: 900;
-}
+.ohmygod 
 .the-question span {
   font-size: 16px;
   font-size: 1.6rem;
