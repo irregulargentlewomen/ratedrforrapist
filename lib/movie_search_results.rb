@@ -30,11 +30,11 @@ class MovieSearchResults < SimpleDelegator
     def initialize(attrs)
       @title = attrs['title']
       @id = attrs['id']
-      @release_date = DateTime.strptime(attrs['release_date'], '%Y-%m-%d')
+      @release_date = attrs['release_date'] ? DateTime.strptime(attrs['release_date'], '%Y-%m-%d') : nil
     end
 
     def year
-      @release_date.strftime("%Y")
+      @release_date ? @release_date.strftime("%Y") : 'unknown year'
     end
   end
 end
