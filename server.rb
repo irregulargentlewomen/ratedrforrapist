@@ -14,6 +14,10 @@ require_relative 'lib/blacklist'
 set :app_file, __FILE__
 set :public_folder, File.dirname(__FILE__) + '/static'
 
+get '/' do
+  send_file File.join(settings.public_folder, 'index.html')
+end
+
 get '/search' do
   if params[:title]
     search_results = MovieSearchResults.get(params['title'])
