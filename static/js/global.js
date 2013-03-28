@@ -18,7 +18,7 @@ IrregularGentlewomen.afterSearch = {
             IrregularGentlewomen.populateBlacklist(data.blacklisted_cast_and_crew);
             IrregularGentlewomen.pushPageState('state-positive');           
         } else {
-            Irregulargentlewomen.clearBlacklist();
+            IrregularGentlewomen.clearBlacklist();
             IrregularGentlewomen.pushPageState('state-negative');
         }
     },
@@ -90,4 +90,5 @@ $(document).ready(function () {
         IrregularGentlewomen.castSearch(e.target);
         $('.response .movie-title').html(e.target.innerHTML);
     });
+
 });
