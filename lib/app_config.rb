@@ -5,7 +5,7 @@ require 'ostruct'
 class AppConfig
   class << self
     def load!
-      if File.file? File.join(File.dirname(__FILE__), '..', 'config.yml'
+      if File.file? File.join(File.dirname(__FILE__), '..', 'config.yml')
         @config = YAML.load_file(File.join(File.dirname(__FILE__), '..', 'config.yml'))[ENV['RACK_ENV']]
       else
         @config = {
@@ -18,7 +18,7 @@ class AppConfig
             'host' => ENV["DATABASE_HOST"]
           }
         }
-      )
+      end
     end
 
     def api_key
