@@ -8,6 +8,10 @@ gem 'sequel'
 gem 'mysql2'
 gem 'rake'
 
+group :production do
+  gem 'pg'
+end
+
 group :development, :test do
   gem 'rspec'
   gem 'rack-test'
