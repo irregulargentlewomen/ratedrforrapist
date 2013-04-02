@@ -20,11 +20,6 @@ class AppConfig
         }
       )
     end
-  end
-end
-
-AppConfig.load!
-    end
 
     def api_key
       @config['api_key']
