@@ -5,7 +5,25 @@ require 'ostruct'
 class AppConfig
   class << self
     def load!
-      @config = YAML.load_file(File.join(File.dirname(__FILE__), '..', 'config.yml'))[ENV['RACK_ENV']]
+      if File.file? File.join(File.dirname(__FILE__), '..', 'config.yml'
+        @config = YAML.load_file(File.join(File.dirname(__FILE__), '..', 'config.yml'))[ENV['RACK_ENV']]
+      else
+        @config = {
+          'api_key' => ENV['API_KEY'],
+          'database' => {
+            'adapter' => ENV["DATABASE_ADAPTER"],
+            'name' => ENV["DATABASE_NAME"],
+            'user' => ENV["DATABASE_USER"],
+            'password' => ENV["DATABASE_PASSWORD"],
+            'host' => ENV["DATABASE_HOST"]
+          }
+        }
+      )
+    end
+  end
+end
+
+AppConfig.load!
     end
 
     def api_key
@@ -17,7 +35,9 @@ class AppConfig
     end
 
     def setup_db
-      Sequel.mysql2(database.name,
+      Sequel.send(
+        database.adapter,
+        database.name,
         :user => database.user,
         :password => AppConfig.database.password,
         :host => AppConfig.database.host
