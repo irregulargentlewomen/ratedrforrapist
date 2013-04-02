@@ -1,0 +1,1856 @@
+--- 
+blacklist: 
+  118772: 
+    :id: 118772
+    :name: Abderrahmane Sissako
+  3490: 
+    :id: 3490
+    :name: Adrien Brody
+  96972: 
+    :id: 96972
+    :name: Alain Berliner
+  35927: 
+    :id: 35927
+    :name: Alain Corneau
+  930355: 
+    :id: 930355
+    :name: Alain Gilbert
+  30632: 
+    :id: 30632
+    :name: Alain Jessua
+  239043: 
+    :id: 239043
+    :name: "Alain Jessua "
+  552372: 
+    :id: 552372
+    :name: Alain Martin
+  64910: 
+    :id: 64910
+    :name: Alain Terzian
+  223: 
+    :id: 223
+    :name: "Alejandro Gonz\xC3\xA1lez I\xC3\xB1\xC3\xA1rritu"
+  543947: 
+    :id: 543947
+    :name: Alexandre Astruc
+  232682: 
+    :id: 232682
+    :name: Astruc Alexandre
+  13235: 
+    :id: 13235
+    :name: Alexander Payne
+  64205: 
+    :id: 64205
+    :name: Alexandre Arcady
+  2949: 
+    :id: 2949
+    :name: Alexandre Desplat
+  11218: 
+    :id: 11218
+    :name: "Alfonso Cuar\xC3\xB3n"
+  1032452: 
+    :id: 1032452
+    :name: Allison Micheletti
+  55387: 
+    :id: 55387
+    :name: "Andrea Sedl\xC3\xA1ckov\xC3\xA1"
+  1040893: 
+    :id: 1040893
+    :name: "Andr\xC3\xA9a Sedlackova"
+  227217: 
+    :id: 227217
+    :name: Andrzej Krakowski
+  96627: 
+    :id: 96627
+    :name: "Andr\xC3\xA9 T\xC3\xA9chin\xC3\xA9"
+  7276: 
+    :id: 7276
+    :name: Anne Consigny
+  233263: 
+    :id: 233263
+    :name: Anthony Byrne
+  96927: 
+    :id: 96927
+    :name: Antony Cordier
+  65540: 
+    :id: 65540
+    :name: Ariel Dorfman
+  28626: 
+    :id: 28626
+    :name: Arielle Dombasle
+  111687: 
+    :id: 111687
+    :name: "Arthur Joff\xC3\xA9"
+  2414: 
+    :id: 2414
+    :name: Artus de Penguern
+  535478: 
+    :id: 535478
+    :name: Artus De Penguern
+  146524: 
+    :id: 146524
+    :name: Artus de Penguern
+  18514: 
+    :id: 18514
+    :name: Asia Argento
+  23393: 
+    :id: 23393
+    :name: Barbet Schroeder
+  1031664: 
+    :id: 1031664
+    :name: Beatrice Sisul
+  186431: 
+    :id: 186431
+    :name: Anna Bernard
+  555905: 
+    :id: 555905
+    :name: Bernard Stora
+  411038: 
+    :id: 411038
+    :name: "Bernard-Henri L\xC3\xA9vy"
+  4956: 
+    :id: 4956
+    :name: Bernardo Bertolucci
+  1053172: 
+    :id: 1053172
+    :name: Bertrand Mandico
+  20556: 
+    :id: 20556
+    :name: Bertrand Tavernier
+  11091: 
+    :id: 11091
+    :name: Brett Ratner
+  220411: 
+    :id: 220411
+    :name: Brett Ratner
+  35073: 
+    :id: 35073
+    :name: Bruno Coulais
+  1075116: 
+    :id: 1075116
+    :name: Bruno de Almeida
+  7795: 
+    :id: 7795
+    :name: Buck Henry
+  1137059: 
+    :id: 1137059
+    :name: "Carmen Mu\xC3\xB1oz"
+  17576: 
+    :id: 17576
+    :name: Carole Laure
+  17424: 
+    :id: 17424
+    :name: Carole Scotta
+  19369: 
+    :id: 19369
+    :name: Caroline Brunner
+  589491: 
+    :id: 589491
+    :name: Caroline Deruas-Garrel
+  24471: 
+    :id: 24471
+    :name: Charles Nemes
+  584381: 
+    :id: 584381
+    :name: "Charles N\xC3\xA9m\xC3\xA8s"
+  578937: 
+    :id: 578937
+    :name: "Charles Nem\xC3\xA8s"
+  584380: 
+    :id: 584380
+    :name: "Charles N\xC3\xA9m\xC3\xA8s"
+  237849: 
+    :id: 237849
+    :name: Charlotte Silvera
+  190299: 
+    :id: 190299
+    :name: Christine Devine
+  70221: 
+    :id: 70221
+    :name: Christian Carion
+  24391: 
+    :id: 24391
+    :name: Christian Gion
+  43993: 
+    :id: 43993
+    :name: Christophe Barratier
+  74887: 
+    :id: 74887
+    :name: Christophe Van Rompaey
+  127491: 
+    :id: 127491
+    :name: Claude Lanzmann
+  16862: 
+    :id: 16862
+    :name: Claude Lelouch
+  18209: 
+    :id: 18209
+    :name: Claude Miller
+  1961: 
+    :id: 1961
+    :name: Claude Pinoteau
+  27436: 
+    :id: 27436
+    :name: Constantin Costa-Gavras
+  252641: 
+    :id: 252641
+    :name: Costa-Gavras
+  228787: 
+    :id: 228787
+    :name: "Costa-Gavras "
+  69403: 
+    :id: 69403
+    :name: "C\xC3\xA9cile Telerman"
+  228775: 
+    :id: 228775
+    :name: "C\xC3\xA9cile Telerman "
+  28974: 
+    :id: 28974
+    :name: Damon Lindelof
+  228779: 
+    :id: 228779
+    :name: Daniel Champagnon
+  115489: 
+    :id: 115489
+    :name: Daniela Schmidt
+  1011392: 
+    :id: 1011392
+    :name: Daniel Treichler
+  38494: 
+    :id: 38494
+    :name: Daniel Vigne
+  260634: 
+    :id: 260634
+    :name: Daniel Vigne
+  20028: 
+    :id: 20028
+    :name: Danis Tanovi?
+  239344: 
+    :id: 239344
+    :name: "Dani\xC3\xA8le Dubroux"
+  1963: 
+    :id: 1963
+    :name: "Dani\xC3\xA8le Thompson"
+  2240: 
+    :id: 2240
+    :name: Darius Khondji
+  6431: 
+    :id: 6431
+    :name: Darren Aronofsky
+  78226: 
+    :id: 78226
+    :name: David Charhon
+  10968: 
+    :id: 10968
+    :name: David Heyman
+  5602: 
+    :id: 5602
+    :name: David Lynch
+  26513: 
+    :id: 26513
+    :name: Debra Winger
+  77005: 
+    :id: 77005
+    :name: Diane Kurys
+  537346: 
+    :id: 537346
+    :name: "Diane von F\xC3\xBCrstenberg"
+  585168: 
+    :id: 585168
+    :name: Didier Martiny
+  1120546: 
+    :id: 1120546
+    :name: Dieter Diependaele
+  73744: 
+    :id: 73744
+    :name: "Dominique Cr\xC3\xA8vecoeur"
+  1054631: 
+    :id: 1054631
+    :name: Dorna van Rouveroy
+  239198: 
+    :id: 239198
+    :name: Edouard Niermans
+  1143009: 
+    :id: 1143009
+    :name: Edwin Brienen
+  1136351: 
+    :id: 1136351
+    :name: Edwin Brienen
+  128862: 
+    :id: 128862
+    :name: Elbert van Strien
+  211109: 
+    :id: 211109
+    :name: Elbert van Strien
+  81782: 
+    :id: 81782
+    :name: Elie Chouraqui
+  145740: 
+    :id: 145740
+    :name: Elie Chouraqui
+  1018730: 
+    :id: 1018730
+    :name: "\xC3\x89lie Chouraqui"
+  39195: 
+    :id: 39195
+    :name: Elsa Zylberstein
+  15254: 
+    :id: 15254
+    :name: Emir Kusturica
+  194834: 
+    :id: 194834
+    :name: Eric Watton
+  228715: 
+    :id: 228715
+    :name: Esteban Carvajal Alegria
+  121531: 
+    :id: 121531
+    :name: Esteban Carvajal-Alegria
+  76907: 
+    :id: 76907
+    :name: Esteban Carvajal-Alegria
+  132229: 
+    :id: 132229
+    :name: Etienne Faure
+  132230: 
+    :id: 132230
+    :name: Etienne Faure
+  31894: 
+    :id: 31894
+    :name: Ettore Scola
+  72611: 
+    :id: 72611
+    :name: Fabrice Du Welz
+  194846: 
+    :id: 194846
+    :name: Fabrice Ziolkowski
+  96679: 
+    :id: 96679
+    :name: Fabrice Ziolkowski
+  96678: 
+    :id: 96678
+    :name: Fabrice Ziolkowski
+  20234: 
+    :id: 20234
+    :name: Fanny Ardant
+  5125: 
+    :id: 5125
+    :name: Fatih Akin
+  37526: 
+    :id: 37526
+    :name: Fernando Trueba
+  35904: 
+    :id: 35904
+    :name: Florence Quentin
+  24693: 
+    :id: 24693
+    :name: "Fran\xC3\xA7ois de Lamothe"
+  71625: 
+    :id: 71625
+    :name: "Fran\xC3\xA7ois Margolin"
+  20557: 
+    :id: 20557
+    :name: "Fr\xC3\xA9d\xC3\xA9ric Bourboulon"
+  144762: 
+    :id: 144762
+    :name: Frederic Mermoud
+  258: 
+    :id: 258
+    :name: "Gael Garc\xC3\xADa Bernal"
+  49855: 
+    :id: 49855
+    :name: "Ga\xC3\xABl Morel"
+  128107: 
+    :id: 128107
+    :name: Gianni Amelio
+  25081: 
+    :id: 25081
+    :name: "Gilles B\xC3\xA9hat"
+  94098: 
+    :id: 94098
+    :name: Gillian Jacobs
+  223988: 
+    :id: 223988
+    :name: Giuseppe Bertolucci
+  65314: 
+    :id: 65314
+    :name: Giuseppe Tornatore
+  585483: 
+    :id: 585483
+    :name: "Guila Braoud\xC3\xA9"
+  10828: 
+    :id: 10828
+    :name: Guillermo del Toro
+  125344: 
+    :id: 125344
+    :name: "Guy S\xC3\xA9ligmann"
+  59839: 
+    :id: 59839
+    :name: Harvey Weinstein
+  1074505: 
+    :id: 1074505
+    :name: Harvey Weinstein
+  213457: 
+    :id: 213457
+    :name: Henning Carlsen
+  3564: 
+    :id: 3564
+    :name: "Herv\xC3\xA9 de Luze"
+  1112: 
+    :id: 1112
+    :name: Hugo Luczyc-Wyhowski
+  77085: 
+    :id: 77085
+    :name: Ian Brady
+  6553: 
+    :id: 6553
+    :name: Isabelle Adjani
+  280635: 
+    :id: 280635
+    :name: "Isabelle Brou\xC3\xA9"
+  78475: 
+    :id: 78475
+    :name: "Isabelle G\xC3\xA9linas"
+  17882: 
+    :id: 17882
+    :name: Isabelle Huppert
+  240032: 
+    :id: 240032
+    :name: Jacob Berger
+  54284: 
+    :id: 54284
+    :name: Jacqueline Bouchard
+  584032: 
+    :id: 584032
+    :name: Jacques Bral
+  584034: 
+    :id: 584034
+    :name: Jacques Bral
+  584039: 
+    :id: 584039
+    :name: Jacques Bral
+  584033: 
+    :id: 584033
+    :name: Jacques Bral
+  237848: 
+    :id: 237848
+    :name: Jacques Fansten
+  587178: 
+    :id: 587178
+    :name: Jacques Lassalle
+  20030: 
+    :id: 20030
+    :name: Jacques Perrin
+  25069: 
+    :id: 25069
+    :name: Jacques Richard
+  295001: 
+    :id: 295001
+    :name: Jacques Richard
+  590884: 
+    :id: 590884
+    :name: Jacques Rozier
+  237666: 
+    :id: 237666
+    :name: Jacques Rozier
+  56401: 
+    :id: 56401
+    :name: Jan Kounen
+  260837: 
+    :id: 260837
+    :name: Jean Douchet
+  27715: 
+    :id: 27715
+    :name: Jean Labadie
+  210193: 
+    :id: 210193
+    :name: Jean-Charles Tacchella
+  35527: 
+    :id: 35527
+    :name: "Jean-Fran\xC3\xA7ois Balmer"
+  2352: 
+    :id: 2352
+    :name: Jean-Jacques Annaud
+  37451: 
+    :id: 37451
+    :name: Jean-Jacques Beineix
+  25995: 
+    :id: 25995
+    :name: Jean-Jacques Rochut
+  240118: 
+    :id: 240118
+    :name: Jean-Louis Milesi
+  240119: 
+    :id: 240119
+    :name: Jean-Louis Milesi
+  229236: 
+    :id: 229236
+    :name: Jean-Loup Hubert
+  38858: 
+    :id: 38858
+    :name: Jean-Marie Besset
+  229635: 
+    :id: 229635
+    :name: "Jean-Michel Carr\xC3\xA9"
+  25950: 
+    :id: 25950
+    :name: Jean-Paul Rappeneau
+  54222: 
+    :id: 54222
+    :name: "Jean-Paul Salom\xC3\xA9"
+  56209: 
+    :id: 56209
+    :name: Jean-Pierre Dardenne
+  233192: 
+    :id: 233192
+    :name: Jean-Pierre Marois
+  228932: 
+    :id: 228932
+    :name: Jean-Pierre Vergne
+  14812: 
+    :id: 14812
+    :name: Jeanne Moreau
+  548451: 
+    :id: 548451
+    :name: Jeff Wells
+  4904: 
+    :id: 4904
+    :name: "Jennifer Aug\xC3\xA9"
+  3056: 
+    :id: 3056
+    :name: Jeremy Thomas
+  1113129: 
+    :id: 1113129
+    :name: Jeremy Thomas
+  1085269: 
+    :id: 1085269
+    :name: Jeremy Thomas
+  98199: 
+    :id: 98199
+    :name: Jerry Schatzberg
+  140862: 
+    :id: 140862
+    :name: "Joaqu\xC3\xADn Sabina"
+  90758: 
+    :id: 90758
+    :name: John Carchietta
+  4610: 
+    :id: 4610
+    :name: John Landis
+  85: 
+    :id: 85
+    :name: Johnny Depp
+  16294: 
+    :id: 16294
+    :name: Jonathan Demme
+  109183: 
+    :id: 109183
+    :name: Jonathan Klein
+  109730: 
+    :id: 109730
+    :name: Joseph Marino
+  928501: 
+    :id: 928501
+    :name: " Joy Fleury "
+  255050: 
+    :id: 255050
+    :name: "Jo\xC3\xABl Farges"
+  223502: 
+    :id: 223502
+    :name: "Jo\xC3\xABl S\xC3\xA9ria"
+  51894: 
+    :id: 51894
+    :name: Juan Antonio Bayona
+  7482: 
+    :id: 7482
+    :name: Julian Schnabel
+  51483: 
+    :id: 51483
+    :name: Julien Seri
+  38007: 
+    :id: 38007
+    :name: Just Jaeckin
+  49868: 
+    :id: 49868
+    :name: "J\xC3\xA9r\xC3\xB4me Cornuau"
+  1041420: 
+    :id: 1041420
+    :name: Kent Jones
+  164636: 
+    :id: 164636
+    :name: Kim Morgan Greene
+  591265: 
+    :id: 591265
+    :name: Krzysztof Majchrzak
+  185501: 
+    :id: 185501
+    :name: Larry Levine
+  210191: 
+    :id: 210191
+    :name: Laurent Heynemann
+  210192: 
+    :id: 210192
+    :name: Laurent Heynemann
+  36521: 
+    :id: 36521
+    :name: Laurent Heynemann
+  138795: 
+    :id: 138795
+    :name: "Laurent Heynemann  "
+  233531: 
+    :id: 233531
+    :name: Laurent Malet
+  538367: 
+    :id: 538367
+    :name: Laurent Malet
+  20104: 
+    :id: 20104
+    :name: Laurent Petitgirard
+  548703: 
+    :id: 548703
+    :name: "Liria B\xC3\xA9g\xC3\xA9ja"
+  10931: 
+    :id: 10931
+    :name: Lorenzo Semple Jr.
+  77128: 
+    :id: 77128
+    :name: Lorraine Levy
+  16269: 
+    :id: 16269
+    :name: Louis Garrel
+  23397: 
+    :id: 23397
+    :name: Luc Barnier
+  35841: 
+    :id: 35841
+    :name: "Luc B\xC3\xA9raud"
+  45138: 
+    :id: 45138
+    :name: Luc Dardenne
+  4390: 
+    :id: 4390
+    :name: Ludivine Sagnier
+  98971: 
+    :id: 98971
+    :name: Marie Prevost
+  225109: 
+    :id: 225109
+    :name: Mario Martone
+  32375: 
+    :id: 32375
+    :name: Mario Monicelli
+  1017242: 
+    :id: 1017242
+    :name: "Marion de Bla\xC3\xBF"
+  554908: 
+    :id: 554908
+    :name: Mark Urman
+  32451: 
+    :id: 32451
+    :name: Martin Ruhe
+  1032: 
+    :id: 1032
+    :name: Martin Scorsese
+  933201: 
+    :id: 933201
+    :name: Martine Dugowson
+  933054: 
+    :id: 933054
+    :name: "Martine Pag\xC3\xA9"
+  11358: 
+    :id: 11358
+    :name: Maryline Monthieux
+  105344: 
+    :id: 105344
+    :name: Maurizio Trani
+  7144: 
+    :id: 7144
+    :name: Michael Flynn
+  238883: 
+    :id: 238883
+    :name: Michael Flynn
+  171186: 
+    :id: 171186
+    :name: Michael Louis Wells
+  638: 
+    :id: 638
+    :name: Michael Mann
+  196981: 
+    :id: 196981
+    :name: Michael Mann
+  12966: 
+    :id: 12966
+    :name: Michael Goldberg
+  1094006: 
+    :id: 1094006
+    :name: Michel Chevalier
+  39243: 
+    :id: 39243
+    :name: Michel Deville
+  19059: 
+    :id: 19059
+    :name: Michel Ferry
+  67333: 
+    :id: 67333
+    :name: Michel Kammoun
+  87429: 
+    :id: 87429
+    :name: Michel Ocelot
+  3784: 
+    :id: 3784
+    :name: Michel Piccoli
+  25819: 
+    :id: 25819
+    :name: Michele Placido
+  264734: 
+    :id: 264734
+    :name: Miguel Courtois
+  49869: 
+    :id: 49869
+    :name: Miguel Courtois
+  29605: 
+    :id: 29605
+    :name: "Mikael H\xC3\xA5fstr\xC3\xB6m"
+  20206: 
+    :id: 20206
+    :name: Mike Medavoy
+  5342: 
+    :id: 5342
+    :name: Mike Nichols
+  40239: 
+    :id: 40239
+    :name: Milan Kundera
+  28782: 
+    :id: 28782
+    :name: Monica Bellucci
+  1011393: 
+    :id: 1011393
+    :name: Monika Weibel
+  202015: 
+    :id: 202015
+    :name: Natalie Mei Lau
+  17016: 
+    :id: 17016
+    :name: Neil Jordan
+  39502: 
+    :id: 39502
+    :name: Nelly Kaplan
+  19727: 
+    :id: 19727
+    :name: Nicola Pecorini
+  41057: 
+    :id: 41057
+    :name: Jacqueline Nicolas
+  20029: 
+    :id: 20029
+    :name: Nicolas Mauvernay
+  21678: 
+    :id: 21678
+    :name: Olivier Assayas
+  578093: 
+    :id: 578093
+    :name: Franck-Olivier Bonnet
+  1109785: 
+    :id: 1109785
+    :name: "Olivier S\xC3\xA9ror"
+  56194: 
+    :id: 56194
+    :name: Paolo Sorrentino
+  146717: 
+    :id: 146717
+    :name: Pascal Thomas
+  49070: 
+    :id: 49070
+    :name: Pascale Rocard
+  23724: 
+    :id: 23724
+    :name: "Patrice Ch\xC3\xA9reau"
+  37626: 
+    :id: 37626
+    :name: Patrice Leconte
+  35911: 
+    :id: 35911
+    :name: Patrick Bouchitey
+  119377: 
+    :id: 119377
+    :name: "Patrick Braoud\xC3\xA9"
+  141409: 
+    :id: 141409
+    :name: "Patrick Braoud\xC3\xA9 "
+  46391: 
+    :id: 46391
+    :name: Paul Auster
+  928491: 
+    :id: 928491
+    :name: " Paul Auster"
+  253816: 
+    :id: 253816
+    :name: Paul Boujenah
+  5268: 
+    :id: 5268
+    :name: Paulo Branco
+  309: 
+    :id: 309
+    :name: "Pedro Almod\xC3\xB3var"
+  1056745: 
+    :id: 1056745
+    :name: Peter Josie
+  559193: 
+    :id: 559193
+    :name: Petter Skavlan
+  56207: 
+    :id: 56207
+    :name: Philippe Garrel
+  21504: 
+    :id: 21504
+    :name: Pierre Jolivet
+  39153: 
+    :id: 39153
+    :name: Pierre Kalfon
+  1086216: 
+    :id: 1086216
+    :name: Pierre Lhomme
+  17556: 
+    :id: 17556
+    :name: Pierre Lhomme
+  24492: 
+    :id: 24492
+    :name: Pierre Schoendoerffer
+  71405: 
+    :id: 71405
+    :name: Pieter Van Hees
+  72295: 
+    :id: 72295
+    :name: "Rachel No\xC3\xABl"
+  1068379: 
+    :id: 1068379
+    :name: Rachel Noel
+  20430: 
+    :id: 20430
+    :name: Radu Mihaileanu
+  86460: 
+    :id: 86460
+    :name: Redha
+  584483: 
+    :id: 584483
+    :name: "Ren\xC3\xA9 Gainville"
+  553508: 
+    :id: 553508
+    :name: Richard Perez-Pena
+  988643: 
+    :id: 988643
+    :name: Richard Schlesinger
+  81836: 
+    :id: 81836
+    :name: Richard Schlesinger
+  161924: 
+    :id: 161924
+    :name: Robert Cohen
+  14246: 
+    :id: 14246
+    :name: Robert Hossein
+  261938: 
+    :id: 261938
+    :name: Robin Davis
+  35522: 
+    :id: 35522
+    :name: Robin Davis
+  199992: 
+    :id: 199992
+    :name: Roger Andrieux
+  535308: 
+    :id: 535308
+    :name: Roger Andrieux
+  79549: 
+    :id: 79549
+    :name: Romain Slocombe
+  3558: 
+    :id: 3558
+    :name: Ronald Harwood
+  1092410: 
+    :id: 1092410
+    :name: Rosalinde Deville
+  1117827: 
+    :id: 1117827
+    :name: Rui Nogueira
+  1124860: 
+    :id: 1124860
+    :name: Ruud Den Dryver
+  9147: 
+    :id: 9147
+    :name: Salman Rushdie
+  39: 
+    :id: 39
+    :name: Sam Mendes
+  549323: 
+    :id: 549323
+    :name: Sissi Duparc
+  661006: 
+    :id: 661006
+    :name: Sophie Deschamps
+  1075658: 
+    :id: 1075658
+    :name: "Souleymane Ciss\xC3\xA9"
+  571222: 
+    :id: 571222
+    :name: "St\xC3\xA9phane Allagnon"
+  571221: 
+    :id: 571221
+    :name: "St\xC3\xA9phane Allagnon"
+  586624: 
+    :id: 586624
+    :name: "St\xC3\xA9phanie Murat"
+  3224: 
+    :id: 3224
+    :name: Stephen Frears
+  929941: 
+    :id: 929941
+    :name: Stephen Ujlaki
+  1884: 
+    :id: 1884
+    :name: Steven Soderbergh
+  1119551: 
+    :id: 1119551
+    :name: "St\xC3\xA9phan Brodzky"
+  142165: 
+    :id: 142165
+    :name: Suzana Peric
+  35319: 
+    :id: 35319
+    :name: Sylvia Kristel
+  18596: 
+    :id: 18596
+    :name: Taylor Hackford
+  73873: 
+    :id: 73873
+    :name: Teco Celio
+  280: 
+    :id: 280
+    :name: Terry Gilliam
+  1012212: 
+    :id: 1012212
+    :name: Terry Gilliam
+  17447: 
+    :id: 17447
+    :name: Terry Zwigoff
+  122570: 
+    :id: 122570
+    :name: Thierry Chabert
+  1843: 
+    :id: 1843
+    :name: Thomas Jahn
+  3063: 
+    :id: 3063
+    :name: Tilda Swinton
+  1071: 
+    :id: 1071
+    :name: Tom Tykwer
+  941: 
+    :id: 941
+    :name: Tomas Arana
+  125037: 
+    :id: 125037
+    :name: Tonie Marshall
+  1071863: 
+    :id: 1071863
+    :name: Tony Gatlif
+  41040: 
+    :id: 41040
+    :name: Tony Gatlif
+  1117837: 
+    :id: 1117837
+    :name: Vangelis
+  18484: 
+    :id: 18484
+    :name: "Virginie Th\xC3\xA9venet"
+  1051319: 
+    :id: 1051319
+    :name: Vladimir Perisic
+  41518: 
+    :id: 41518
+    :name: "V\xC3\xA9ra Belmont"
+  8574: 
+    :id: 8574
+    :name: Walter Salles
+  5655: 
+    :id: 5655
+    :name: Wes Anderson
+  2395: 
+    :id: 2395
+    :name: Whoopi Goldberg
+  97083: 
+    :id: 97083
+    :name: William Klein
+  2303: 
+    :id: 2303
+    :name: Wim Wenders
+  1034309: 
+    :id: 1034309
+    :name: Wim Wenders
+  12453: 
+    :id: 12453
+    :name: Wong Kar-Wai
+  1243: 
+    :id: 1243
+    :name: Woody Allen
+  1143018: 
+    :id: 1143018
+    :name: Xavier Beauvois
+  72320: 
+    :id: 72320
+    :name: Xavier Beauvois
+  143593: 
+    :id: 143593
+    :name: Xavier Dolan
+  145638: 
+    :id: 145638
+    :name: Xavier Dolan
+  225407: 
+    :id: 225407
+    :name: Yann Gozlan
+  112197: 
+    :id: 112197
+    :name: Yann Moix
+  237675: 
+    :id: 237675
+    :name: Yannick Bellon
+  120096: 
+    :id: 120096
+    :name: Yasmina Reza
+  35558: 
+    :id: 35558
+    :name: Yves Gasser
+  236614: 
+    :id: 236614
+    :name: Yvon Marciano
+  19876: 
+    :id: 19876
+    :name: Zelda Tinska
+  3556: 
+    :id: 3556
+    :name: Roman Polanski
+  66: 
+    :id: 66
+    :name: Chris Tucker
+  18897: 
+    :id: 18897
+    :name: Jackie Chan
+  9195: 
+    :id: 9195
+    :name: Hiroyuki Sanada
+  2201: 
+    :id: 2201
+    :name: Max von Sydow
+  2245: 
+    :id: 2245
+    :name: Yvan Attal
+  41894: 
+    :id: 41894
+    :name: Jingchu Zhang
+  4492: 
+    :id: 4492
+    :name: Philip Baker Hall
+  145633: 
+    :id: 145633
+    :name: "No\xC3\xA9mie Lenoir"
+  164945: 
+    :id: 164945
+    :name: Sarah Shahi
+  16145: 
+    :id: 16145
+    :name: Youki Kudoh
+  21629: 
+    :id: 21629
+    :name: Tzi Ma
+  13314: 
+    :id: 13314
+    :name: Dana Ivey
+  39829: 
+    :id: 39829
+    :name: Henry O
+  215130: 
+    :id: 215130
+    :name: Mia Tyler
+  21631: 
+    :id: 21631
+    :name: Michael Chow
+  554599: 
+    :id: 554599
+    :name: Kentaro
+  2689: 
+    :id: 2689
+    :name: Jeff Nathanson
+  21634: 
+    :id: 21634
+    :name: Ross LaManna
+  4504: 
+    :id: 4504
+    :name: Roger Birnbaum
+  41896: 
+    :id: 41896
+    :name: Jay Stern
+  21635: 
+    :id: 21635
+    :name: Jonathan Glickman
+  21636: 
+    :id: 21636
+    :name: Arthur M. Sarkissian
+  9217: 
+    :id: 9217
+    :name: Lalo Schifrin
+  21118: 
+    :id: 21118
+    :name: J. Michael Muro
+  1098: 
+    :id: 1098
+    :name: Mark Helfrich
+  909: 
+    :id: 909
+    :name: Billy Weber
+  15005: 
+    :id: 15005
+    :name: Don Zimmerman
+  4953: 
+    :id: 4953
+    :name: Ed Verreaux
+  11102: 
+    :id: 11102
+    :name: Chad S. Frey
+  41898: 
+    :id: 41898
+    :name: Kate J. Sullivan
+  11802: 
+    :id: 11802
+    :name: Betsy Heimann
+  41899: 
+    :id: 41899
+    :name: Leon Dudevoir
+  44936: 
+    :id: 44936
+    :name: Ginger Lynn Allen
+  44937: 
+    :id: 44937
+    :name: Juliet Anderson
+  30904: 
+    :id: 30904
+    :name: Samuel Z. Arkoff
+  44938: 
+    :id: 44938
+    :name: Juli Ashton
+  44939: 
+    :id: 44939
+    :name: Lisa De Leeuw
+  44941: 
+    :id: 44941
+    :name: Samantha Fox
+  31309: 
+    :id: 31309
+    :name: Hugh M. Hefner
+  42113: 
+    :id: 42113
+    :name: Zalman King
+  40177: 
+    :id: 40177
+    :name: Jayne Mansfield
+  4590: 
+    :id: 4590
+    :name: Russ Meyer
+  45573: 
+    :id: 45573
+    :name: John Holmes
+  101154: 
+    :id: 101154
+    :name: Vanessa del Rio
+  44785: 
+    :id: 44785
+    :name: SaRenna Lee
+  44934: 
+    :id: 44934
+    :name: Jeremy Workman
+  46328: 
+    :id: 46328
+    :name: John Leonetti
+  46329: 
+    :id: 46329
+    :name: Marc Greville-Masson
+  1025748: 
+    :id: 1025748
+    :name: Chuck Workman
+  16927: 
+    :id: 16927
+    :name: "G\xC3\xA9rard Depardieu"
+  15915: 
+    :id: 15915
+    :name: Sergio Rubini
+  69488: 
+    :id: 69488
+    :name: Nanni Moretti
+  57345: 
+    :id: 57345
+    :name: Alessandro Gassman
+  3124: 
+    :id: 3124
+    :name: Valeria Golino
+  78681: 
+    :id: 78681
+    :name: Isabella Ferrari
+  931963: 
+    :id: 931963
+    :name: Blu Yoshimi
+  23388: 
+    :id: 23388
+    :name: Hippolyte Girardot
+  120832: 
+    :id: 120832
+    :name: Kasia Smutniak
+  6020: 
+    :id: 6020
+    :name: "Denis Podalyd\xC3\xA8s"
+  48576: 
+    :id: 48576
+    :name: Charles Berling
+  108900: 
+    :id: 108900
+    :name: Silvio Orlando
+  128748: 
+    :id: 128748
+    :name: Alba Rohrwacher
+  126631: 
+    :id: 126631
+    :name: Manuela Morabito
+  115609: 
+    :id: 115609
+    :name: Roberto Nobile
+  41525: 
+    :id: 41525
+    :name: Babak Karimi
+  932544: 
+    :id: 932544
+    :name: Beatrice Bruschi
+  932545: 
+    :id: 932545
+    :name: Sara D'Amico
+  7546: 
+    :id: 7546
+    :name: Tatiana Lepore
+  932546: 
+    :id: 932546
+    :name: Anna Gigante
+  70083: 
+    :id: 70083
+    :name: Antonella Attili
+  932547: 
+    :id: 932547
+    :name: Cloris Brosca
+  129077: 
+    :id: 129077
+    :name: Valentina Carnelutti
+  932548: 
+    :id: 932548
+    :name: Stefano Guglielmi
+  932549: 
+    :id: 932549
+    :name: Nestor Saied
+  932550: 
+    :id: 932550
+    :name: Dina Braschi
+  932551: 
+    :id: 932551
+    :name: Ester Cavallari
+  311387: 
+    :id: 311387
+    :name: Antonello Grimaldi
+  373757: 
+    :id: 373757
+    :name: Laura Paolucci
+  73855: 
+    :id: 73855
+    :name: Francesco Piccolo
+  1076706: 
+    :id: 1076706
+    :name: Thierry Berbezy
+  24299: 
+    :id: 24299
+    :name: Jean-Claude Brialy
+  1076707: 
+    :id: 1076707
+    :name: Laetitia de Fombelle
+  2359: 
+    :id: 2359
+    :name: Jake Eberts
+  1076708: 
+    :id: 1076708
+    :name: "G\xC3\xA9rard Gu\xC3\xABt"
+  1076709: 
+    :id: 1076709
+    :name: Sophie Lack
+  1076710: 
+    :id: 1076710
+    :name: Elsa Lepoivre
+  1076711: 
+    :id: 1076711
+    :name: "St\xC3\xA9phane Massard"
+  1076712: 
+    :id: 1076712
+    :name: Mathieu Mathelin
+  44079: 
+    :id: 44079
+    :name: Charlotte Rampling
+  1076713: 
+    :id: 1076713
+    :name: Eddy Rousselot
+  1076714: 
+    :id: 1076714
+    :name: Edith Vernes
+  1076705: 
+    :id: 1076705
+    :name: Jean Rousselot
+  3542: 
+    :id: 3542
+    :name: Barney Clark
+  2282: 
+    :id: 2282
+    :name: Ben Kingsley
+  3543: 
+    :id: 3543
+    :name: Jamie Foreman
+  3544: 
+    :id: 3544
+    :name: Harry Eden
+  3545: 
+    :id: 3545
+    :name: Edward Hardwicke
+  3546: 
+    :id: 3546
+    :name: Leanne Rowe
+  3547: 
+    :id: 3547
+    :name: Ian McNeice
+  3548: 
+    :id: 3548
+    :name: Timothy Bateson
+  3549: 
+    :id: 3549
+    :name: Andy Linden
+  3550: 
+    :id: 3550
+    :name: Teresa Churcher
+  3551: 
+    :id: 3551
+    :name: Jake Curran
+  3552: 
+    :id: 3552
+    :name: Turbo
+  3553: 
+    :id: 3553
+    :name: Lewis Chase
+  3554: 
+    :id: 3554
+    :name: Levi Hayes
+  3555: 
+    :id: 3555
+    :name: Jeremy Swift
+  3565: 
+    :id: 3565
+    :name: Gillian Hanna
+  3566: 
+    :id: 3566
+    :name: Chris Overton
+  3567: 
+    :id: 3567
+    :name: Michael Heath
+  3568: 
+    :id: 3568
+    :name: Patrick Godfrey
+  3557: 
+    :id: 3557
+    :name: Charles Dickens
+  3559: 
+    :id: 3559
+    :name: Robert Benmussa
+  3560: 
+    :id: 3560
+    :name: Alain Sarde
+  3561: 
+    :id: 3561
+    :name: Pawel Edelman
+  3562: 
+    :id: 3562
+    :name: Rachel Portman
+  3563: 
+    :id: 3563
+    :name: Allan Starski
+  970: 
+    :id: 970
+    :name: Celestia Fox
+  3491: 
+    :id: 3491
+    :name: Thomas Kretschmann
+  6637: 
+    :id: 6637
+    :name: Frank Finlay
+  6638: 
+    :id: 6638
+    :name: Maureen Lipman
+  6639: 
+    :id: 6639
+    :name: Emilia Fox
+  6640: 
+    :id: 6640
+    :name: Ed Stoppard
+  6641: 
+    :id: 6641
+    :name: Julia Rayner
+  6642: 
+    :id: 6642
+    :name: Jessica Kate Meyer
+  6643: 
+    :id: 6643
+    :name: Micha? ?ebrowski
+  6644: 
+    :id: 6644
+    :name: Wanja Mues
+  6645: 
+    :id: 6645
+    :name: Richard Ridings
+  6646: 
+    :id: 6646
+    :name: Nomi Sharron
+  6647: 
+    :id: 6647
+    :name: Detlev von Wangenheim
+  24524: 
+    :id: 24524
+    :name: Krzysztof Pieczy?ski
+  6635: 
+    :id: 6635
+    :name: Wladyslaw Szpilman
+  1400: 
+    :id: 1400
+    :name: Wojciech Kilar
+  8924: 
+    :id: 8924
+    :name: Frank Langella
+  5313: 
+    :id: 5313
+    :name: Lena Olin
+  8925: 
+    :id: 8925
+    :name: Emmanuelle Seigner
+  8926: 
+    :id: 8926
+    :name: Barbara Jefford
+  8927: 
+    :id: 8927
+    :name: Jack Taylor
+  8928: 
+    :id: 8928
+    :name: "Jos\xC3\xA9 L\xC3\xB3pez Rodero"
+  785: 
+    :id: 785
+    :name: James Russo
+  19057: 
+    :id: 19057
+    :name: Willy Holt
+  922: 
+    :id: 922
+    :name: Allen Garfield
+  180976: 
+    :id: 180976
+    :name: Tony Amoni
+  266665: 
+    :id: 266665
+    :name: Jacques Dacqmine
+  12983: 
+    :id: 12983
+    :name: Joe Sheridan
+  140055: 
+    :id: 140055
+    :name: Rebecca Pauly
+  220582: 
+    :id: 220582
+    :name: Catherine Benguigui
+  1077903: 
+    :id: 1077903
+    :name: Maria Ducceschi
+  992979: 
+    :id: 992979
+    :name: Jacques Collard
+  1077904: 
+    :id: 1077904
+    :name: Dominique Pozzetto
+  74113: 
+    :id: 74113
+    :name: Emanuel Booz
+  1077905: 
+    :id: 1077905
+    :name: Lino Ribeiro de Sousa
+  1077906: 
+    :id: 1077906
+    :name: "Asil Ra\xC3\xAFs"
+  1077907: 
+    :id: 1077907
+    :name: Bernard Richier
+  1077908: 
+    :id: 1077908
+    :name: Marinette Richier
+  8908: 
+    :id: 8908
+    :name: "Arturo P\xC3\xA9rez-Reverte"
+  8909: 
+    :id: 8909
+    :name: John Brownjohn
+  8911: 
+    :id: 8911
+    :name: Mark Allan
+  8912: 
+    :id: 8912
+    :name: Antonio Cardenal
+  8913: 
+    :id: 8913
+    :name: Michel Cheyko
+  8915: 
+    :id: 8915
+    :name: Wolfgang Glattes
+  8917: 
+    :id: 8917
+    :name: Adam Kempton
+  8918: 
+    :id: 8918
+    :name: "I\xC3\xB1aki N\xC3\xBA\xC3\xB1ez"
+  8919: 
+    :id: 8919
+    :name: Alain Vannier
+  8920: 
+    :id: 8920
+    :name: Suzanne Wiesenfeld
+  1530: 
+    :id: 1530
+    :name: Howard Feuer
+  2875: 
+    :id: 2875
+    :name: Dean Tavoularis
+  2190: 
+    :id: 2190
+    :name: "G\xC3\xA9rard Viard"
+  8921: 
+    :id: 8921
+    :name: Philippe Turlure
+  8922: 
+    :id: 8922
+    :name: Anthony Powell
+  8923: 
+    :id: 8923
+    :name: Laura Stuart
+  1026261: 
+    :id: 1026261
+    :name: Enrique Urbizu
+  3291: 
+    :id: 3291
+    :name: Hugh Grant
+  5470: 
+    :id: 5470
+    :name: Kristin Scott Thomas
+  9979: 
+    :id: 9979
+    :name: Peter Coyote
+  2356: 
+    :id: 2356
+    :name: "G\xC3\xA9rard Brach"
+  595: 
+    :id: 595
+    :name: Vangelis
+  2361: 
+    :id: 2361
+    :name: Tonino Delli Colli
+  10205: 
+    :id: 10205
+    :name: Sigourney Weaver
+  14344: 
+    :id: 14344
+    :name: Stuart Wilson
+  65537: 
+    :id: 65537
+    :name: Krystia Mova
+  65538: 
+    :id: 65538
+    :name: Jonathan Vega
+  65539: 
+    :id: 65539
+    :name: Rodolphe Vega
+  11453: 
+    :id: 11453
+    :name: Rafael Yglesias
+  43383: 
+    :id: 43383
+    :name: Jane Barclay
+  43382: 
+    :id: 43382
+    :name: Sharon Harel
+  65541: 
+    :id: 65541
+    :name: Josh Kramer
+  4052: 
+    :id: 4052
+    :name: Thom Mount
+  3: 
+    :id: 3
+    :name: Harrison Ford
+  52462: 
+    :id: 52462
+    :name: Betty Buckley
+  66198: 
+    :id: 66198
+    :name: Djiby Soumare
+  57241: 
+    :id: 57241
+    :name: Tim Hampton
+  1259: 
+    :id: 1259
+    :name: Ennio Morricone
+  7094: 
+    :id: 7094
+    :name: Witold Sobocinski
+  12015: 
+    :id: 12015
+    :name: Sam O'Steen
+  2630: 
+    :id: 2630
+    :name: Nastassja Kinski
+  22109: 
+    :id: 22109
+    :name: Peter Firth
+  26257: 
+    :id: 26257
+    :name: Leigh Lawson
+  68884: 
+    :id: 68884
+    :name: John Collin
+  20718: 
+    :id: 20718
+    :name: Claude Berri
+  25633: 
+    :id: 25633
+    :name: Tom Priestley
+  20075: 
+    :id: 20075
+    :name: Philippe Sarde
+  11988: 
+    :id: 11988
+    :name: Ghislain Cloquet
+  6837: 
+    :id: 6837
+    :name: Walter Matthau
+  69563: 
+    :id: 69563
+    :name: Cris Campion
+  26679: 
+    :id: 26679
+    :name: Damien Thomas
+  69565: 
+    :id: 69565
+    :name: Olu Jacobs
+  16787: 
+    :id: 16787
+    :name: Tarak Ben Ammar
+  3099: 
+    :id: 3099
+    :name: William Reynolds
+  213368: 
+    :id: 213368
+    :name: Pegah Ahangarani
+  5682: 
+    :id: 5682
+    :name: "Anouk Aim\xC3\xA9e"
+  213370: 
+    :id: 213370
+    :name: Leonid Alexeenko
+  213371: 
+    :id: 213371
+    :name: Taraneh Alidoosti
+  213372: 
+    :id: 213372
+    :name: "D\xC3\xA0vi Alvarado"
+  11595: 
+    :id: 11595
+    :name: Antonin Artaud
+  213373: 
+    :id: 213373
+    :name: Vishka Asayesh
+  30181: 
+    :id: 30181
+    :name: Fred Astaire
+  47793: 
+    :id: 47793
+    :name: George Babluani
+  3783: 
+    :id: 3783
+    :name: Brigitte Bardot
+  213374: 
+    :id: 213374
+    :name: Cindy Beckett
+  16851: 
+    :id: 16851
+    :name: Josh Brolin
+  213375: 
+    :id: 213375
+    :name: Caju
+  213376: 
+    :id: 213376
+    :name: Carl-Erik Calamnius
+  10316: 
+    :id: 10316
+    :name: Theodoros Angelopoulos
+  19684: 
+    :id: 19684
+    :name: Bille August
+  10757: 
+    :id: 10757
+    :name: Jane Campion
+  20023: 
+    :id: 20023
+    :name: Youssef Chahine
+  20640: 
+    :id: 20640
+    :name: Kaige Chen
+  12114: 
+    :id: 12114
+    :name: Michael Cimino
+  1224: 
+    :id: 1224
+    :name: Ethan Coen
+  1223: 
+    :id: 1223
+    :name: Joel Coen
+  224: 
+    :id: 224
+    :name: David Cronenberg
+  81749: 
+    :id: 81749
+    :name: Manoel de Oliveira
+  56836: 
+    :id: 56836
+    :name: Raymond Depardon
+  56205: 
+    :id: 56205
+    :name: Atom Egoyan
+  20024: 
+    :id: 20024
+    :name: Amos Gitai
+  64992: 
+    :id: 64992
+    :name: Hsiao-hsien Hou
+  16767: 
+    :id: 16767
+    :name: "Aki Kaurism\xC3\xA4ki"
+  119294: 
+    :id: 119294
+    :name: Abbas Kiarostami
+  3317: 
+    :id: 3317
+    :name: Takeshi Kitano
+  58728: 
+    :id: 58728
+    :name: Andrei Konchalovsky
+  15488: 
+    :id: 15488
+    :name: Ken Loach
+  121585: 
+    :id: 121585
+    :name: Raoul Ruiz
+  131685: 
+    :id: 131685
+    :name: Elia Suleiman
+  71174: 
+    :id: 71174
+    :name: Ming-liang Tsai
+  5216: 
+    :id: 5216
+    :name: Gus Van Sant
+  42: 
+    :id: 42
+    :name: Lars von Trier
+  607: 
+    :id: 607
+    :name: Yimou Zhang
+  204: 
+    :id: 204
+    :name: Kate Winslet
+  1038: 
+    :id: 1038
+    :name: Jodie Foster
+  27319: 
+    :id: 27319
+    :name: Christoph Waltz
+  4764: 
+    :id: 4764
+    :name: John C. Reilly
+  3061: 
+    :id: 3061
+    :name: Ewan McGregor
+  2109: 
+    :id: 2109
+    :name: Kim Cattrall
+  207: 
+    :id: 207
+    :name: Tom Wilkinson
+  16327: 
+    :id: 16327
+    :name: Timothy Hutton
+  11616: 
+    :id: 11616
+    :name: Olivia Williams
+  26485: 
+    :id: 26485
+    :name: James Belushi
+  19498: 
+    :id: 19498
+    :name: Jon Bernthal
+  74225: 
+    :id: 74225
+    :name: Jaymes Butler
+  84067: 
+    :id: 84067
+    :name: Marianne Graffam
+  84068: 
+    :id: 84068
+    :name: Daphne Alexander
+  84069: 
+    :id: 84069
+    :name: Angelique Fernandez
+  84070: 
+    :id: 84070
+    :name: Nyasha Hatendi
+  84071: 
+    :id: 84071
+    :name: Michael S. Ruscheinsky
+  84073: 
+    :id: 84073
+    :name: Eben Young
+  113360: 
+    :id: 113360
+    :name: Tim Preece
+  113361: 
+    :id: 113361
+    :name: Anna Botting
+  5755: 
+    :id: 5755
+    :name: Robert Seeliger
+  517: 
+    :id: 517
+    :name: Pierce Brosnan
+  902: 
+    :id: 902
+    :name: Milton Welsh
+  16716: 
+    :id: 16716
+    :name: Alister Mazzotti
+  3265: 
+    :id: 3265
+    :name: Eli Wallach
+  65434: 
+    :id: 65434
+    :name: Robert Harris
+  1283: 
+    :id: 1283
+    :name: Helena Bonham Carter
