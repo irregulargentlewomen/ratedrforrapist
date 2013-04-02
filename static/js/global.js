@@ -35,6 +35,11 @@ IrregularGentlewomen.pushPageState = function(state) {
     $('body').addClass(state);
 };
 
+IrregularGentlewomen.popPageState = function() {
+    $('body').removeClass(IrregularGentlewomen.pageStates.pop());
+    $('body').addClass(IrregularGentlewomen.pageStates[-1]);
+}
+
 IrregularGentlewomen.titleSearch = function(form) {
     $.ajax({
         url: form.action + '?' + $(form).serialize(),
@@ -61,13 +66,13 @@ IrregularGentlewomen.populateDisambiguator = function(data) {
 };
 
 IrregularGentlewomen.populateBlacklist = function(data) {
-    IrregularGentlewomen.populateList('.blacklist', data, function(x) {
+    IrregularGentlewomen.populateList('.positive.response', data, function(x) {
         return x.name + ' (' + x.role + ")"
     }); 
 };
 
 IrregularGentlewomen.clearBlacklist = function() {
-    $('.blacklist ul').html(''); 
+    $('.positive.response ul').html(''); 
 };
 
 IrregularGentlewomen.populateList = function(listSectionClass, data, stringFunction) {
@@ -90,5 +95,8 @@ $(document).ready(function () {
         IrregularGentlewomen.castSearch(e.target);
         $('.response .movie-title').html(e.target.innerHTML);
     });
-
+    $('.close').click(function(e) {
+        e.preventDefault();
+        IrregularGentlewomen.popPageState();
+    });
 });
