@@ -15,7 +15,8 @@ class AppConfig
             'name' => ENV["DATABASE_NAME"],
             'user' => ENV["DATABASE_USER"],
             'password' => ENV["DATABASE_PASSWORD"],
-            'host' => ENV["DATABASE_HOST"]
+            'host' => ENV["DATABASE_HOST"],
+            'port' => ENV["DATABASE_PORT"]
           }
         }
       end
@@ -35,7 +36,8 @@ class AppConfig
         database.name,
         :user => database.user,
         :password => AppConfig.database.password,
-        :host => AppConfig.database.host
+        :host => AppConfig.database.host,
+        :port => AppConfig.database.port
       )
     end
   end
