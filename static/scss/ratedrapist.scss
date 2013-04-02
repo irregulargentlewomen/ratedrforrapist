@@ -46,13 +46,19 @@ body.state-disambiguate {
 }
 
 body.state-positive {
-  .blacklist, .positive.response {
+  .positive.response {
     @include invoked;
   }
 }
 
 body.state-negative {
   .negative.response {
+    @include invoked;
+  }
+}
+
+body.state-further-info {
+  #further-info {
     @include invoked;
   }
 }

@@ -30,14 +30,14 @@ IrregularGentlewomen.afterSearch = {
 IrregularGentlewomen.pageStates = [""];
 
 IrregularGentlewomen.pushPageState = function(state) {
-    $('body').removeClass(IrregularGentlewomen.pageStates[-1]);
+    $('body').removeClass(IrregularGentlewomen.pageStates[IrregularGentlewomen.pageStates.length - 1]);
     IrregularGentlewomen.pageStates.push(state);
     $('body').addClass(state);
 };
 
 IrregularGentlewomen.popPageState = function() {
     $('body').removeClass(IrregularGentlewomen.pageStates.pop());
-    $('body').addClass(IrregularGentlewomen.pageStates[-1]);
+    $('body').addClass(IrregularGentlewomen.pageStates[IrregularGentlewomen.pageStates.length - 1]);
 }
 
 IrregularGentlewomen.titleSearch = function(form) {
@@ -98,5 +98,9 @@ $(document).ready(function () {
     $('.close').click(function(e) {
         e.preventDefault();
         IrregularGentlewomen.popPageState();
+    });
+    $('a[href=#further-info]').click(function(e){
+        e.preventDefault();
+        IrregularGentlewomen.pushPageState('state-further-info');
     });
 });
