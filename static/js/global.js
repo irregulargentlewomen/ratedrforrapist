@@ -16,9 +16,11 @@ IrregularGentlewomen.afterSearch = {
             IrregularGentlewomen.pushPageState('state-disambiguate');
         } else if (data.blacklisted) {
             IrregularGentlewomen.populateBlacklist(data.blacklisted_cast_and_crew);
+            IrregularGentlewomen.setMovieTitle(data.title);
             IrregularGentlewomen.pushPageState('state-positive');           
         } else {
             IrregularGentlewomen.clearBlacklist();
+            IrregularGentlewomen.setMovieTitle(data.title);
             IrregularGentlewomen.pushPageState('state-negative');
         }
     },
@@ -84,6 +86,10 @@ IrregularGentlewomen.populateList = function(listSectionClass, data, stringFunct
         );
     }
 };
+
+IrregularGentlewomen.setMovieTitle = function(title) {
+    $('.movie-title').html(title);
+}
 
 $(document).ready(function () {
     $('form').submit(function(e){

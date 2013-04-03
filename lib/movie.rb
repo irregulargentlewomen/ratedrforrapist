@@ -16,10 +16,14 @@ class Movie
   end
 
   def cast_and_crew
-    @cast_and_crew ||= api_response_body['cast'] + api_response_body['crew']
+    @cast_and_crew ||= api_response_body['casts']['cast'] + api_response_body['casts']['crew']
   end
 
   def release_year
+  end
+
+  def title
+    api_response_body['title']
   end
 
   private
@@ -34,6 +38,6 @@ class Movie
   end
 
   def url
-    "http://api.themoviedb.org/3/movie/#{id}/casts?api_key=#{api_key}"
+    "http://api.themoviedb.org/3/movie/#{id}?api_key=#{api_key}&append_to_response=casts"
   end
 end

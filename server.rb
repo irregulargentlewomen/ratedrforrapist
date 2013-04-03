@@ -39,6 +39,7 @@ get '/search' do
     blacklisted: movie.has_blacklisted_cast_or_crew?,
     blacklisted_cast_and_crew: movie.blacklisted_cast_and_crew.map { |x|
       {id: x['id'], name: x['name'], role: x['job'] || x['character']}
-    }
+    },
+    title: movie.title
   })
 end
