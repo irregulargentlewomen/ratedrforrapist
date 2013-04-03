@@ -37,9 +37,14 @@ get '/search' do
   
   json({
     blacklisted: movie.has_blacklisted_cast_or_crew?,
-    blacklisted_cast_and_crew: movie.blacklisted_cast_and_crew.map { |x|
-      {id: x['id'], name: x['name'], role: x['job'] || x['character']}
-    },
+    blacklisted_cast_and_crew: movie.blacklisted_cast_and_crew.inject({}) { |result, x|
+      if result[x['id']]
+        result[x['id']][:role] += ", #{x['job'] || x['character']}"
+      else
+        result[x['id']] = {id: x['id'], name: x['name'], role: x['job'] || x['character']}
+      end
+      result
+    }.values,
     title: movie.title
   })
 end
