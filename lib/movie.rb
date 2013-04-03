@@ -19,6 +19,17 @@ class Movie
     @cast_and_crew ||= api_response_body['casts']['cast'] + api_response_body['casts']['crew']
   end
 
+  def presentable_blacklisted_cast_and_crew
+    blacklisted_cast_and_crew.inject({}) { |result, x|
+      if result[x['id']]
+        result[x['id']][:role] += ", #{x['job'] || x['character']}"
+      else
+        result[x['id']] = {id: x['id'], name: x['name'], role: x['job'] || x['character']}
+      end
+      result
+    }.values
+  end
+
   def release_year
   end
 
