@@ -1,6 +1,9 @@
 describe("IrregularGentlewomen", function() {
+  var node = null;
   beforeEach(function(){
-    node = jasmine.createSpyObj('node', ['removeClass', 'addClass']);
+    node = jasmine.createSpyObj('node',
+      ['removeClass', 'addClass', 'html', 'append']
+    );
     $ = jasmine.createSpy('jquery').andReturn(node);
   });
   describe('#pushPageState', function(){
@@ -31,6 +34,73 @@ describe("IrregularGentlewomen", function() {
     });
     it('adds the new page state to the body class', function() {
       expect(node.addClass).toHaveBeenCalledWith('');
+    });
+  });
+
+  describe('#populateDisambiguator', function() {
+    beforeEach(function() {
+      IrregularGentlewomen.populateDisambiguator([
+        {id: 43, title: 'test'}
+      ]);
+    });
+    it('targets the correct node', function() {
+      expect($).toHaveBeenCalledWith('.disambiguation ul');
+    });
+    it('correctly populates the list', function() {
+      expect(node.append).toHaveBeenCalledWith(
+        '<li><a href="/search?id=43">test</a></li>'
+      );
+    })
+  });
+
+  describe('#populateBlacklist', function() {
+    beforeEach(function() {
+      IrregularGentlewomen.populateBlacklist([
+        {name: "Helena Bonham Carter", role: 'Mrs. Lovett'}
+      ]);
+    });
+    it('targets the correct node', function() {
+      expect($).toHaveBeenCalledWith('.positive.response ul');
+    });
+    it('correctly populates the list', function() {
+      expect(node.append).toHaveBeenCalledWith(
+        '<li>Helena Bonham Carter (Mrs. Lovett)</li>'
+      );
+    })
+  });
+
+  describe('#clearBlackist', function() {
+    it('clears the blacklist', function() {
+      IrregularGentlewomen.clearBlacklist();
+      expect(node.html).toHaveBeenCalledWith('');
+    });
+  });
+
+  describe('#populateList', function() {
+    beforeEach(function() {
+      IrregularGentlewomen.populateList('section', ['test'], function(x) {
+        return '-' + x + '-';
+      });
+    });
+
+    it('targets the correct node', function() {
+      expect($).toHaveBeenCalledWith('section ul');
+    });
+
+    it('correctly populates the list', function() {
+      expect(node.append).toHaveBeenCalledWith('<li>-test-</li>');
+    });
+  });
+
+  describe('#setMovieTitle', function() {
+    beforeEach(function() {
+      IrregularGentlewomen.setMovieTitle('new title');
+    });
+    it('sets the movie title', function() {
+      expect(node.html).toHaveBeenCalledWith('new title');
+    });
+    it('targets the correct node', function() {
+      expect($).toHaveBeenCalledWith('.movie-title');
     });
   });
 });
