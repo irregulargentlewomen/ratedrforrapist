@@ -14,7 +14,7 @@ This is a Sinatra project, and we run Sequel for the ORM against MySQL.
 
 Copyright and licensing
 =======================
-Rated R For Rapist is a project of the [Irregular Gentlewomen](https://github.com/irregulargentlewomen): [Betsy Haibel](http://twitter.com/#!/betsythemuffin) and [Elizabeth Yalkut](http://www.elizabethyalkut.com). It is released under the [GPL](http://www.gnu.org/licenses/gpl-3.0.en.html). The code is [available on Github](https://github.com/irregulargentlewomen/polanski).
+Rated R For Rapist is a project of the [Irregular Gentlewomen](https://github.com/irregulargentlewomen): [Betsy Haibel](http://bhaibel.github.com) and [Elizabeth Yalkut](http://www.elizabethyalkut.com). It is released under the [GPL](http://www.gnu.org/licenses/gpl-3.0.en.html). The code is [available on Github](https://github.com/irregulargentlewomen/polanski).
 
 Credits
 =======
@@ -44,16 +44,18 @@ We are not interested in debating, discussing, or engaging with the question of 
 
 These are our premises; we do not intend to defend or explain them beyond this statement. 
 
-&mdash; Elizabeth Yalkut and Betsy Haibel, March 2013
+&mdash; Elizabeth Yalkut and Betsy Haibel, April 2013
 
-To Do
-=====
-* create a decent title graphic
-* test the CSS on actual mobile devices
-* clean up the invocation JS workflow
+To Do (in no order whatsoever)
+==============================
+* test the CSS on iphone
+* fix the portrait - > landscape crash on Android
 * migrate CSS to scss
 * add documentation comments to CSS and HTML
 * refine language in further-info alert
-* set up cron job to keep the list updated
+* add cron job to email reminder to update/disambiguate blacklist
 * establish baseline blacklist from script and disambiguate as needed
 * once the script is run through, live testing of form submission
+* add annotations to provide context for why person(s) trigger link to Polanski
+* add pushstate/permalinks
+* prettify movie disambiguation, results list, close icon on responses
