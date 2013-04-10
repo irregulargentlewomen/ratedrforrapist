@@ -67,6 +67,9 @@ body.state-further-info {
   h2 {
     text-align: center;
   }
+	ul {
+		margin-left: 0.1em;
+	}
   .icon-info-sign {
     background-color: transparent;
   }
@@ -79,6 +82,19 @@ body.state-further-info {
       color: #DF2922;
     }
   }
+	.alert .close {
+		right: -65px;
+	}
+	a.close {
+		visibility: hidden;
+	}
+	a.close:before {
+		visibility: visible;
+	}
+	a.close:hover:before {
+		text-decoration: none;
+		color: #000;
+	}
 }
 
 .alert p {
