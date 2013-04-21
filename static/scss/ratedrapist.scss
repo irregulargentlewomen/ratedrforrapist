@@ -31,9 +31,6 @@ section.alert {
   width: 50%;
   z-index: 10;
 }
-section.alert-error {
-  top: 50%;
-}
 @mixin invoked {
   display: block;
 }
@@ -63,12 +60,17 @@ body.state-further-info {
   }
 }
 
-.response {
+section.alert {
+		-webkit-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, .4);
+	box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, .4);
   h2 {
     text-align: center;
   }
-	ul {
+	ul, p {
 		margin-left: 0.1em;
+		font-size: 16px;
+		font-size: 1.6em;
+		font-size: 1.6rem;
 	}
   .icon-info-sign {
     background-color: transparent;
@@ -82,24 +84,26 @@ body.state-further-info {
       color: #DF2922;
     }
   }
-	.alert .close {
-		right: -65px;
-	}
-	a.close {
+	.close {
+		right: -60px;
 		visibility: hidden;
 	}
-	a.close:before {
+	.close:before {
 		visibility: visible;
 	}
-	a.close:hover:before {
+	.close:hover:before {
 		text-decoration: none;
 		color: #000;
 	}
 }
-
-.alert p {
-  font-size: 16px;
-  font-size: 1.6rem;
+section.alert.positive ul {
+	list-style-type: none;
+	margin-left: -0.5em;
+	li:before {
+		content: "\f007";
+		font-family: FontAwesome;
+		padding-right: 5px;
+	}
 }
 
 .ohmygod {
