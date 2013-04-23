@@ -42,87 +42,93 @@ section.alert {
   z-index: 10;
 }
 
-/* line 34, ../scss/ratedrapist.scss */
-section.alert-error {
-  top: 50%;
-}
-
 /* define application states */
-/* line 43, ../scss/ratedrapist.scss */
+/* line 40, ../scss/ratedrapist.scss */
 body.state-disambiguate .disambiguation {
   display: block;
 }
 
-/* line 49, ../scss/ratedrapist.scss */
+/* line 46, ../scss/ratedrapist.scss */
 body.state-positive .positive.response {
   display: block;
 }
 
-/* line 55, ../scss/ratedrapist.scss */
+/* line 52, ../scss/ratedrapist.scss */
 body.state-negative .negative.response {
   display: block;
 }
 
-/* line 61, ../scss/ratedrapist.scss */
+/* line 58, ../scss/ratedrapist.scss */
 body.state-further-info #further-info {
   display: block;
 }
 
-/* line 67, ../scss/ratedrapist.scss */
-.response h2 {
+/* line 63, ../scss/ratedrapist.scss */
+section.alert {
+  -webkit-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+/* line 66, ../scss/ratedrapist.scss */
+section.alert h2 {
   text-align: center;
 }
-/* line 70, ../scss/ratedrapist.scss */
-.response ul {
+/* line 69, ../scss/ratedrapist.scss */
+section.alert ul, section.alert p {
   margin-left: 0.1em;
+  font-size: 16px;
+  font-size: 1.6em;
+  font-size: 1.6rem;
 }
-/* line 73, ../scss/ratedrapist.scss */
-.response .icon-info-sign {
+/* line 75, ../scss/ratedrapist.scss */
+section.alert .icon-info-sign {
   background-color: transparent;
 }
-/* line 76, ../scss/ratedrapist.scss */
-.response a.icon-info-sign {
+/* line 78, ../scss/ratedrapist.scss */
+section.alert a.icon-info-sign {
   display: inline-block;
 }
-/* line 78, ../scss/ratedrapist.scss */
-.response a.icon-info-sign:hover {
+/* line 80, ../scss/ratedrapist.scss */
+section.alert a.icon-info-sign:hover {
   text-decoration: none;
 }
-/* line 81, ../scss/ratedrapist.scss */
-.response a.icon-info-sign:hover, .response a.icon-info-sign:visited {
+/* line 83, ../scss/ratedrapist.scss */
+section.alert a.icon-info-sign:hover, section.alert a.icon-info-sign:visited {
   color: #DF2922;
 }
-/* line 85, ../scss/ratedrapist.scss */
-.response .alert .close {
-  right: -65px;
-}
-/* line 88, ../scss/ratedrapist.scss */
-.response a.close {
+/* line 87, ../scss/ratedrapist.scss */
+section.alert .close {
+  right: -60px;
   visibility: hidden;
 }
 /* line 91, ../scss/ratedrapist.scss */
-.response a.close:before {
+section.alert .close:before {
   visibility: visible;
 }
 /* line 94, ../scss/ratedrapist.scss */
-.response a.close:hover:before {
+section.alert .close:hover:before {
   text-decoration: none;
   color: #000;
 }
 
-/* line 100, ../scss/ratedrapist.scss */
-.alert p {
-  font-size: 16px;
-  font-size: 1.6rem;
+/* line 99, ../scss/ratedrapist.scss */
+section.alert.positive ul {
+  list-style-type: none;
+  margin-left: -0.5em;
+}
+/* line 102, ../scss/ratedrapist.scss */
+section.alert.positive ul li:before {
+  content: "\f007";
+  font-family: FontAwesome;
+  padding-right: 5px;
 }
 
-/* line 105, ../scss/ratedrapist.scss */
+/* line 109, ../scss/ratedrapist.scss */
 .ohmygod {
   background-color: #fff;
   border-color: #DF2922;
   box-shadow: 5px 5px 10px #000;
 }
-/* line 109, ../scss/ratedrapist.scss */
+/* line 113, ../scss/ratedrapist.scss */
 .ohmygod p {
   color: #DF2922;
   font-family: "Gilda Display", serif;
@@ -130,38 +136,38 @@ body.state-further-info #further-info {
   font-size: 2.2rem;
   text-shadow: 2px 2px 2px 2px #000;
 }
-/* line 116, ../scss/ratedrapist.scss */
+/* line 120, ../scss/ratedrapist.scss */
 .ohmygod .what {
   font-size: 34em;
   font-size: 3.4rem;
   font-weight: 900;
 }
 
-/* line 123, ../scss/ratedrapist.scss */
+/* line 127, ../scss/ratedrapist.scss */
 .the-question span {
   font-size: 16px;
   font-size: 1.6rem;
   font-weight: bold;
 }
 
-/* line 128, ../scss/ratedrapist.scss */
+/* line 132, ../scss/ratedrapist.scss */
 input {
   background-color: #f5f5f5;
   background-color: rgba(245, 245, 245, 0.3);
 }
 
-/* line 132, ../scss/ratedrapist.scss */
+/* line 136, ../scss/ratedrapist.scss */
 input[type="submit"] {
   font-weight: bold;
 }
 
-/* line 136, ../scss/ratedrapist.scss */
+/* line 140, ../scss/ratedrapist.scss */
 input[type="submit"]:hover,
 input[type="text"]:hover {
   border-color: #DF2922;
 }
 
-/* line 139, ../scss/ratedrapist.scss */
+/* line 143, ../scss/ratedrapist.scss */
 footer {
   text-align: center;
 }
@@ -173,12 +179,12 @@ footer {
   /* 600 =================================================== */
 }
 @media only screen and (max-width: 768px) {
-  /* line 149, ../scss/ratedrapist.scss */
+  /* line 153, ../scss/ratedrapist.scss */
   p.has-citation {
     display: none;
   }
 
-  /* line 152, ../scss/ratedrapist.scss */
+  /* line 156, ../scss/ratedrapist.scss */
   .ohmygod p {
     font-size: 26px;
     font-size: 2.6rem;
@@ -186,19 +192,19 @@ footer {
 }
 @media only screen and (min-width: 768px) {
   /* 768 =================================================== */
-  /* line 159, ../scss/ratedrapist.scss */
+  /* line 163, ../scss/ratedrapist.scss */
   p.has-citation {
     display: block;
     margin-right: 10px;
   }
 
-  /* line 163, ../scss/ratedrapist.scss */
+  /* line 167, ../scss/ratedrapist.scss */
   .has-citation {
     float: left;
     width: 47%;
   }
 
-  /* line 167, ../scss/ratedrapist.scss */
+  /* line 171, ../scss/ratedrapist.scss */
   blockquote {
     margin: 0;
   }
@@ -208,7 +214,7 @@ footer {
 }
 @media only screen and (min-width: 1382px) {
   /* 1382 =================================================== */
-  /* line 176, ../scss/ratedrapist.scss */
+  /* line 180, ../scss/ratedrapist.scss */
   body {
     max-width: 1440px;
   }

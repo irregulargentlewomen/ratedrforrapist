@@ -17,6 +17,7 @@ group :development, :test do
   gem 'rack-test'
   gem 'database_cleaner'
   gem 'jasmine'
+  gem 'capybara-webkit'
 
   gem 'compass'
 end
