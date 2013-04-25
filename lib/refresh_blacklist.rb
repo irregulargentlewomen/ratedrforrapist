@@ -3,11 +3,12 @@ require_relative 'person'
 require_relative 'movie'
 
 class RefreshBlacklist
-  attr_reader :results, :unfindables
+  attr_reader :results, :unfindables, :roles
 
   def initialize(options = {})
     @results = Set.new
     @unfindables = Set.new
+    @roles = Set.new
   end
 
   def fetch_blacklist!
@@ -79,13 +80,19 @@ class RefreshBlacklist
     end
   end
 
-  def add_result(person)
+  def add_result(person, movie = {id: nil, role: 'petitioner'})
     puts "adding #{person['name']} (#{person['id']})"
     @results << person
+    @roles << {
+      'person_id' => person['id'],
+      'movie_id' => movie[:id],
+      'role' => movie[:role]
+    }
   end
 
   def subtract_result(person)
     puts "removing #{person['name']} (#{person['id']})"
     @results.delete person
+    @roles.reject! {|x| x['person_id'] == person['id']}
   end
 end

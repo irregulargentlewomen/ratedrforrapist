@@ -1,7 +1,7 @@
 require_relative '../../lib/refresh_blacklist'
 require_relative '../spec_helper_db'
 
-class HTTParty; end
+module HTTParty; end
 
 describe RefreshBlacklist do
   let(:refresher) {RefreshBlacklist.new(
@@ -44,6 +44,11 @@ describe RefreshBlacklist do
           x['id'] == 287
           x['name'] == 'Tilda Swinton'
         }.length.should == 1
+        refresher.roles.select { |x|
+          x['person_id'] == 287
+          x['movie_id'] == nil
+          x['role'] == 'petitioner'
+        }.length.should == 1
       end
     end
 
@@ -81,6 +86,19 @@ describe RefreshBlacklist do
         before do
           refresher.instance_variable_set('@results', (Set.new << hash))
 
+          # use a multi-role test case to make sure you get all of them
+          roles = Set.new
+          roles << {
+            'movie_id' => 324,
+            'person_id' => 984,
+            'role' => 'screenwriter'
+          }
+          roles << {
+            'movie_id' => 361,
+            'person_id' => 984,
+            'role' => 'Feste'
+          }
+          refresher.instance_variable_set('@roles', roles)
         end
 
         it 'subtracts the person from the results list' do
@@ -88,10 +106,16 @@ describe RefreshBlacklist do
             x['id'] == 984
             x['name'] == 'William Shakespeare'
           }.length.should == 1
+          refresher.roles.select {|x|
+            x['person_id'] == 984
+          }.length.should == 2
           refresher.fetch_whitelist!
           refresher.results.select {|x|
             x['id'] == 984
             x['name'] == 'William Shakespeare'
+          }.length.should == 0
+          refresher.roles.select {|x|
+            x['person_id'] == 984
           }.length.should == 0
         end
       end
