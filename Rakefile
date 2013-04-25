@@ -13,6 +13,7 @@ namespace :blacklist do
     refresher = RefreshBlacklist.new
     refresher.fetch!
     DB[:blacklist].multi_insert(refresher.results)
+    DB[:roles].multi_insert(refresher.roles)
   end
   task :dump do
     DB = AppConfig.setup_db
@@ -22,9 +23,7 @@ namespace :blacklist do
       }, out)
     end
   end
-  task :load do
-    DB = AppConfig.setup_db
-    require_relative 'db/reload_schema'
+  task :load => :reload_schema do
     DB[:blacklist].multi_insert(YAML.load_file('database_dump.yml')['blacklist'].values)
   end
 end
