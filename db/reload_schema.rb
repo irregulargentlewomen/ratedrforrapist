@@ -10,8 +10,17 @@ end
 
 DB.drop_table?(:roles)
 DB.create_table(:roles) do
-  Integer :person_id
-  Integer :movie_id
+  primary_key :id
+  foreign_key :person_id, :blacklist
+  foreign_key :movie_id, :movies
   String :role
-  primary_key [:person_id, :movie_id], :name => :roles_pk
+  index :person_id, :unique => false
+  index [:person_id, :movie_id, :role], :unique => true
+end
+
+DB.drop_table?(:movies)
+DB.create_table(:movies) do
+  Integer :id, :primary_key => true
+  String :release_year
+  String :title
 end

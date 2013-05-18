@@ -98,4 +98,6 @@ describe Movie do
       movie.blacklisted_cast_and_crew.should_not include({'id' => 8})
     end
   end
+
+  it 'allows release_year to be writable'
 end

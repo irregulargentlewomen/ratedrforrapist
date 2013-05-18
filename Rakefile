@@ -14,12 +14,15 @@ namespace :blacklist do
     refresher.fetch!
     DB[:blacklist].multi_insert(refresher.results)
     DB[:roles].multi_insert(refresher.roles)
+    DB[:movies].multi_insert(refresher.movies)
   end
   task :dump do
     DB = AppConfig.setup_db
     File.open('database_dump.yml', 'w') do |out|
       YAML.dump({
-        'blacklist' => DB[:blacklist].to_hash(:id)
+        'blacklist' => DB[:blacklist].to_hash(:id),
+        'movies' => DB[:movies].to_hash(:id),
+        'roles' => DB[:roles].to_hash(:id)
       }, out)
     end
   end

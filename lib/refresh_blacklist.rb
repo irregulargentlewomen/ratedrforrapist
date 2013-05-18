@@ -3,12 +3,13 @@ require_relative 'person'
 require_relative 'movie'
 
 class RefreshBlacklist
-  attr_reader :results, :unfindables, :roles
+  attr_reader :results, :unfindables, :roles, :movies
 
   def initialize(options = {})
     @results = Set.new
     @unfindables = Set.new
     @roles = Set.new
+    @movies = Set.new
   end
 
   def fetch_blacklist!
@@ -36,9 +37,13 @@ class RefreshBlacklist
       add_result(result)
       person_object = Person.new(result['id'])
       person_object.movies.each do |m|
-        if(DateTime.strptime(m['release_date'], '%Y-%m-%d') > DateTime.strptime('1977-03-11', '%Y-%m-%d'))        
-          Movie.new(m['id']).cast_and_crew.each do |p|
-            add_result({'id' => p['id'], 'name' => p['name']})
+        if(DateTime.strptime(m['release_date'], '%Y-%m-%d') > DateTime.strptime('1977-03-11', '%Y-%m-%d')) 
+          movie = Movie.new(m['id'])
+          @movies << {'id' => movie.id, 'title' => movie.title, 'release_year' => movie.release_year}       
+          movie.cast_and_crew.each do |p|
+            add_result(
+              {'id' => p['id'], 'name' => p['name']},
+              {id: movie.id, role: (p['job'] || p['character'])})
           end
         else
           puts "#{m['title']} was released before Polanski's arrest."

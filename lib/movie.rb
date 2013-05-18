@@ -31,6 +31,7 @@ class Movie
   end
 
   def release_year
+    DateTime.parse(api_response_body['release_date']).strftime("%Y")
   end
 
   def title
