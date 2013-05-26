@@ -3,9 +3,11 @@ require 'database_cleaner'
 ENV['RACK_ENV'] = 'test'
 require_relative '../lib/app_config'
 
-DB = AppConfig.setup_db
-
-require_relative '../db/reload_schema.rb'
+# only run once
+unless defined? DB
+  DB = AppConfig.setup_db
+  require_relative '../db/reload_schema.rb'
+end
 
 RSpec.configure do |config|
   config.before(:suite) do
