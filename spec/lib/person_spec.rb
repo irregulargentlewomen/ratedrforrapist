@@ -67,7 +67,7 @@ describe Person do
 
       it 'returns a single-item array with that information' do
         person.blacklist_roles.should == [
-          { movie: nil
+          { movie: nil,
             role: 'petitioner'
           }
         ]
@@ -76,6 +76,7 @@ describe Person do
 
     context 'when the person has only collaborated on a movie' do
       before do
-
+      end
+    end
   end
 end
