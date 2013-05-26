@@ -40,7 +40,7 @@ describe Blacklist do
       end
 
       it 'returns a single-item array with that information' do
-        person.blacklist_roles.should == [
+        person.roles_for_id.should == [
           { movie: nil,
             role: 'petitioner'
           }
