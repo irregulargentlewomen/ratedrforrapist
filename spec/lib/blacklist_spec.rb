@@ -33,14 +33,19 @@ describe Blacklist do
   describe '#roles_for_id' do
     before do
       DB[:blacklist].insert(:id => 0, :name => 'Tilda Swinton')
+      Blacklist.movie_source = lambda { |id, options| OpenStruct.new(options.merge({id: id})) }
     end
+    after do
+      Blacklist.movie_source = nil
+    end
+
     context 'when the person has only signed the petition' do
       before do
         DB[:roles].insert(:movie_id => nil, :person_id => 0, :role => 'petitioner')
       end
 
       it 'returns a single-item array with that information' do
-        person.roles_for_id.should == [
+        Blacklist.roles_for_id(0).should == [
           { movie: nil,
             role: 'petitioner'
           }
@@ -50,6 +55,15 @@ describe Blacklist do
 
     context 'when the person has only collaborated on a movie' do
       before do
+        DB[:movies].insert(id: 5, release_year: '1998', title: 'Chinatown')
+        DB[:roles].insert(movie_id: 5, person_id: 0, role: "Scriptwriter")
+      end
+      it 'returns a single-item array with that information' do
+        Blacklist.roles_for_id(0).should == [
+          { movie: OpenStruct.new(id: 5, release_year: '1998', title: 'Chinatown'),
+            role: 'Scriptwriter'
+          }
+        ]
       end
     end
   end

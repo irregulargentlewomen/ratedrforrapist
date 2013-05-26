@@ -13,6 +13,12 @@ describe Movie do
     movie.id.should == 0
   end
 
+  it 'accepts a release_year attribute on initialization'
+  it 'accepts a title attribute on initialization'
+
+  it 'does not hit the API for the title if set on initialization'
+  it 'does not hit the API for the release year if set on initialization'
+
   describe "#cast_and_crew" do
     describe "when the API is available" do
       before do
