@@ -1,5 +1,7 @@
 require_relative '../../lib/person'
-require_relative '../spec_helper_db'
+require_relative '../spec_helper'
+
+module HTTParty; end
 
 describe Person do
   let(:person) { Person.new(0) }
@@ -15,7 +17,7 @@ describe Person do
     describe "when the API is available" do
       before do
         HTTParty.stub(:get).
-        with("http://api.themoviedb.org/3/person/0/credits?api_key=key").
+        with("http://api.themoviedb.org/3/person/0/credits?api_key=key", headers: {"Accept"=>"application/json"}).
         and_return(OpenStruct.new(code: 200, body: {
           id: 0,
           cast: [
@@ -47,35 +49,12 @@ describe Person do
       end
 
       it 'raises an error' do
-        person.cast_and_crew.should raise_error
+        person.movies.should raise_error
       end
 
       it 'tries 5 times before giving up' do
+        person.movies
         HTTParty.should_receive(:get).exactly(5).times
-      end
-    end
-  end
-
-  describe '#blacklist_roles' do
-    before do
-      DB[:blacklist].insert(:id => 0, :name => 'Tilda Swinton')
-    end
-    context 'when the person has only signed the petition' do
-      before do
-        DB[:roles].insert(:movie_id => nil, :person_id => 0, :role => 'petitioner')
-      end
-
-      it 'returns a single-item array with that information' do
-        person.blacklist_roles.should == [
-          { movie: nil,
-            role: 'petitioner'
-          }
-        ]
-      end
-    end
-
-    context 'when the person has only collaborated on a movie' do
-      before do
       end
     end
   end
