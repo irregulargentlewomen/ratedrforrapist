@@ -3,8 +3,10 @@ require_relative 'api_handler'
 class Movie
   attr_reader :id
   attr_writer :api_key
-  def initialize(id)
+  def initialize(id, params = {})
     @id = id
+    @release_year = params[:release_year]
+    @title = params[:title]
   end
 
   def has_blacklisted_cast_or_crew?
@@ -31,11 +33,11 @@ class Movie
   end
 
   def release_year
-    DateTime.parse(api_response_body['release_date']).strftime("%Y")
+    @release_year ||= DateTime.parse(api_response_body['release_date']).strftime("%Y")
   end
 
   def title
-    api_response_body['title']
+    @title ||= api_response_body['title']
   end
 
   private

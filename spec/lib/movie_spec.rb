@@ -13,11 +13,23 @@ describe Movie do
     movie.id.should == 0
   end
 
-  it 'accepts a release_year attribute on initialization'
-  it 'accepts a title attribute on initialization'
+  it 'accepts a release_year attribute on initialization' do
+    Movie.new(0, release_year: '1199').release_year.should == '1199'
+  end
+  it 'accepts a title attribute on initialization' do
+    Movie.new(0, title: 'Chinatown').title.should == 'Chinatown'
+  end
 
-  it 'does not hit the API for the title if set on initialization'
-  it 'does not hit the API for the release year if set on initialization'
+  it 'does not hit the API for the title if set on initialization' do
+    movie = Movie.new(0, title: 'Chinatown')
+    HTTParty.should_not_receive(:get)
+    movie.title
+  end
+  it 'does not hit the API for the release year if set on initialization' do
+    movie = Movie.new(0, release_year: '1220')
+    HTTParty.should_not_receive(:get)
+    movie.release_year
+  end
 
   describe "#cast_and_crew" do
     describe "when the API is available" do
@@ -106,6 +118,4 @@ describe Movie do
       movie.blacklisted_cast_and_crew.should_not include({'id' => 8})
     end
   end
-
-  it 'allows release_year to be writable'
 end
