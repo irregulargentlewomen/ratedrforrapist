@@ -1,6 +1,13 @@
 require_relative 'api_handler'
 
 class Person
+  class << self
+    attr_writer :movie_source
+    def movie_source
+      @movie_source ||= Movie.public_method(:new)
+    end
+  end
+
   attr_reader :id
   attr_writer :api_key
   def initialize(id)
@@ -9,6 +16,22 @@ class Person
 
   def movies
     @movies ||= get_movies
+  end
+
+  def blacklist_roles
+    DB[:roles].
+      left_outer_join(:movies, id: :movie_id).
+      where(person_id: id).
+      map { |r|
+      { movie: (r[:movie_id] ?
+          Person.movie_source.call(r[:movie_id],
+            release_year: r[:release_year],
+            title: r[:title]
+          ) :
+          nil),
+        role: r[:role]
+      }
+    }
   end
 
   private
@@ -22,4 +45,5 @@ class Person
   def url
     "http://api.themoviedb.org/3/person/#{id}/credits?api_key=#{api_key}"
   end
+
 end

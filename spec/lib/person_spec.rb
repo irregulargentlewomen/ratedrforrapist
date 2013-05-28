@@ -1,5 +1,5 @@
 require_relative '../../lib/person'
-require_relative '../spec_helper'
+require_relative '../spec_helper_db'
 
 module HTTParty; end
 
@@ -55,6 +55,45 @@ describe Person do
       it 'tries 5 times before giving up' do
         person.movies
         HTTParty.should_receive(:get).exactly(5).times
+      end
+    end
+  end
+
+  describe '#roles_for_id' do
+    before do
+      DB[:blacklist].insert(:id => 0, :name => 'Tilda Swinton')
+      Person.movie_source = lambda { |id, options| OpenStruct.new(options.merge({id: id})) }
+    end
+    # so that we don't ruin the integration tests
+    after do
+      Person.movie_source = nil
+    end
+
+    context 'when the person has only signed the petition' do
+      before do
+        DB[:roles].insert(:movie_id => nil, :person_id => 0, :role => 'petitioner')
+      end
+
+      it 'returns a single-item array with that information' do
+        person.blacklist_roles.should == [
+          { movie: nil,
+            role: 'petitioner'
+          }
+        ]
+      end
+    end
+
+    context 'when the person has only collaborated on a movie' do
+      before do
+        DB[:movies].insert(id: 5, release_year: '1998', title: 'Chinatown')
+        DB[:roles].insert(movie_id: 5, person_id: 0, role: "Scriptwriter")
+      end
+      it 'returns a single-item array with that information' do
+        person.blacklist_roles.should == [
+          { movie: OpenStruct.new(id: 5, release_year: '1998', title: 'Chinatown'),
+            role: 'Scriptwriter'
+          }
+        ]
       end
     end
   end
