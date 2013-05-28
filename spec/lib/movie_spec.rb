@@ -23,7 +23,7 @@ describe Movie do
     describe "when the API is available" do
       before do
         HTTParty.stub(:get).
-        with("http://api.themoviedb.org/3/movie/0/casts?api_key=key", :headers => {"Accept"=>"application/json"}).
+        with("http://api.themoviedb.org/3/movie/0/casts?api_key=key&append_to_response=casts", headers: {"Accept"=>"application/json"}).
         and_return(OpenStruct.new(code: 200, body: {
           id: 0,
           cast: [
