@@ -75,13 +75,15 @@ describe 'POST /search' do
               cast: [
                 {
                   id: 819,
-                  name: "Edward Norton"
+                  name: "Edward Norton",
+                  character: 'Tyler Durden'
                 }
               ],
               crew: [
                 {
                   id: 1283,
-                  name: "Helena Bonham Carter"
+                  name: "Helena Bonham Carter",
+                  job: 'Screenwriter'
                 }
               ]
             },
@@ -94,7 +96,6 @@ describe 'POST /search' do
         end
 
         it 'responds with json including "blacklisted: false"' do
-          warn last_response.inspect
           result = JSON.parse(last_response.body)
           result.should have_key 'blacklisted'
           result['blacklisted'].should be_false
@@ -109,13 +110,15 @@ describe 'POST /search' do
               cast: [
                 {
                   id: 287,
-                  name: "Brad Pitt"
+                  name: "Brad Pitt",
+                  character: 'Tyler Durden'
                 }
               ],
               crew: [
                 {
                   id: 1283,
-                  name: "Helena Bonham Carter"
+                  name: "Helena Bonham Carter",
+                  job: 'Screenwriter'
                 }
               ]
             },
@@ -166,13 +169,15 @@ describe 'POST /search' do
             cast: [
               {
                 id: 819,
-                name: "Edward Norton"
+                name: "Edward Norton",
+                character: 'Tyler Durden'
               }
             ],
             crew: [
               {
                 id: 1283,
-                name: "Helena Bonham Carter"
+                name: "Helena Bonham Carter",
+                job: 'Screenwriter'
               }
             ]
           },
@@ -199,13 +204,15 @@ describe 'POST /search' do
             cast: [
               {
                 id: 287,
-                name: "Brad Pitt"
+                name: "Brad Pitt",
+                character: 'Tyler Durden'
               }
             ],
             crew: [
               {
                 id: 1283,
-                name: "Helena Bonham Carter"
+                name: "Helena Bonham Carter",
+                job: 'Screenwriter'
               }
             ]
           },
