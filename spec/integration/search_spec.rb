@@ -60,7 +60,7 @@ describe 'POST /search' do
       }
       before do
         HTTParty.stub(:get).
-          with("http://api.themoviedb.org/3/movie/550/casts?api_key=key", :headers => {"Accept"=>"application/json"}).
+          with("http://api.themoviedb.org/3/movie/550?api_key=key&append_to_response=casts", :headers => {"Accept"=>"application/json"}).
           and_return(second_api_response)
 
 
@@ -71,18 +71,21 @@ describe 'POST /search' do
         let(:second_api_response) {
           OpenStruct.new(code: 200, body: {
             id: 0,
-            cast: [
-              {
-                id: 819,
-                name: "Edward Norton"
-              }
-            ],
-            crew: [
-              {
-                id: 1283,
-                name: "Helena Bonham Carter"
-              }
-            ]
+            casts: {
+              cast: [
+                {
+                  id: 819,
+                  name: "Edward Norton"
+                }
+              ],
+              crew: [
+                {
+                  id: 1283,
+                  name: "Helena Bonham Carter"
+                }
+              ]
+            },
+            title: 'Fight Club'
           }.to_json)
         }
 
@@ -91,6 +94,7 @@ describe 'POST /search' do
         end
 
         it 'responds with json including "blacklisted: false"' do
+          warn last_response.inspect
           result = JSON.parse(last_response.body)
           result.should have_key 'blacklisted'
           result['blacklisted'].should be_false
@@ -101,18 +105,21 @@ describe 'POST /search' do
         let(:second_api_response) {
           OpenStruct.new(code: 200, body: {
             id: 0,
-            cast: [
-              {
-                id: 287,
-                name: "Brad Pitt"
-              }
-            ],
-            crew: [
-              {
-                id: 1283,
-                name: "Helena Bonham Carter"
-              }
-            ]
+            casts: {
+              cast: [
+                {
+                  id: 287,
+                  name: "Brad Pitt"
+                }
+              ],
+              crew: [
+                {
+                  id: 1283,
+                  name: "Helena Bonham Carter"
+                }
+              ]
+            },
+          title: 'Fight Club'
           }.to_json)
         }
 
@@ -145,7 +152,7 @@ describe 'POST /search' do
   context "when given an id" do
     before do
       HTTParty.stub(:get).
-        with("http://api.themoviedb.org/3/movie/0/casts?api_key=key", :headers => {"Accept"=>"application/json"}).
+        with("http://api.themoviedb.org/3/movie/0?api_key=key&append_to_response=casts", :headers => {"Accept"=>"application/json"}).
         and_return(api_response)
 
       get '/search', :id => 0
@@ -155,18 +162,21 @@ describe 'POST /search' do
       let(:api_response) {
         OpenStruct.new(code: 200, body: {
           id: 0,
-          cast: [
-            {
-              id: 819,
-              name: "Edward Norton"
-            }
-          ],
-          crew: [
-            {
-              id: 1283,
-              name: "Helena Bonham Carter"
-            }
-          ]
+          casts: {
+            cast: [
+              {
+                id: 819,
+                name: "Edward Norton"
+              }
+            ],
+            crew: [
+              {
+                id: 1283,
+                name: "Helena Bonham Carter"
+              }
+            ]
+          },
+          title: 'Fight Club'
         }.to_json)
       }
 
@@ -185,18 +195,21 @@ describe 'POST /search' do
       let(:api_response) {
         OpenStruct.new(code: 200, body: {
           id: 0,
-          cast: [
-            {
-              id: 287,
-              name: "Brad Pitt"
-            }
-          ],
-          crew: [
-            {
-              id: 1283,
-              name: "Helena Bonham Carter"
-            }
-          ]
+          casts: {
+            cast: [
+              {
+                id: 287,
+                name: "Brad Pitt"
+              }
+            ],
+            crew: [
+              {
+                id: 1283,
+                name: "Helena Bonham Carter"
+              }
+            ]
+          },
+          title: 'Fight Club'
         }.to_json)
       }
 
