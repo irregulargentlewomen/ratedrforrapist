@@ -10,6 +10,7 @@ DB = AppConfig.setup_db
 require_relative 'lib/movie'
 require_relative 'lib/movie_search_results'
 require_relative 'lib/blacklist'
+require_relative 'lib/person'
 
 set :app_file, __FILE__
 set :public_folder, File.dirname(__FILE__) + '/static'

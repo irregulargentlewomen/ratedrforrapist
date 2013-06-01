@@ -24,10 +24,10 @@ class Person
       where(person_id: id).
       map { |r|
       { movie: (r[:movie_id] ?
-          Person.movie_source.call(r[:movie_id],
+          {
             release_year: r[:release_year],
-            title: r[:title]
-          ) :
+            title: r[:title] 
+          } :
           nil),
         role: r[:role]
       }

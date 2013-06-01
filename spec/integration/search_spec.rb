@@ -148,6 +148,12 @@ describe 'POST /search' do
           result['blacklisted_cast_and_crew'].first.should have_key 'name'
           result['blacklisted_cast_and_crew'].first['name'].should == 'Brad Pitt'
         end
+        it 'responds with json including the role played by the blacklisted person' do
+          result = JSON.parse(last_response.body)
+          result.should have_key 'blacklisted_cast_and_crew'
+          result['blacklisted_cast_and_crew'].first.should have_key 'name'
+          result['blacklisted_cast_and_crew'].first['role'].should == 'Tyler Durden'
+        end
       end
     end
   end

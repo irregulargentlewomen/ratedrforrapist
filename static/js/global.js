@@ -69,7 +69,18 @@ IrregularGentlewomen.populateDisambiguator = function(data) {
 
 IrregularGentlewomen.populateBlacklist = function(data) {
     IrregularGentlewomen.populateList('.positive.response', data, function(x) {
-        return x.name + ' (' + x.role + ")"
+        var blacklistRoleString = '', m, movieString;
+
+        for(var i = x.blacklist_roles.length; i >= 0; i--) {
+            if(x.blacklist_roles[i].movie) {
+                m = x.blacklistRoles[i].movie;
+                movieString = m.title + ' (' + m.release_year + ') &mdash ';
+            } else {
+                movieString = '';
+            }
+            blacklistRoleString += '<p>' + movieString + x.blacklistRoles[i].role + '</p>';
+        }
+        return '<h3>' + x.name + ' (' + x.role + ")" + '</h3'> + blacklistRoleString;
     }); 
 };
 

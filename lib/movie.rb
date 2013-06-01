@@ -26,7 +26,12 @@ class Movie
       if result[x['id']]
         result[x['id']][:role] += ", #{x['job'] || x['character']}"
       else
-        result[x['id']] = {id: x['id'], name: x['name'], role: x['job'] || x['character']}
+        result[x['id']] = {
+          id: x['id'],
+          name: x['name'],
+          role: x['job'] || x['character'],
+          blacklist_roles: Person.new(x['id']).blacklist_roles
+        }
       end
       result
     }.values
