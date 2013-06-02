@@ -25,7 +25,7 @@ IrregularGentlewomen.afterSearch = {
         }
     },
     error: function(data) {
-        alert('try again');
+        alert('Sorry, we can\'t find what you\'re looking for! Give it another shot.');
     }
 };
 
