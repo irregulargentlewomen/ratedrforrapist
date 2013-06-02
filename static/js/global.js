@@ -80,7 +80,9 @@ IrregularGentlewomen.populateBlacklist = function(data) {
             }
             blacklistRoleString += '<p>' + movieString + x.blacklist_roles[i].role + '</p>';
         }
-        return '<h3>' + x.name + ' (' + x.role + ")" + '</h3>' + blacklistRoleString;
+        return '<h3><a href="person-' + x.id + '">' +
+            x.name + ' (' + x.role + ")" +
+            '</a></h3>' + blacklistRoleString;
     }); 
 };
 
