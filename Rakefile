@@ -27,7 +27,9 @@ namespace :blacklist do
     end
   end
   task :load => :reload_schema do
-    DB[:blacklist].multi_insert(YAML.load_file('database_dump.yml')['blacklist'].values)
+    ['blacklist', 'movies', 'roles'].each do |t|
+      DB[t.to_sym].multi_insert(YAML.load_file('database_dump.yml')[t].values)
+    end
   end
 end
 
