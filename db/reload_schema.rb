@@ -2,20 +2,21 @@ unless defined? DB
   raise "You didn't load a database context before you tried to reload the schema."
 end
 
+DB.drop_table?(:roles)
+DB.drop_table?(:movies)
 DB.drop_table?(:blacklist)
+
 DB.create_table(:blacklist) do
   Integer :id, :primary_key => true
   String :name
 end
 
-DB.drop_table?(:movies)
 DB.create_table(:movies) do
   Integer :id, :primary_key => true
   String :release_year
   String :title
 end
 
-DB.drop_table?(:roles)
 DB.create_table(:roles) do
   primary_key :id
   foreign_key :person_id, :blacklist
