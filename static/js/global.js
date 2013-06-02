@@ -80,7 +80,7 @@ IrregularGentlewomen.populateBlacklist = function(data) {
             }
             blacklistRoleString += '<p>' + movieString + x.blacklist_roles[i].role + '</p>';
         }
-        return '<h3><a href="person-' + x.id + '">' +
+        return '<h3><a href="#person-' + x.id + '">' +
             x.name + ' (' + x.role + ")" +
             '</a></h3>' + blacklistRoleString;
     }); 
@@ -95,7 +95,7 @@ IrregularGentlewomen.populateList = function(listSectionClass, data, stringFunct
     list.html('');
     for(var i = data.length-1; i >= 0; i--) {
         list.append(
-            '<li>' + stringFunction(data[i]) + "</li>"
+            '<li id="person-' + x.id +'">' + stringFunction(data[i]) + "</li>"
         );
     }
 };
