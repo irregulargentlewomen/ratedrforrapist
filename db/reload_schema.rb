@@ -8,6 +8,13 @@ DB.create_table(:blacklist) do
   String :name
 end
 
+DB.drop_table?(:movies)
+DB.create_table(:movies) do
+  Integer :id, :primary_key => true
+  String :release_year
+  String :title
+end
+
 DB.drop_table?(:roles)
 DB.create_table(:roles) do
   primary_key :id
@@ -16,11 +23,4 @@ DB.create_table(:roles) do
   String :role
   index :person_id, :unique => false
   index [:person_id, :movie_id, :role], :unique => true
-end
-
-DB.drop_table?(:movies)
-DB.create_table(:movies) do
-  Integer :id, :primary_key => true
-  String :release_year
-  String :title
 end
