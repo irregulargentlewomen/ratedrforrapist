@@ -28,7 +28,7 @@ class Person
             release_year: r[:release_year],
             title: r[:title] 
           } :
-          nil),
+          false),
         role: r[:role]
       }
     }
