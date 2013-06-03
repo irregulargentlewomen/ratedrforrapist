@@ -1,5 +1,5 @@
 require_relative 'api_handler'
-require 'date'
+require_relative 'date_helper'
 require 'delegate'
 class MovieSearchResults < SimpleDelegator
   def self.get(title)
@@ -26,11 +26,13 @@ class MovieSearchResults < SimpleDelegator
   end
 
   class Result
+    include DateHelper
+
     attr_reader :title, :id
     def initialize(attrs)
       @title = attrs['title']
       @id = attrs['id']
-      @release_date = attrs['release_date'] ? DateTime.strptime(attrs['release_date'], '%Y-%m-%d') : nil
+      @release_date = parse_date(attrs['release_date'])
     end
 
     def year

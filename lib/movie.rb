@@ -1,4 +1,5 @@
 require_relative 'api_handler'
+require_relative 'date_helper'
 
 class Movie
   attr_reader :id
@@ -38,7 +39,7 @@ class Movie
   end
 
   def release_year
-    @release_year ||= DateTime.parse(api_response_body['release_date']).strftime("%Y")
+    @release_year ||= year_string_from_date_string(api_response_body['release_date'])
   end
 
   def title
@@ -47,6 +48,7 @@ class Movie
 
   private
   include ApiHandler
+  include DateHelper
   
   def api_response_body
     @api_response_body ||= get_unless_down

@@ -156,6 +156,33 @@ describe 'POST /search' do
         end
       end
     end
+
+    context 'and a returned release date is invalid' do
+      let(:api_response) {
+        OpenStruct.new(code: 200, body: {
+          results: [
+            {
+              title: 'Fight Club',
+              id: 550,
+              release_date: '59-15-23w242f'
+            },
+            {
+              title: 'Clubbed',
+              id: 14476,
+              release_date: '2008-10-02'
+            }
+          ]
+        }.to_json)
+      }
+      before do
+        get '/search', title: 'title'
+      end
+
+
+      it 'does not throw an error' do
+        last_response.should be_ok
+      end
+    end
   end
 
   context "when given an id" do
