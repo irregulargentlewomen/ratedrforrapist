@@ -63,7 +63,7 @@ IrregularGentlewomen.castSearch = function(link) {
 
 IrregularGentlewomen.populateDisambiguator = function(data) {
     IrregularGentlewomen.populateList('.disambiguation', data, function(x) {
-        return '<a href="/search?id=' + x.id + '">' + x.title + "</a>"
+        return '<li><a href="/search?id=' + x.id + '">' + x.title + "</a></li>"
     });
 };
 
@@ -80,9 +80,11 @@ IrregularGentlewomen.populateBlacklist = function(data) {
             }
             blacklistRoleString += '<p>' + movieString + x.blacklist_roles[i].role + '</p>';
         }
-        return '<h3><a href="#person-' + x.id + '">' +
+        return '<li id="person-' + x.id +'">' +
+            '<h3><a href="#person-' + x.id + '">' +
             x.name + ' (' + x.role + ")" +
-            '</a></h3>' + blacklistRoleString;
+            '</a></h3>' + blacklistRoleString +
+            '</li>';
     }); 
 };
 
@@ -94,9 +96,7 @@ IrregularGentlewomen.populateList = function(listSectionClass, data, stringFunct
     var list = $(listSectionClass + ' ul');
     list.html('');
     for(var i = data.length-1; i >= 0; i--) {
-        list.append(
-            '<li id="person-' + x.id +'">' + stringFunction(data[i]) + "</li>"
-        );
+        list.append(stringFunction(data[i]));
     }
 };
 
