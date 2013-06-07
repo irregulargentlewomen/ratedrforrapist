@@ -1,11 +1,27 @@
 require_relative '../spec_helper_integration'
 
+def stub_api_request(type, options = {})
+  url_for_type = case type
+    when :title_search
+      title = options[:title] || 'title'
+      "search/movie?query=#{title}"
+    else
+      raise 'url type not defined'
+    end
+  raise 'no response defined' unless options[:response]
+  HTTParty.stub(:get).
+    with("http://api.themoviedb.org/3/#{url_for_type}&api_key=key",
+      :headers => {"Accept"=>"application/json"}
+    ).
+    and_return(options[:response])
+end
+
 describe 'POST /search' do
   context "when given a title" do
     before do
-      HTTParty.stub(:get).
-        with("http://api.themoviedb.org/3/search/movie?query=title&api_key=key", :headers => {"Accept"=>"application/json"}).
-        and_return(api_response)
+      stub_api_request(:title_search, 
+        title: 'title',
+        response: api_response)
     end
 
     context "with multiple possible results" do

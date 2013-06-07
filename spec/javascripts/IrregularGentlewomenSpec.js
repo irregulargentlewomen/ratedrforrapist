@@ -56,7 +56,21 @@ describe("IrregularGentlewomen", function() {
   describe('#populateBlacklist', function() {
     beforeEach(function() {
       IrregularGentlewomen.populateBlacklist([
-        {name: "Helena Bonham Carter", role: 'Mrs. Lovett'}
+        {
+          name: "Helena Bonham Carter",
+          role: 'Mrs. Lovett',
+          id: 550,
+          blacklist_roles: [
+            {
+              movie: {title: 'Harry Potter', release_year: '2000'},
+              role: 'Bellatrix Lestrange'
+            },
+            {
+              movie: null,
+              role: 'petitioner'
+            }
+          ]
+        }
       ]);
     });
     it('targets the correct node', function() {
@@ -64,7 +78,13 @@ describe("IrregularGentlewomen", function() {
     });
     it('correctly populates the list', function() {
       expect(node.append).toHaveBeenCalledWith(
-        '<li>Helena Bonham Carter (Mrs. Lovett)</li>'
+        '<li id="person-550">' +
+          '<h3><a href="#person-550">' +
+            'Helena Bonham Carter (Mrs. Lovett)' +
+          '</a></h3>' +
+          '<p>Harry Potter (2000) &mdash; Bellatrix Lestrange</p>' +
+          '<p>petitioner</p>' +
+        '</li>'
       );
     })
   });
@@ -88,7 +108,7 @@ describe("IrregularGentlewomen", function() {
     });
 
     it('correctly populates the list', function() {
-      expect(node.append).toHaveBeenCalledWith('<li>-test-</li>');
+      expect(node.append).toHaveBeenCalledWith('-test-');
     });
   });
 
