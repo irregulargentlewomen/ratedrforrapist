@@ -165,11 +165,12 @@ footer {
   /* 600 =================================================== */
 	section.alert.positive ul {
 		li:before {
-			content: "\f116;";
+			content: "\f116";
 			font-family: FontAwesome;
 			font-size: 21px;
 			font-size: 2.1em;
 			font-size: 2.1rem;
+			color: #013568;
 			padding-right: 5px;
 		}
 	}
