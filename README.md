@@ -27,24 +27,43 @@ The capsule biography of Roman Polanski is adapted from the New Oxford American 
 
 [A Vague Disclaimer Is Nobody's Friend](http://tmblr.co/Z-dllxbNAKMv)
 =====================================
-The Irregular Gentlewomen make no claim to complete accuracy in the results provided by this tool. The information used in determining if a movie has been made in part by Roman Polanski collaborators or supporters is drawn from the following sources:
+While the Irregular Gentlewomen make no claim to complete accuracy in the results provided by this tool, and acknowledge that both false positives and negatives may occur, we are committed to maintaining a dataset which is as accurate as possible. The information used in determining if a movie has been made in part by Roman Polanski collaborators or supporters is drawn from the following sources:
 * [Bernard-Henri Levy](http://www.bernard-henri-levy.com/si-vous-souhaitez-signer-la-petition-pour-roman-polanski-2418.html)
-* Breitbart.com ([1](http://www.breitbart.com/Big-Hollywood/2009/09/29/Naming-Names--The-Free-Roman-Polanski-Petition), [2](http://www.breitbart.com/Big-Hollywood/2009/09/28/Round-Up-of-Hollywoods-Polanski-Supporters))
-* [I Hate the Media](http://www.ihatethemedia.com/roman-polanski-whoopi-goldberg)
+* [The Independant](http://www.independent.co.uk/voices/commentators/harvey-weinstein-polanski-has-served-his-time-and-must-be-freed-1794699.html)
+* [The Huffington Post](http://www.huffingtonpost.com/kim-morgan/roman-polanski-understand_b_301292.htm)
+* [NPR](http://www.npr.org/templates/story/story.php?storyId=113316262)
 * [New York Times](http://roomfordebate.blogs.nytimes.com/2009/09/29/the-polanski-uproar/#damon)
-* [PopCrunch](http://www.popcrunch.com/celebrities-support-polanski/)
 * [SACD](http://www.sacd.fr/Tous-les-signataires-de-la-petition-All-signing-parties.1341.0.html)
-* [YouTube](http://www.youtube.com/watch?v=yyx4E51ZCns)
+* [The Wrap](http://www.thewrap.com/article/hollywood-reacts-shock-polanski-arrest-7844)
+* [YouTube][1](http://www.youtube.com/watch?v=yyx4E51ZCns), [2](http://www.youtube.com/watch?v=As7nJgSoWrg), [3](http://www.youtube.com/watch?v=nZskUvAGyjQ)
 
-It is possible, indeed probable, indeed certain, that there are further collaborators and supporters of Polanski's career and decisions. (We have not gone looking for any of the many op-eds written in 2009 to include the authors thereof, for example.)
+If you have a source for us to add to our list, or information indicating that one of our sources is out-of-date or otherwise inaccurate, we will be happy to update our dataset to reflect that; please email <irregulargentlewomen@gmail.com>.
 
-In short: Roman Polanski has been working in the film industry, American and European, for decades. He is undeniably a talented filmmaker and therefore enjoys the support of many of his fellow filmmakers. Because we live in a society which excuses, minimizes, and avoids thinking about rape, he has been able to retain that support even though he is an admitted rapist.
+All cast and crew information is sourced through The Movie Database's API. TMDB is an open dataset and corrections may be directly made there. Rated R for Rapist caches cast and crew data for movies which Roman Polanski worked on after 1977, though it does not cache other movie data retrieved from TMDB. This caching is a partially-manual process and we do not refresh this cache frequently as the data is largely static. If you make a change to TMDB data which affects this portion of our dataset, or notice a change which has made our cache out-of-date, please notify us so that we can run an update. This data was last checked in May 2013.
 
-We are not interested in debating, discussing, or engaging with the question of whether Polanski's life, history, and/or talent provide mitigating circumstances; this project operates on the assumptions that (a) drugging and raping a thirteen-year-old is not an excusable action, (b) to attempt to excuse such an action allies one with the rapist rather than the survivor, and (c) to choose not to support, financially or otherwise, the work of a rapist or those who support a rapist is an ethical action. Many people &mdash; including both the authors of this project &mdash; have independently made such a choice; this tool is meant only to provide information to make it easier to follow through on that choice.
+If you are a petitioner, supporter, or former collaborator who is uncomfortable with your name appearing in our dataset, our _removal policy_ is as follows:
+
+Petitioners
+-----------
+Please withdraw your name from the petition(s) you've signed and send us documentation of this withdrawal. "Documentation" can be as simple as a link to an updated petition.
+
+Other supporters
+---------------
+Our "other supporter" data is drawn from public statements. Please provide documentation of a later statement where you contradict your prior support, or documentation indicating that our sources misquote you.
+
+Former collaborators
+--------------------
+We're uncomfortable with obscuring the historical record. The only former "collaborator" of Roman Polanski that our dataset generation script ignores is William Shakespeare, and we'll only consider removing/ignoring collaboration data under similar exceptional circumstances. However, if you provide documentation of a public statement which indicates that your past collaboration is not reflective of present support, we will add a clarifying annotation to our dataset.
+
+Statement of Intent
+===================
+Roman Polanski has been working in the film industry, American and European, for decades. He is undeniably a talented filmmaker and therefore enjoys the support of many of his fellow filmmakers. Because we live in a society which excuses, minimizes, and avoids thinking about rape, he has been able to retain that support even though he is an admitted rapist.
+
+We are not interested in debating, discussing, or engaging with the question of whether Polanski's life, history, and/or talent provide mitigating circumstances; this project operates on the assumptions that (a) drugging and raping a thirteen-year-old is not an excusable action, (b) to attempt to excuse such an action allies one with the rapist rather than the survivor, and (c) to choose not to support, financially or otherwise, the work of a rapist or those who support a rapist is an ethical action. Many people have independently made such a choice; this tool is meant only to provide information to make it easier to follow through on that choice.
 
 These are our premises; we do not intend to defend or explain them beyond this statement. 
 
-&mdash; Elizabeth Yalkut and Betsy Haibel, April 2013
+&mdash; Elizabeth Yalkut and Betsy Haibel, September 2013
 
 To Do (in no order whatsoever)
 ==============================
