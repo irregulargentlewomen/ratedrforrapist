@@ -33,6 +33,16 @@ namespace :blacklist do
   end
 end
 
+namespace :searcher do
+  task :golden_globes do
+    require 'httparty'
+    require_relative 'lib/person_search_results'
+    require_relative 'lib/person'
+    require_relative 'lib/movie'
+
+
+
+
 begin
   require 'jasmine'
   load 'jasmine/tasks/jasmine.rake'

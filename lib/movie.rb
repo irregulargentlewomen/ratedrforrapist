@@ -1,13 +1,10 @@
 require_relative 'api_handler'
 require_relative 'date_helper'
 
-class Movie
-  attr_reader :id
+Movie = Struct.new :id, :title, :release_year do
   attr_writer :api_key
   def initialize(id, params = {})
-    @id = id
-    @release_year = params[:release_year]
-    @title = params[:title]
+    super(id, params[:title], params[:release_year])
   end
 
   def has_blacklisted_cast_or_crew?
@@ -39,11 +36,11 @@ class Movie
   end
 
   def release_year
-    @release_year ||= year_string_from_date_string(api_response_body['release_date'])
+    self['release_year'] ||= year_string_from_date_string(api_response_body['release_date'])
   end
 
   def title
-    @title ||= api_response_body['title']
+    self['title'] ||= api_response_body['title']
   end
 
   private
