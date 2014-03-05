@@ -3,8 +3,8 @@ require_relative 'movie'
 
 Person = Struct.new(:id, :name) do
   attr_writer :api_key, :movie_source
-  def initialize(id, options = {})
-    super(id, options[:name])
+  def initialize(options = {})
+    super(options[:id], options[:name])
   end
 
   def movies
