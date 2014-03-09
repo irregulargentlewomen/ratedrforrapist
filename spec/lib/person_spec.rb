@@ -1,9 +1,9 @@
 require_relative '../../lib/person'
 require_relative '../spec_helper_db'
-require_relative '../support/api_mocking_helper'
+
+module HTTParty; end
 
 describe Person do
-  include ApiMockingHelper
   let(:person) { Person.new(0) }
   before do
     person.api_key = "key"
@@ -16,55 +16,50 @@ describe Person do
   describe "#movies" do
     describe "when the API is available" do
       before do
-        stub_request(
-          :get,
-          "http://api.themoviedb.org/3/person/0/credits?api_key=key",
-          ApiMockingHelper::Response.new(
-            body: {
-              id: 0,
-              cast: [
-                {
-                  id: 107,
-                  title: "Snatch"
-                }
-              ],
-              crew: [
-                {
-                  id: 161,
-                  title: "Ocean's Eleven"
-                }
-              ]
+        HTTParty.stub(:get).
+        with("http://api.themoviedb.org/3/person/0/credits?api_key=key", headers: {"Accept"=>"application/json"}).
+        and_return(OpenStruct.new(code: 200, body: {
+          id: 0,
+          cast: [
+            {
+              id: 107,
+              title: "Snatch"
             }
-          )
-        )
+          ],
+          crew: [
+            {
+              id: 161,
+              title: "Ocean's Eleven"
+            }
+          ]
+        }.to_json))
       end
 
       it 'returns the correct result' do
         result = person.movies
         result.length.should == 2
-        result.select {|x| x.id == 107 && x.title == "Snatch"}.length.should == 1
-        result.select {|x| x.id == 161 && x.title == "Ocean's Eleven"}.length.should == 1   
+        result.select {|x| x['id'] == 107 && x['title'] == "Snatch"}.length.should == 1
+        result.select {|x| x['id'] == 161 && x['title'] == "Ocean's Eleven"}.length.should == 1   
       end
     end
 
     describe "when the API is not available" do
       before do 
-        stub_all_requests_with_errors
+        HTTParty.stub(:get).and_return(OpenStruct.new(code: 500))
       end
 
       it 'raises an error' do
-        expect { person.movies }.to raise_error
+        person.movies.should raise_error
       end
 
       it 'tries 5 times before giving up' do
-        # duplicative. figure out a different way to ignore the exception
-        expect { person.movies }.to raise_error
-        expect(HTTParty).to have_received(:get)
+        person.movies
+        HTTParty.should_receive(:get).exactly(5).times
       end
     end
   end
 
-  describe '#blacklist_roles' do
+  describe '#roles_for_id' do
     before do
       DB[:blacklist].insert(:id => 0, :name => 'Tilda Swinton')
     end

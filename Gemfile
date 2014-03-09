@@ -14,8 +14,6 @@ end
 
 group :development, :test do
   gem 'rspec'
-  gem 'rspec-spies'
-  gem 'mocha'
   gem 'rack-test'
   gem 'database_cleaner'
   gem 'jasmine'

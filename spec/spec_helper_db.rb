@@ -1,10 +1,5 @@
 require 'database_cleaner'
 
-require 'pry'
-
-require 'mocha/api'
-RSpec.configure {|c| c.mock_with :mocha }
-
 ENV['RACK_ENV'] = 'test'
 require_relative '../lib/app_config'
 

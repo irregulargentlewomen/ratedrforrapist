@@ -3,11 +3,8 @@ require_relative 'date_helper'
 
 Movie = Struct.new :id, :title, :release_year do
   attr_writer :api_key
-  def initialize(params = {})
-    id = params.fetch(:id)
-    title = params.fetch(:title, nil)
-    release_year = params.fetch(:release_year, nil)
-    super(id, title, release_year)
+  def initialize(id, params = {})
+    super(id, params[:title], params[:release_year])
   end
 
   def has_blacklisted_cast_or_crew?

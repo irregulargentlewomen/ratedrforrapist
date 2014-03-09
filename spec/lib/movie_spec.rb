@@ -4,39 +4,37 @@ require_relative '../spec_helper'
 class Blacklist; end
 
 describe Movie do
-  subject(:movie) { Movie.new(id: 0) }
+  subject(:movie) { Movie.new(0) }
   before do
     movie.api_key = "key"
   end
 
   it 'sets id on initialization' do
-    expect(movie.id).to eql(0)
+    movie.id.should == 0
   end
 
   it 'accepts a release_year attribute on initialization' do
-    m = Movie.new(id: 0, release_year: '1199')
+    m = Movie.new(0, release_year: '1199')
     expect(m.release_year).to eql('1199')
   end
   it 'accepts a title attribute on initialization' do
-    m = Movie.new(id: 0, release_year: '1199')
-    expect(m.title).to eql('Chinatown')
+    Movie.new(0, title: 'Chinatown').title.should == 'Chinatown'
   end
 
   it 'does not hit the API for the title if set on initialization' do
-    movie = Movie.new(id: 0, title: 'Chinatown')
+    movie = Movie.new(0, title: 'Chinatown')
+    HTTParty.should_not_receive(:get)
     movie.title
-    expect(HTTParty).to_not have_received(:get)
   end
   it 'does not hit the API for the release year if set on initialization' do
-    movie = Movie.new(id: 0, release_year: '1220')
+    movie = Movie.new(0, release_year: '1220')
+    HTTParty.should_not_receive(:get)
     movie.release_year
-    expect(HTTParty).to_not have_received(:get)
   end
 
   describe "#cast_and_crew" do
     describe "when the API is available" do
       before do
-        #stub_request(
         HTTParty.stub(:get).
         with("http://api.themoviedb.org/3/movie/0?api_key=key&append_to_response=casts", headers: {"Accept"=>"application/json"}).
         and_return(OpenStruct.new(code: 200, body: {
