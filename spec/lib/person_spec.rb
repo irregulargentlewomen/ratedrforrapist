@@ -62,9 +62,11 @@ describe Person do
   describe '#roles_for_id' do
     before do
       DB[:blacklist].insert(:id => 0, :name => 'Tilda Swinton')
+      Person.movie_source = lambda { |id, options| OpenStruct.new(options.merge({id: id})) }
     end
     # so that we don't ruin the integration tests
     after do
+      Person.movie_source = nil
     end
 
     context 'when the person has only signed the petition' do

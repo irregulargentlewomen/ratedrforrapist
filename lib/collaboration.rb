@@ -1,1 +1,0 @@
-Collaboration = Struct.new(:person, :movie, :role)

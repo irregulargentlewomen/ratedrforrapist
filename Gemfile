@@ -18,8 +18,6 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'jasmine'
   gem 'capybara-webkit'
-  gem 'pry'
-  gem 'pry-debugger'
 
   gem 'compass'
 end

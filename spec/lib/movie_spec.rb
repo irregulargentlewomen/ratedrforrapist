@@ -4,7 +4,7 @@ require_relative '../spec_helper'
 class Blacklist; end
 
 describe Movie do
-  subject(:movie) { Movie.new(0) }
+  let(:movie) { Movie.new(0) }
   before do
     movie.api_key = "key"
   end
@@ -14,8 +14,7 @@ describe Movie do
   end
 
   it 'accepts a release_year attribute on initialization' do
-    m = Movie.new(0, release_year: '1199')
-    expect(m.release_year).to eql('1199')
+    Movie.new(0, release_year: '1199').release_year.should == '1199'
   end
   it 'accepts a title attribute on initialization' do
     Movie.new(0, title: 'Chinatown').title.should == 'Chinatown'

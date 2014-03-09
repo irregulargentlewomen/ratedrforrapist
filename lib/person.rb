@@ -1,10 +1,17 @@
 require_relative 'api_handler'
-require_relative 'movie'
 
-Person = Struct.new(:id, :name) do
+class Person
+  class << self
+    attr_writer :movie_source
+    def movie_source
+      @movie_source ||= Movie.public_method(:new)
+    end
+  end
+
+  attr_reader :id
   attr_writer :api_key
-  def initialize(id, options = {})
-    super(id, options[:name])
+  def initialize(id)
+    @id = id
   end
 
   def movies
@@ -32,7 +39,7 @@ Person = Struct.new(:id, :name) do
   
   def get_movies
     response_body = get_unless_down
-    (response_body['cast'] + response_body['crew']).collect {|x| Movie.new(x['id'])}
+    response_body['cast'] + response_body['crew']
   end
 
   def url
