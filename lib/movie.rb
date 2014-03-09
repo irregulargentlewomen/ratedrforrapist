@@ -1,5 +1,5 @@
-require 'date_helper'
-require 'api_client'
+require_relative 'api_handler'
+require_relative 'date_helper'
 
 Movie = Struct.new :id, :title, :release_year do
   attr_writer :api_key
@@ -19,7 +19,7 @@ Movie = Struct.new :id, :title, :release_year do
   end
 
   def cast_and_crew
-    @cast_and_crew ||= ApiClient.cast_and_crew_for_movie(self)
+    @cast_and_crew ||= api_response_body['casts']['cast'] + api_response_body['casts']['crew']
   end
 
   def presentable_blacklisted_cast_and_crew
@@ -47,9 +47,18 @@ Movie = Struct.new :id, :title, :release_year do
   end
 
   private
+  include ApiHandler
   include DateHelper
+  
+  def api_response_body
+    @api_response_body ||= get_unless_down
+  end
 
   def ids_of_blacklisted_cast_and_crew
     @ids_of_blacklisted_cast_and_crew ||= Blacklist.filtered_by_id(cast_and_crew.map {|x| x['id']}).select_map(:id)
+  end
+
+  def url
+    "http://api.themoviedb.org/3/movie/#{id}?api_key=#{api_key}&append_to_response=casts"
   end
 end
