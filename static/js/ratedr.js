@@ -18,8 +18,8 @@ angular.module('ratedr',
     });
 }).controller('SearchController', function($scope) {
   $scope.movies = [
-    { title: 'Mariel of Redwall', releaseYear: '1865' },
-    { title: 'Gaudy Night', releaseYear: '1993'}
+    { id: 19, title: 'Mariel of Redwall', releaseYear: '1865' },
+    { id: 23, title: 'Gaudy Night', releaseYear: '1993'}
   ];
 }).controller('MovieController', function($scope) {
   $scope.movie = { title: 'Mariel of Redwall', releaseYear: '1865' };

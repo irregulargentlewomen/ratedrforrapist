@@ -2,7 +2,7 @@
   <h2>Which of these movies do you mean?</h2>
   <ul>
     <li ng-repeat='movie in movies'>
-      <a>{{movie.title}} ({{movie.releaseYear}})</a>
+      <a href="#/movies/{{movie.id}}">{{movie.title}} ({{movie.releaseYear}})</a>
     </li>
   </ul>
   <p><a href="#" class="close icon-remove">Close</a></p>

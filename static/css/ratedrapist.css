@@ -44,7 +44,7 @@ section.alert {
 
 /* define application states */
 /* line 40, ../scss/ratedrapist.scss */
-.disambiguation {
+section.alert.disambiguation {
   display: block;
 }
 
