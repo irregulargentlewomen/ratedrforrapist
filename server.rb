@@ -19,26 +19,26 @@ get '/' do
   send_file File.join(settings.public_folder, 'index.html')
 end
 
-get '/search' do
-  if params[:title]
-    search_results = MovieSearchResults.get(params['title'])
-    if search_results.length < 1
-      return json(error: 'no results found')
-    elsif search_results.length > 1
-      return json(disambiguate: search_results.map { |x|
-        {title: "#{x.title} (#{x.year})", id: x.id}
-      })
-    end
-    movie = Movie.new(search_results.first.id)
-  elsif params[:id]
-    movie = Movie.new(params[:id])
-  else
-    return json(error: 'please search by either movie title or movie id')
-  end
+# get '/search' do
+#   if params[:title]
+#     search_results = MovieSearchResults.get(params['title'])
+#     if search_results.length < 1
+#       return json(error: 'no results found')
+#     elsif search_results.length > 1
+#       return json(disambiguate: search_results.map { |x|
+#         {title: "#{x.title} (#{x.year})", id: x.id}
+#       })
+#     end
+#     movie = Movie.new(search_results.first.id)
+#   elsif params[:id]
+#     movie = Movie.new(params[:id])
+#   else
+#     return json(error: 'please search by either movie title or movie id')
+#   end
   
-  json({
-    blacklisted: movie.has_blacklisted_cast_or_crew?,
-    blacklisted_cast_and_crew: movie.presentable_blacklisted_cast_and_crew,
-    title: movie.title
-  })
-end
+#   json({
+#     blacklisted: movie.has_blacklisted_cast_or_crew?,
+#     blacklisted_cast_and_crew: movie.presentable_blacklisted_cast_and_crew,
+#     title: movie.title
+#   })
+# end

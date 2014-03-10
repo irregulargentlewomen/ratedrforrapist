@@ -44,17 +44,17 @@ section.alert {
 
 /* define application states */
 /* line 40, ../scss/ratedrapist.scss */
-body.state-disambiguate .disambiguation {
+.disambiguation {
   display: block;
 }
 
 /* line 46, ../scss/ratedrapist.scss */
-body.state-positive .positive.response {
+.positive.response.active {
   display: block;
 }
 
 /* line 52, ../scss/ratedrapist.scss */
-body.state-negative .negative.response {
+.negative.response.active {
   display: block;
 }
 
@@ -126,7 +126,7 @@ section.alert.positive ul li h3 a {
 }
 /* line 109, ../scss/ratedrapist.scss */
 section.alert.positive ul li p {
-  display: none;
+  //display: none;
   font-style: italic;
   margin-top: 0;
   -webkit-transition: all .3s ease;

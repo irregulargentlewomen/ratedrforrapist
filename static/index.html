@@ -3,7 +3,7 @@
 	<!--[if IE 7 ]><html lang="en" class="ie7"><![endif]-->
 	<!--[if IE 8 ]><html lang="en" class="ie8"><![endif]-->
 	<!--[if IE 9 ]><html lang="en" class="ie9"><![endif]-->
-<html lang="en">
+<html lang="en" ng-app='ratedr'>
 <head>
 	<title>Rated R For Rapist</title>
 		
@@ -20,13 +20,15 @@
 	<link rel="shortcut icon" href="favicon.ico">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.1/angular.min.js"></script>
-	<script src="/js/disambiguation.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.1/angular-resource.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.1/angular-route.min.js"></script>
+	<script src="/js/ratedr.js"></script>
 </head>
 <body>
 	<h1>Rated R For Rapist</h1>
-	<form action="/search" method="get" accept-charset="utf-8" class="form-inline the-question">
+	<form accept-charset="utf-8" class="form-inline the-question" ng-controller='GlobalController' ng-submit="search()">
 		<label for="title">Has anyone who worked on</label>
-		<input type="text" name="title" placeholder="this movie" id="title" class="input-extra-large">
+		<input type="text" name="title" placeholder="this movie" id="title" class="input-extra-large" ng-model='title'>
 		<span>collaborated with or otherwise supported</span>
 		<input type="submit" value="Roman Polanski?">
 	</form>
@@ -37,32 +39,17 @@
 			<p><cite>&mdash; Roman Polanski, quoted in Martin Amis, <cite class="title icon-book">Visiting Mrs Nabokov</cite>, 1979, p. 264.</cite></p>
 		</blockquote>
 	</article>
-	<section class="invocations">
-	<section class="response alert disambiguation" ng-controller ='DisambiguationController'>
-		<h2>Which of these movies do you mean?</h2>
-		<ul>
-			<li ng-repeat='movie in movies'>
-				<a>{{movie.title}} ({{movie.releaseYear}})</a>
-			</li>
-		</ul>
-		<p><a href="#" class="close icon-remove">Close</a></p>
-	</section>
-	<section class="negative response alert alert-success">
+	<section class="invocations" ng-view></section>
+<!-- 	<section class="negative response alert alert-success">
 		<h2>No!</h2>
 		<p>None of the cast or crew of <span class="movie-title">$movie</span> have collaborated with Roman Polanski or publicly expressed support for him. <a href="#further-info" class="icon-info-sign alert-error" title="Link to more context on how and why we make this claim."></a></p>
 			<p><a href="#" class="close icon-remove">Close</a></p>
-	</section>
-	<section class="positive response alert alert-warning">
-		<h2>Yes.</h2>
-		<p>One or more people who worked on <span class="movie-title">$movie</span> have either collaborated with Roman Polanski or publicly expressed support for him. <a href="#further-info" class="icon-info-sign alert-error" title="Link to more context on how and why we make this claim."></a></p>
-		<ul></ul>
-		<p><a href="#" class="close icon-remove">Close</a></p>
 	</section>
 	<section class="alert alert-error" id="further-info"><p>Please note, this information <em>may include false negatives</em>. The Irregular Gentlewomen make no claim to complete accuracy in the results provided by this tool.</p>
 		<p>If you wish to add to the sources we rely on, please <a href="http://github.com/irregulargentlewomen/ratedrforrapist" class="icon-github-sign">submit a pull request</a>, <a href="mailto:irregulargentlewomen@gmail.com?subject=Addition to the Polanski project" class="icon-envelope">email</a>, or <span class="icon-twitter-sign">tweet</span> with the hashtag #ratedrapist. Please provide us with a citation so that we may verify your information.</p>
 		<p><a href="#" class="close icon-remove">Close</a>
 	</section>
-	</section>
+ -->
 	<footer>
 		<p><a href="http://github.com/irregulargentlewomen/ratedrforrapist" class="icon-github-sign">Code</a> by <a href="http://bhaibel.github.com" class="icon-github-sign">Betsy Haibel</a> and <a class="icon-user" href="http://www.elizabethyalkut.com">Elizabeth Yalkut</a>. Distributed under the <a href="http://creativecommons.org/licenses/GPL/3.0/" class="icon-external-link">GPL</a>. Credits and notes are available in the <a href="https://github.com/irregulargentlewomen/ratedrforrapist#readme" class="icon-bookmark">README</a>.</p>
 	</footer>
