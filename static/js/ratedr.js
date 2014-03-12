@@ -32,16 +32,34 @@ angular.module('ratedr',
     }
   }
   return service;
+}]).service('Movie', [ '$rootScope', function( $rootScope ) {
+  var service = {
+    data: {
+      19: {
+        movie: { id: 19, title: 'Mariel of Redwall', releaseYear: '1865' },
+        people: [
+          { id: 42, name: 'Maria Giannetti', role: 'typist', blacklistRoles: [
+            { role: 'petitioner' },
+            { movie: { title: 'Chinatown', releaseYear: '2312'}, role: 'cinematographer'}
+            ]
+          }
+        ]
+      }
+    },
+    getMovieForMovieId: function(id) {
+      return service.data[id].movie;
+    },
+    getPeopleForMovieId: function(id) {
+      return service.data[id].people;
+    }
+  }
+  return service;
 }]).controller('SearchController', ['$scope', 'Search', '$routeParams', function(scope, Search, routeParams) {
   scope.movies = Search.getSearchResults(routeParams['title']);
-}]).controller('MovieController', function($scope) {
-  $scope.movie = { title: 'Mariel of Redwall', releaseYear: '1865' };
-  $scope.people = [
-    { id: 42, name: 'Maria Giannetti', role: 'typist', blacklistRoles: [
-      { role: 'petitioner' },
-      { movie: { title: 'Chinatown', releaseYear: '2312'}, role: 'cinematographer'}
-    ] }
-  ]
+}]).controller('MovieController', ['$scope', 'Movie', '$routeParams', function($scope, Movie, routeParams) {
+  $scope.movie = Movie.getMovieForMovieId(routeParams['id']);
+  $scope.people = Movie.getPeopleForMovieId(routeParams['id']);
+
   $scope.positiveClass = function() {
     if($scope.people.length > 0) {
       return "active";
@@ -56,7 +74,7 @@ angular.module('ratedr',
       return "";
     }
   };
-}).controller('GlobalController', function($scope, $location){
+}]).controller('GlobalController', function($scope, $location){
   $scope.search = function() {
     $location.path('/search/' + $scope.title);
   };
