@@ -16,12 +16,25 @@ angular.module('ratedr',
     .otherwise({
       redirectTo: '/'
     });
-}).controller('SearchController', function($scope) {
-  $scope.movies = [
-    { id: 19, title: 'Mariel of Redwall', releaseYear: '1865' },
-    { id: 23, title: 'Gaudy Night', releaseYear: '1993'}
-  ];
-}).controller('MovieController', function($scope) {
+}).service('Search', [ '$rootScope', function( $rootScope ) {
+  var service = {
+    searches: {
+      'test search': [
+        { id: 19, title: 'Mariel of Redwall', releaseYear: '1865' },
+        { id: 23, title: 'Gaudy Night', releaseYear: '1993'}
+      ],
+      'other search': [
+        { id: 54, title: 'Victory', releaseYear: '1231' }
+      ]
+    },
+    getSearchResults: function(title) {
+      return service.searches[title];
+    }
+  }
+  return service;
+}]).controller('SearchController', ['$scope', 'Search', '$routeParams', function(scope, Search, routeParams) {
+  scope.movies = Search.getSearchResults(routeParams['title']);
+}]).controller('MovieController', function($scope) {
   $scope.movie = { title: 'Mariel of Redwall', releaseYear: '1865' };
   $scope.people = [
     { id: 42, name: 'Maria Giannetti', role: 'typist', blacklistRoles: [
