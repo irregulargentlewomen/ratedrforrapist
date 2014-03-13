@@ -19,6 +19,25 @@ get '/' do
   send_file File.join(settings.public_folder, 'index.html')
 end
 
+get '/search/:title.json' do
+  search_results = MovieSearchResults.get(params['title'])
+  return json(search_results.map { |x|
+    {
+      id: x.id,
+      title: x.title,
+      releaseYear: x.year
+    }
+  })
+#     if search_results.length < 1
+#       return json(error: 'no results found')
+#     elsif search_results.length > 1
+#       return json(disambiguate: search_results.map { |x|
+#         {title: "#{x.title} (#{x.year})", id: x.id}
+#       })
+#     end
+#     movie = Movie.new(search_results.first.id)
+end
+
 # get '/search' do
 #   if params[:title]
 #     search_results = MovieSearchResults.get(params['title'])

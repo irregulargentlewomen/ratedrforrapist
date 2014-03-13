@@ -1,5 +1,5 @@
 angular.module('ratedr',
-  ['ngRoute']
+  ['ngRoute', 'ngResource']
 ).config(function($routeProvider) {
   $routeProvider
     .when('/', {
@@ -16,22 +16,11 @@ angular.module('ratedr',
     .otherwise({
       redirectTo: '/'
     });
-}).service('Search', [ '$rootScope', function( $rootScope ) {
-  var service = {
-    searches: {
-      'test search': [
-        { id: 19, title: 'Mariel of Redwall', releaseYear: '1865' },
-        { id: 23, title: 'Gaudy Night', releaseYear: '1993'}
-      ],
-      'other search': [
-        { id: 54, title: 'Victory', releaseYear: '1231' }
-      ]
-    },
-    getSearchResults: function(title) {
-      return service.searches[title];
-    }
-  }
-  return service;
+}).factory('Search', ['$resource',
+  function($resource){
+    return $resource('/search/:title.json', {}, {
+      query: {method:'GET', params:{title:'@title'}, isArray:true}
+    });
 }]).service('Movie', [ '$rootScope', function( $rootScope ) {
   var service = {
     data: {
@@ -54,8 +43,8 @@ angular.module('ratedr',
     }
   }
   return service;
-}]).controller('SearchController', ['$scope', 'Search', '$routeParams', function(scope, Search, routeParams) {
-  scope.movies = Search.getSearchResults(routeParams['title']);
+}]).controller('SearchController', ['$scope', '$routeParams', 'Search', function(scope, routeParams, Search) {
+  scope.movies = Search.query({title: routeParams['title']});
 }]).controller('MovieController', ['$scope', 'Movie', '$routeParams', function($scope, Movie, routeParams) {
   $scope.movie = Movie.getMovieForMovieId(routeParams['id']);
   $scope.people = Movie.getPeopleForMovieId(routeParams['id']);
