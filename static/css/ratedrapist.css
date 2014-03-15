@@ -59,7 +59,7 @@ section.alert.disambiguation {
 }
 
 /* line 58, ../scss/ratedrapist.scss */
-body.state-further-info #further-info {
+#further-info {
   display: block;
 }
 

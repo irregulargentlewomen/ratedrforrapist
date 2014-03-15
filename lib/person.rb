@@ -25,7 +25,7 @@ class Person
       map { |r|
       { movie: (r[:movie_id] ?
           {
-            release_year: r[:release_year],
+            releaseYear: r[:release_year],
             title: r[:title] 
           } :
           false),

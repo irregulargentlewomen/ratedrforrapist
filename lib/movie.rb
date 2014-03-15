@@ -31,7 +31,7 @@ class Movie
           id: x['id'],
           name: x['name'],
           role: x['job'] || x['character'],
-          blacklist_roles: Person.new(x['id']).blacklist_roles
+          blacklistRoles: Person.new(x['id']).blacklist_roles
         }
       end
       result

@@ -13,6 +13,9 @@ angular.module('ratedr',
       controller: 'MovieController',
       templateUrl: 'yesorno.html'
     })
+    .when('/further-info', {
+      templateUrl: 'furtherinfo.html'
+    })
     .otherwise({
       redirectTo: '/'
     });
@@ -24,8 +27,13 @@ angular.module('ratedr',
   return $resource('/movie/:id.json', {}, {
       query: {method:'GET', params:{id:'@id'}}
     });
-}]).controller('SearchController', ['$scope', '$routeParams', 'Search', function(scope, routeParams, Search) {
+}]).controller('SearchController', ['$scope', '$routeParams', 'Search', '$location', function(scope, routeParams, Search, $location) {
   scope.movies = Search.query({title: routeParams['title']});
+  scope.movies.$promise.then(function() {
+    if(scope.movies.length == 1) {
+      $location.path('/movies/' + scope.movies[0].id);
+    }
+  });
 }]).controller('MovieController', ['$scope', 'MovieAndCast', '$routeParams', function($scope, MovieAndCast, routeParams) {
   var movieData = MovieAndCast.query({id: routeParams['id']});
   $scope.movie = function() { return movieData.movie; }
