@@ -20,4 +20,7 @@ group :development, :test do
   gem 'capybara-webkit'
 
   gem 'compass'
+
+  gem 'pry'
+  gem 'pry-debugger'
 end

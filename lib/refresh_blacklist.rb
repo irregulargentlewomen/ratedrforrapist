@@ -1,3 +1,5 @@
+require 'csv'
+
 require_relative 'person_search_results'
 require_relative 'person'
 require_relative 'movie'
@@ -13,10 +15,11 @@ class RefreshBlacklist
   end
 
   def fetch_blacklist!
-    blacklist.each do |line|
-      person = line.strip
+    CSV.foreach(File.expand_path("#{File.dirname(__FILE__)}/../blacklist.csv")) do |row|
+      person = row[0]
+      source = row[1]
       search_for_and_disambiguate(person) do |result|
-        add_result(result)
+        add_result(result, source: source)
       end
     end
   end
@@ -34,7 +37,7 @@ class RefreshBlacklist
     fetch_blacklist!
 
     search_for_and_disambiguate("Roman Polanski") do |result|
-      add_result(result)
+      add_result(result, role: "accused")
       person_object = Person.new(result['id'])
       person_object.movies.each do |m|
         if(DateTime.strptime(m['release_date'], '%Y-%m-%d') > DateTime.strptime('1977-03-11', '%Y-%m-%d')) 
@@ -43,7 +46,7 @@ class RefreshBlacklist
           movie.cast_and_crew.each do |p|
             add_result(
               {'id' => p['id'], 'name' => p['name']},
-              {id: movie.id, role: (p['job'] || p['character'])})
+              movie_id: movie.id, role: (p['job'] || p['character']))
           end
         else
           puts "#{m['title']} was released before Polanski's arrest."
@@ -61,7 +64,7 @@ class RefreshBlacklist
   end
 
   def blacklist
-    IO.readlines(File.join(File.dirname(__FILE__), '..', 'blacklist.txt'))
+    IO.read(File.expand_path("blacklist.csv"))
   end
 
   def whitelist
@@ -85,13 +88,17 @@ class RefreshBlacklist
     end
   end
 
-  def add_result(person, movie = {id: nil, role: 'petitioner'})
+  def add_result(person, options)
+    movie_id = options.fetch(:movie_id, nil)
+    source = options.fetch(:source, nil)
+    role = options.fetch(:role, role_from_source(source))
     puts "adding #{person['name']} (#{person['id']})"
     @results << person
     @roles << {
       'person_id' => person['id'],
-      'movie_id' => movie[:id],
-      'role' => movie[:role]
+      'movie_id' => movie_id,
+      'role' => role,
+      'source' => source
     }
   end
 
@@ -99,5 +106,9 @@ class RefreshBlacklist
     puts "removing #{person['name']} (#{person['id']})"
     @results.delete person
     @roles.reject! {|x| x['person_id'] == person['id']}
+  end
+
+  def role_from_source(source)
+    (source == 'SACD' || source == 'BHL') ? 'petitioner' : 'supporter'
   end
 end

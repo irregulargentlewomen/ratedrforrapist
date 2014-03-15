@@ -1,5 +1,7 @@
 ENV['RACK_ENV'] ||= 'development'
 require_relative 'lib/app_config'
+require 'pry'
+
 
 task :reload_schema do
   DB = AppConfig.setup_db
@@ -13,8 +15,8 @@ namespace :blacklist do
     refresher = RefreshBlacklist.new
     refresher.fetch!
     DB[:blacklist].multi_insert(refresher.results)
-    DB[:roles].multi_insert(refresher.roles)
     DB[:movies].multi_insert(refresher.movies)
+    DB[:roles].multi_insert(refresher.roles)
   end
   task :dump do
     DB = AppConfig.setup_db

@@ -22,6 +22,7 @@ DB.create_table(:roles) do
   foreign_key :person_id, :blacklist
   foreign_key :movie_id, :movies
   String :role
+  String :source
   index :person_id, :unique => false
   index [:person_id, :movie_id, :role], :unique => true
 end
