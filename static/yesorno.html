@@ -1,9 +1,9 @@
-<section class="positive response alert alert-warning {{positiveClass()}}">
+<section class="positive response alert alert-warning" ng-if='yes'>
   <h2>Yes.</h2>
   <p>One or more people who worked on {{movie.title}} have either collaborated with Roman Polanski or publicly expressed support for him. <a href="#/further-info" class="icon-info-sign alert-error" title="Link to more context on how and why we make this claim."></a></p>
   <ul>
     <li
-      ng-repeat="person in people()"
+      ng-repeat="person in people"
       class="icon-expand-alt"
     >
       <h3><a ng-click="toggleDetails()">
@@ -19,8 +19,8 @@
   </ul>
   <p><a href="#" class="close icon-remove">Close</a></p>
 </section>
-<section class="negative response alert alert-success {{negativeClass()}}">
+<section class="negative response alert alert-success" ng-if='no'>
   <h2>No!</h2>
-  <p>None of the cast or crew of {{movie().title}} have collaborated with Roman Polanski or publicly expressed support for him. <a href="#/further-info" class="icon-info-sign alert-error" title="Link to more context on how and why we make this claim."></a></p>
+  <p>None of the cast or crew of {{movie.title}} have collaborated with Roman Polanski or publicly expressed support for him. <a href="#/further-info" class="icon-info-sign alert-error" title="Link to more context on how and why we make this claim."></a></p>
     <p><a href="#" class="close icon-remove">Close</a></p>
 </section>

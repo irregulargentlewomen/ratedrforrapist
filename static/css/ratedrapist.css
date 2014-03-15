@@ -34,7 +34,7 @@ form {
 /* hides the results and further-info elements until invoked */
 /* line 26, ../scss/ratedrapist.scss */
 section.alert {
-  display: none;
+  display: block;
   position: absolute;
   top: 25%;
   left: 25%;
@@ -42,28 +42,7 @@ section.alert {
   z-index: 10;
 }
 
-/* define application states */
-/* line 40, ../scss/ratedrapist.scss */
-section.alert.disambiguation {
-  display: block;
-}
-
-/* line 46, ../scss/ratedrapist.scss */
-.positive.response.active {
-  display: block;
-}
-
-/* line 52, ../scss/ratedrapist.scss */
-.negative.response.active {
-  display: block;
-}
-
-/* line 58, ../scss/ratedrapist.scss */
-#further-info {
-  display: block;
-}
-
-/* line 63, ../scss/ratedrapist.scss */
+* line 63, ../scss/ratedrapist.scss */
 section.alert {
   -webkit-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);

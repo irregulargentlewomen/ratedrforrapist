@@ -35,24 +35,21 @@ angular.module('ratedr',
     }
   });
 }]).controller('MovieController', ['$scope', 'MovieAndCast', '$routeParams', function($scope, MovieAndCast, routeParams) {
-  var movieData = MovieAndCast.query({id: routeParams['id']});
-  $scope.movie = function() { return movieData.movie; }
-  $scope.people = function() { return movieData.people; }
+  $scope.movie = {};
+  $scope.people = [];
+  $scope.yes = false;
+  $scope.no = false;
 
-  $scope.positiveClass = function() {
-    if($scope.people() && $scope.people().length > 0) {
-      return "active";
+  var movieData = MovieAndCast.query({id: routeParams['id']});
+  movieData.$promise.then(function() {
+    $scope.movie = movieData.movie;
+    $scope.people = movieData.people;
+    if($scope.people.length == 0) {
+      $scope.no = true;
     } else {
-      return "";
+      $scope.yes = true;
     }
-  };
-  $scope.negativeClass = function() {
-    if($scope.people() && $scope.people().length == 0) {
-      return "active";
-    } else {
-      return "";
-    }
-  };
+  })
 }]).controller('GlobalController', function($scope, $location){
   $scope.search = function() {
     $location.path('/search/' + $scope.title);
