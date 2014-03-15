@@ -16,48 +16,30 @@ angular.module('ratedr',
     .otherwise({
       redirectTo: '/'
     });
-}).factory('Search', ['$resource',
-  function($resource){
+}).factory('Search', ['$resource', function($resource){
     return $resource('/search/:title.json', {}, {
       query: {method:'GET', params:{title:'@title'}, isArray:true}
     });
-}]).service('Movie', [ '$rootScope', function( $rootScope ) {
-  var service = {
-    data: {
-      19: {
-        movie: { id: 19, title: 'Mariel of Redwall', releaseYear: '1865' },
-        people: [
-          { id: 42, name: 'Maria Giannetti', role: 'typist', blacklistRoles: [
-            { role: 'petitioner' },
-            { movie: { title: 'Chinatown', releaseYear: '2312'}, role: 'cinematographer'}
-            ]
-          }
-        ]
-      }
-    },
-    getMovieForMovieId: function(id) {
-      return service.data[id].movie;
-    },
-    getPeopleForMovieId: function(id) {
-      return service.data[id].people;
-    }
-  }
-  return service;
+}]).factory('MovieAndCast', [ '$resource', function( $resource ) {
+  return $resource('/movie/:id.json', {}, {
+      query: {method:'GET', params:{id:'@id'}}
+    });
 }]).controller('SearchController', ['$scope', '$routeParams', 'Search', function(scope, routeParams, Search) {
   scope.movies = Search.query({title: routeParams['title']});
-}]).controller('MovieController', ['$scope', 'Movie', '$routeParams', function($scope, Movie, routeParams) {
-  $scope.movie = Movie.getMovieForMovieId(routeParams['id']);
-  $scope.people = Movie.getPeopleForMovieId(routeParams['id']);
+}]).controller('MovieController', ['$scope', 'MovieAndCast', '$routeParams', function($scope, MovieAndCast, routeParams) {
+  var movieData = MovieAndCast.query({id: routeParams['id']});
+  $scope.movie = function() { return movieData.movie; }
+  $scope.people = function() { return movieData.people; }
 
   $scope.positiveClass = function() {
-    if($scope.people.length > 0) {
+    if($scope.people() && $scope.people().length > 0) {
       return "active";
     } else {
       return "";
     }
   };
   $scope.negativeClass = function() {
-    if($scope.people.length == 0) {
+    if($scope.people() && $scope.people().length == 0) {
       return "active";
     } else {
       return "";

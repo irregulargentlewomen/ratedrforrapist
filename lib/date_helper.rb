@@ -6,6 +6,6 @@ module DateHelper
   end
 
   def year_string_from_date_string(date)
-    x = parse_date(date) ? x.strftime('%Y') : 'unknown year'
+    (x = parse_date(date)) ? x.strftime('%Y') : 'unknown year'
   end
 end

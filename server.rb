@@ -38,6 +38,19 @@ get '/search/:title.json' do
 #     movie = Movie.new(search_results.first.id)
 end
 
+get '/movie/:id.json' do
+  movie = Movie.new(params[:id])
+
+  json({
+    movie: {
+      id: movie.id,
+      title: movie.title,
+      releaseYear: movie.release_year
+    },
+    people: movie.presentable_blacklisted_cast_and_crew
+  })
+end
+
 # get '/search' do
 #   if params[:title]
 #     search_results = MovieSearchResults.get(params['title'])

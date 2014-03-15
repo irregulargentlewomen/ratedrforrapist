@@ -3,7 +3,7 @@
   <p>One or more people who worked on {{movie.title}} have either collaborated with Roman Polanski or publicly expressed support for him. <a href="#further-info" class="icon-info-sign alert-error" title="Link to more context on how and why we make this claim."></a></p>
   <ul>
     <li
-      ng-repeat="person in people"
+      ng-repeat="person in people()"
       class="icon-expand-alt"
     >
       <h3><a ng-click="toggleDetails()">
