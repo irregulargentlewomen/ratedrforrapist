@@ -54,4 +54,24 @@ angular.module('ratedr',
   $scope.search = function() {
     $location.path('/search/' + $scope.title);
   };
+}).directive('sourceLink', function() {
+  return {
+    restrict: 'A',
+    template: "(<a href='{{sourceURL}}' target='_blank'>{{sourceText}}</a>)",
+    scope: {
+      source: '='
+    },
+    link: function(scope, elem, attrs) {
+      if(scope.source == 'SACD') {
+        scope.sourceText = "Société des Auteurs et Compositeurs Dramatiques";
+        scope.sourceURL = 'http://www.sacd.fr/Tous-les-signataires-de-la-petition-All-signing-parties.1341.0.html'
+      } else if(scope.source == 'BHL') {
+        scope.sourceText = 'Bernard-Henri Levy';
+        scope.sourceURL = 'http://www.bernard-henri-levy.com/si-vous-souhaitez-signer-la-petition-pour-roman-polanski-2418.html';
+      } else {
+        scope.sourceText = scope.source;
+        scope.sourceURL = scope.source;
+      }
+    }
+  }
 });

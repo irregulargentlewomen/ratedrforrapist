@@ -14,6 +14,7 @@
           {{role.movie.title}} ({{role.movie.releaseYear}}) &mdash;
         </span>
         {{role.role}}
+        <span ng-if='role.source' source-link source='role.source'></span>
       </p>
     </li>
   </ul>

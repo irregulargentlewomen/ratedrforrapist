@@ -29,7 +29,8 @@ class Person
             title: r[:title] 
           } :
           false),
-        role: r[:role] || ''
+        role: r[:role] || '',
+        source: r[:source] || ''
       }
     }
   end
