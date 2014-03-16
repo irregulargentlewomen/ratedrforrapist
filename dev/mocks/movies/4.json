@@ -1,0 +1,49 @@
+{
+  "movie": {
+    "id":"4",
+    "title":"Sweeney Todd: The Demon Barber of Fleet Street",
+    "releaseYear":"2007"
+  },
+  "people": [
+    {
+      "id":85,
+      "name":"Johnny Depp",
+      "role":"Sweeney Todd",
+      "blacklistRoles": [
+        {
+          "movie":false,
+          "role":"supporter",
+          "source":"http://www.youtube.com/watch?v=yyx4E51ZCns"
+        },
+        {
+          "movie": {
+            "releaseYear":"1999",
+            "title":"The Ninth Gate"
+          },
+          "role":"Dean Corso",
+          "source":""
+        }
+      ]
+    },
+    {
+      "id":1283,
+      "name":"Helena Bonham Carter",
+      "role":"Mrs. Lovett",
+      "blacklistRoles": [
+        {
+          "movie": {
+            "releaseYear":"2012",
+            "title":"A Therapy"
+          },
+          "role":"Patient",
+          "source":""
+        },
+        {
+          "movie":false,
+          "role":"petitioner",
+          "source":"SACD"
+        }
+      ]
+    }
+  ]
+}
