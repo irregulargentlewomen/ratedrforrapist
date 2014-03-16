@@ -30,7 +30,7 @@ get '/search/:title.json' do
   })
 end
 
-get '/movie/:id.json' do
+get '/movies/:id.json' do
   movie = Movie.new(params[:id])
 
   json({

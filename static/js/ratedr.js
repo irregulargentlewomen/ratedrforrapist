@@ -24,7 +24,7 @@ angular.module('ratedr',
       query: {method:'GET', params:{title:'@title'}, isArray:true}
     });
 }]).factory('MovieAndCast', [ '$resource', function( $resource ) {
-  return $resource('/movie/:id.json', {}, {
+  return $resource('/movies/:id.json', {}, {
       query: {method:'GET', params:{id:'@id'}}
     });
 }]).controller('SearchController', ['$scope', '$routeParams', 'Search', '$location', function(scope, routeParams, Search, $location) {
